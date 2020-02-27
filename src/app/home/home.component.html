@@ -1,0 +1,90 @@
+<div class="container-fluid">
+  <div class="content" role="main">
+    <!-- Promotional Slider -->
+    <div id="slider">
+      <a class="control_next">></a>
+      <a class="control_prev"><</a>
+      <ul>
+        <li>SLIDE 1</li>
+        <li style="background: #aaa;">SLIDE 2</li>
+        <li>SLIDE 3</li>
+        <li style="background: #aaa;">SLIDE 4</li>
+      </ul>
+    </div>
+    <!-- end -->
+    <div class="container">
+      <div class="sidebar">
+        <ul class="list-group">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Morbi leo risus</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+        <div class="wrap">
+          <div class="container">
+            <div class="row">
+              <div class="banner2 col">
+                <img src="" alt="banner1" />
+              </div>
+              <div class="banner2 col">
+                <img src="" alt="banner2" />
+              </div>
+            </div>
+            <h4>Budget Shopping</h4>
+            <div class="row">
+              <div class="swipe col">      
+                  <swiper
+                    class="swiper-container"
+                    [config]="config"
+                  >
+                    <div *ngFor="let slide of slides" class="swiper-slide">
+                      <img src="{{ slide.img }}" alt="" />
+                    </div>
+                  </swiper>
+              </div>
+            </div>
+            <h4>Popular Products</h4>
+            <div class="row">
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+            </div>
+            <h4>Popular Services</h4>
+            <div class="row">
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+              <div class="popular d-inline"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

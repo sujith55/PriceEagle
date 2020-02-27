@@ -5,7 +5,7 @@
       <a class="control_next">></a>
       <a class="control_prev"><</a>
       <ul>
-        <li>SLIDE 1</li>
+        <li *ngFor="let obj of main"><img src="{{obj.img}}" alt=""></li>
         <li style="background: #aaa;">SLIDE 2</li>
         <li>SLIDE 3</li>
         <li style="background: #aaa;">SLIDE 4</li>
@@ -15,25 +15,10 @@
     <div class="container">
       <div class="sidebar">
         <ul class="list-group">
-          <li class="list-group-item">Cras justo odio</li>
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Morbi leo risus</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-          <li class="list-group-item">Vestibulum at eros</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-          <li class="list-group-item">Vestibulum at eros</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-          <li class="list-group-item">Vestibulum at eros</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-          <li class="list-group-item">Vestibulum at eros</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-          <li class="list-group-item">Vestibulum at eros</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-          <li class="list-group-item">Vestibulum at eros</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-          <li class="list-group-item">Vestibulum at eros</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-          <li class="list-group-item">Vestibulum at eros</li>
+          <li class="list-group-item"  *ngFor="let item of sidebar">
+              <img src="{{item.img}}" width="30" alt="img">
+              {{item.name}}
+          </li>
         </ul>
         <div class="wrap">
           <div class="container">
@@ -60,7 +45,20 @@
             </div>
             <h4>Popular Products</h4>
             <div class="row">
-              <div class="popular d-inline"></div>
+              <div class="popular d-inline">
+                  <div class="figure pull-left">
+                    <img src="/assets/shop/mobiles.png" class="img-responsive" alt="">
+                    <p>Mobiles</p>
+                  </div>
+                  <div class="captions pull-right">
+                    <p>New Releases</p>
+                    <p>Smart Phones</p>
+                    <p>Basic Phones</p>
+                    <p>Tablets</p>
+                    <p>Mobile Accessories</p>
+                    <span style="color: rgb(14, 106, 197);">More....</span>
+                  </div>
+              </div>
               <div class="popular d-inline"></div>
               <div class="popular d-inline"></div>
               <div class="popular d-inline"></div>

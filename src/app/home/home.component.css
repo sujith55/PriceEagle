@@ -191,6 +191,59 @@ a:hover {
   border-radius: 3px;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.11);
   cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.popular .figure{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    align-items: center;
+    padding: 3px 4px;
+    width: 50%;
+}
+.popular:hover{
+    transform: scale(1.1222);
+    box-shadow: 0 1px 5px 0 rgba(185, 123, 159, 0.534);
+    z-index: 99;
+}
+.popular .figure p{
+    padding: 0px 4px;
+    margin: 0px 10px;
+    align-self: center;
+    font-size: 18px;
+    color: #4d4d4d;
+    letter-spacing: 0.03rem;
+}
+.popular .figure .img-responsive {
+    max-width: 100%;
+    max-height: 100%;
+    border: 0;
+    vertical-align: middle;
+}
+
+.popular .captions{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    justify-content: center;
+    padding: 3px 4px;
+    width: 50%;
+    overflow: hidden;
+}
+.popular .captions p{
+    color: #4d4d4d;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.03rem;
+    line-height: 1.42857143;
+}
+.popular .captions p:hover{
+    color: rgb(14, 106, 197);
+}
+.pull-left{
+    float: left !important;
+}
+.pull-right{
+    float: right !important;
 }
 /* Responsive Styles */
 @media screen and (max-width: 767px) {

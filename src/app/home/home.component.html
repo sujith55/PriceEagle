@@ -13,7 +13,7 @@
     </div>
     <!-- end -->
     <div class="container">
-      <div class="sidebar">
+      <div class="sidebar">  
         <ul class="list-group">
           <li class="list-group-item"  *ngFor="let item of sidebar">
               <img src="{{item.img}}" width="30" alt="img">
@@ -24,10 +24,10 @@
           <div class="container">
             <div class="row">
               <div class="banner2 col">
-                <img src="" alt="banner1" />
+                <img src="/assets/imgs/3rd banner.png" alt="banner1" />
               </div>
               <div class="banner2 col">
-                <img src="" alt="banner2" />
+                <img src="/assets/imgs/2nd banner.png" alt="banner2" />
               </div>
             </div>
             <h4>Budget Shopping</h4>
@@ -45,40 +45,28 @@
             </div>
             <h4>Popular Products</h4>
             <div class="row">
-              <div class="popular d-inline">
+              <div class="popular d-inline" *ngFor="let ele of shop">
                   <div class="figure pull-left">
-                    <img src="/assets/shop/mobiles.png" class="img-responsive" alt="">
-                    <p>Mobiles</p>
+                    <img src="{{ele.img}}" class="img-responsive" alt="">
+                    <p>{{ele.title}}</p>
                   </div>
                   <div class="captions pull-right">
-                    <p>New Releases</p>
-                    <p>Smart Phones</p>
-                    <p>Basic Phones</p>
-                    <p>Tablets</p>
-                    <p>Mobile Accessories</p>
-                    <span style="color: rgb(14, 106, 197);">More....</span>
+                    <p *ngFor="let link of ele.contents" class="contents">{{link}}</p>
+                    <!-- <span style="color: rgb(14, 106, 197);">More....</span> -->
                   </div>
               </div>
-              <div class="popular d-inline"></div>
-              <div class="popular d-inline"></div>
-              <div class="popular d-inline"></div>
-              <div class="popular d-inline"></div>
-              <div class="popular d-inline"></div>
-              <div class="popular d-inline"></div>
-              <div class="popular d-inline"></div>
-              <div class="popular d-inline"></div>
-              <div class="popular d-inline"></div>
-              <div class="popular d-inline"></div>
-              <div class="popular d-inline"></div>
             </div>
             <h4>Popular Services</h4>
             <div class="row">
-              <div class="popular d-inline"></div>
-              <div class="popular d-inline"></div>
-              <div class="popular d-inline"></div>
-              <div class="popular d-inline"></div>
-              <div class="popular d-inline"></div>
-              <div class="popular d-inline"></div>
+              <div class="popular d-inline" *ngFor="let eles of services">
+                <div class="figure pull-left">
+                  <img src="{{eles.img}}" class="img-responsive" alt="">
+                  <p>{{eles.title}}</p>
+                </div>
+                <div class="captions pull-right">
+                  <p *ngFor="let link of eles.contents" class="contents">{{link}}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -137,7 +137,204 @@ export class HomeComponent implements OnInit {
     // {
     //   img:"/assets/banner/picture1.jpg"
     // }
-  ]
+  ];
+  public shop = [
+    {
+      title:"MOBILES",
+      img:"/assets/shop/mobiles.png",
+      contents:[
+        'New Releases',
+        'Smart Phones',
+        'Basic Phones',
+        'Tablets',
+        'Mobile Accessories'
+      ]
+    },
+    {
+      title:"ELECTRONICS",
+      img:"/assets/shop/electronics.png",
+      contents:[
+        'Computers',
+        'Television',
+        'Refriegerators',
+        'Washing Machines',
+        'Air Conditioners'
+      ]
+    },
+    {
+      title:"HOME APPLIANCES",
+      img:"/assets/shop/home appliances.png",
+      contents:[
+        'Cooker',
+        'Mixer & Grinders',
+        'Geysers',
+        'Microwave',
+        'Iron Box'
+      ]
+    },
+    {
+      title:"FASHION",
+      img:"/assets/shop/fashion.png",
+      contents:[
+        'Men',
+        'Women',
+        'Kids',
+        'Watches',
+        'Lingeries'
+      ]
+    },
+    {
+      title:"BEAUTY",
+      img:"/assets/shop/beauty.png",
+      contents:[
+        'Make-up Items',
+        'Creams & Shampoos',
+        'Shaving Products',
+        'Perfume & Deos',
+        'SunGlasses'
+      ]
+    },
+    {
+      title:"JEWELLERY",
+      img:"/assets/shop/jewellery.png",
+      contents:[
+        'Rings',
+        'Pendents',
+        'Necklace',
+        'Bangles',
+        'Waist Bands'
+      ]
+    },
+    {
+      title:"AGRICULTURE",
+      img:"/assets/shop/agriculture.png",
+      contents:[
+        'Fertilisers',
+        'Seeds',
+        'Pesticides',
+        'Trap Sets',
+        'Mulch Film'
+      ]
+    },
+    {
+      title:"PUJA",
+      img:"/assets/shop/puja.png",
+      contents:[
+        'Yantra',
+        'Rudraaksh',
+        'Puja Services',
+        'Idols & Figurines',
+        'Puja Books'
+      ]
+    },
+    {
+      title:"MEDICINE",
+      img:"/assets/shop/medicine.png",
+      contents:[
+        'MedLife',
+        'Netmeds',
+        '1Mg',
+        'Condoms'
+      ]
+    },
+    {
+      title:"BOOKS",
+      img:"/assets/shop/books.png",
+      contents:[
+        'Fiction',
+        'Children',
+        'Biographics',
+        'Text Books',
+        'Business & Econimics'
+      ]
+    },
+    {
+      title:"BAGS & LUGGAGES",
+      img:"/assets/shop/bags and luggages.png",
+      contents:[
+        'Back Packs',
+        'Bags',
+        'Briefcases',
+        'Cosmetic Bags',
+        'Duffel Bags'
+      ]
+    },
+    {
+      title:"SPORTS & FITNESS",
+      img:"/assets/shop/sports.png",
+      contents:[
+        'Cricket Balls',
+        'Cricket Bats',
+        'Dumbles',
+        'Foot Balls',
+        'Gloves & Belts'
+      ]
+    }
+  ];
+  public services = [
+    {
+      title:"TRAVEL",
+      img:"/assets/shop/travel.png",
+      contents:[
+        'Buses',
+        'Cabs',
+        'Flights',
+        'Trains'
+      ]
+    },
+    {
+      title:"HOTEL",
+      img:"/assets/shop/hotel.png",
+      contents:[
+        'Airbnb',
+        'Clear Trip',
+        'Goibibo',
+        'MakeMyTrip',
+        'OYO'
+      ]
+    },
+    {
+      title:"RECHARGE",
+      img:"/assets/shop/recharge.png",
+      contents:[
+        'Amazon',
+        'FreeCharge',
+        'Mobikwik',
+        'Paytm'
+      ]
+    },
+    {
+      title:"EDUCATION",
+      img:"/assets/shop/education.png",
+      contents:[
+        'BYJUS',
+        'SimpliLearn',
+        'Unacademy',
+        'Vedantu'
+      ]
+    },
+    {
+      title:"FOOD SERVICES",
+      img:"/assets/shop/food.png",
+      contents:[
+        'Eatfit',
+        'Swiggy',
+        'Zomato'
+      ]
+    },
+    {
+      title:"REPAIR & SERVICES",
+      img:"/assets/shop/repair and services.png",
+      contents:[
+        'Beautician',
+        'Carpenter',
+        'Electrician',
+        'Painter',
+        'PestControl'
+      ]
+    }
+  ];
+
   public config: SwiperConfigInterface = {
     direction: 'horizontal',
     slidesPerView: 5,   

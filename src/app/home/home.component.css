@@ -146,10 +146,14 @@ a:hover {
   padding: 0px 4px;
   margin: 0px 4px 10px 4px;
   width: 100%;
-  height: 200px;
+  height: 150px;
   background: white;
   border-radius: 3px;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.11);
+}
+.banner2 img{
+  max-width: 100%;
+  max-height: 100%;
 }
 .swipe {
   position: relative;
@@ -182,15 +186,16 @@ a:hover {
 .popular {
   position: relative;
   background: white;
-  width: 16rem;
-  height: 150px;
-  padding: 4px 4px;
+  width: 20rem;
+  height: 130px;
+  padding: 0px 4px;
   display: -webkit-box;
-  margin: 10px 3px;
+  margin: 1px 1px;
   left: 25px;
   border-radius: 3px;
+  border: 2px solid #ffc2df;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.11);
-  cursor: pointer;
+  cursor: pointer; 
   transition: 0.5s ease-in-out;
 }
 .popular .figure{
@@ -199,24 +204,27 @@ a:hover {
     position: relative;
     align-items: center;
     padding: 3px 4px;
+    border-right: 3px solid #ffc2df;
     width: 50%;
+    max-height: 100%;
 }
 .popular:hover{
-    transform: scale(1.1222);
+    transform: scale(1.01);
     box-shadow: 0 1px 5px 0 rgba(185, 123, 159, 0.534);
     z-index: 99;
 }
 .popular .figure p{
-    padding: 0px 4px;
-    margin: 0px 10px;
+    padding: 0px 0px;
+    margin: 0px 0px;
     align-self: center;
-    font-size: 18px;
+    font-size: 13px;
+    font-weight: bold;
     color: #4d4d4d;
     letter-spacing: 0.03rem;
 }
 .popular .figure .img-responsive {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 100px;
     border: 0;
     vertical-align: middle;
 }
@@ -230,13 +238,18 @@ a:hover {
     width: 50%;
     overflow: hidden;
 }
-.popular .captions p{
+.captions:nth-child(3){
+  float: left !important;
+}
+.popular .captions .contents{
     color: #4d4d4d;
     font-family: Roboto, sans-serif;
     letter-spacing: 0.03rem;
-    line-height: 1.42857143;
+    line-height: 1.43857143;
+    /* padding: 2px 2px; */
+    text-overflow: ellipsis;
 }
-.popular .captions p:hover{
+.popular .captions .contents:hover{
     color: rgb(14, 106, 197);
 }
 .pull-left{

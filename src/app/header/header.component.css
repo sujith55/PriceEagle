@@ -2,7 +2,7 @@
   position: fixed;
   top: 0 !important;
   width: 100%;
-  height: 70px;
+  height: 50px;
   display: flex;
   align-items: center;
   background-color: #ffc2df;
@@ -12,12 +12,15 @@
   z-index: 200;
 }
 .navbar img {
+  position: relative;
   margin: 0 16px;
+  bottom: 10px;
 }
 .flipkart-navbar-search {
   position: relative;
   display: flex;
   padding: 10px 0;
+  bottom: 10px;
   /* left: 0px !important; */
   align-items: flex-start;
 }
@@ -27,7 +30,7 @@
 .flipkart-navbar-search .flipkart-navbar-input {
   position: relative;
   padding: 8px 16px;
-  border-radius: 2px 0 0 2px;
+  border-radius: 20px 0 0 20px;
   border: 0 none;
   outline: 0 none;
   font-size: 15px;
@@ -37,11 +40,11 @@
 
 .flipkart-navbar-button {
   position: relative;
-  background-color: #ffe11b;
-  border: 1px solid #ffe11b;
-  border-radius: 0 2px 2px 0;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 0 20px 20px 0;
   color: #565656;
-  padding: 8px 0;
+  padding: 2px 0;
   height: 40px;
   width: 70px;
   cursor: pointer;
@@ -54,7 +57,10 @@
 .lang .btn-group .btn{
   width: 160px;
   padding: 4px;
+  background: none;
+  border: none;
   border-radius: 0px;
+  box-shadow: none;
 }
 .img{
     position: relative;

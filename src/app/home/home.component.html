@@ -1,76 +1,87 @@
 <div class="container-fluid">
-  <div class="content" role="main">
-    <!-- Promotional Slider -->
-    <div id="slider">
+  <!-- Promotional Slider -->
+  <!-- end -->
+  <div class="container">
+    <div class="sidebar">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of sidebar">
+          <img src="{{ item.img }}" width="30" alt="img" />
+          {{ item.name }}
+        </li>
+      </ul>
+    </div>
+    <div id="slider" class="col pull-right">
+      <div class="carousel slide" data-ride="carousel" id="myCarousel">
+        <div class="carousel-inner">
+          <div
+            class="carousel-item"
+            *ngFor="let img of imageUrl; let k = index"
+            [ngClass]="k == 0 ? 'item active' : 'item'"
+          >
+            <a href="{{ img.url }}" target="_blank">
+              <img src="{{ global.ImgUrls.bannerUrl }}{{ img.imgUrl }}" />
+            </a>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- <div id="slider" class="col pull-right"> 
       <a class="control_next">></a>
       <a class="control_prev"><</a>
       <ul>
-        <li *ngFor="let obj of main"><img src="{{obj.img}}" alt=""></li>
-        <li style="background: #aaa;">SLIDE 2</li>
+        <li *ngFor="let obj of imageUrl; let k = index" [ngClass]="k == 0 ? 'item active' : 'item'">
+          <a href="{{obj.url}}" target="_blank">
+            <img src="{{global.ImgUrls.bannerUrl}}{{obj.imgUrl}}" alt=""/>
+          </a>
+        </li>
+        <li>SLIDE 2</li>
         <li>SLIDE 3</li>
-        <li style="background: #aaa;">SLIDE 4</li>
+        <li>SLIDE 4</li>
       </ul>
+    </div> -->
+    <div class="wrap">
+      <div class="banner2 col">
+        <img src="/assets/imgs/3rd banner.png" alt="banner1" />
+      </div>
+      <div class="banner2 col">
+        <img src="/assets/imgs/2nd banner.png" alt="banner2" />
+      </div>
     </div>
-    <!-- end -->
-    <div class="container">
-      <div class="sidebar">  
-        <ul class="list-group">
-          <li class="list-group-item"  *ngFor="let item of sidebar">
-              <img src="{{item.img}}" width="30" alt="img">
-              {{item.name}}
-          </li>
-        </ul>
-        <div class="wrap">
-          <div class="container">
-            <div class="row">
-              <div class="banner2 col">
-                <img src="/assets/imgs/3rd banner.png" alt="banner1" />
-              </div>
-              <div class="banner2 col">
-                <img src="/assets/imgs/2nd banner.png" alt="banner2" />
-              </div>
-            </div>
-            <h4>Budget Shopping</h4>
-            <div class="row">
-              <div class="swipe col">      
-                  <swiper
-                    class="swiper-container"
-                    [config]="config"
-                  >
-                    <div *ngFor="let slide of slides" class="swiper-slide">
-                      <img src="{{ slide.img }}" alt="" />
-                    </div>
-                  </swiper>
-              </div>
-            </div>
-            <h4>Popular Products</h4>
-            <div class="row">
-              <div class="popular d-inline" *ngFor="let ele of shop">
-                  <div class="figure pull-left">
-                    <img src="{{ele.img}}" class="img-responsive" alt="">
-                    <p>{{ele.title}}</p>
-                  </div>
-                  <div class="captions pull-right">
-                    <p *ngFor="let link of ele.contents" class="contents">{{link}}</p>
-                    <!-- <span style="color: rgb(14, 106, 197);">More....</span> -->
-                  </div>
-              </div>
-            </div>
-            <h4>Popular Services</h4>
-            <div class="row">
-              <div class="popular d-inline" *ngFor="let eles of services">
-                <div class="figure pull-left">
-                  <img src="{{eles.img}}" class="img-responsive" alt="">
-                  <p>{{eles.title}}</p>
-                </div>
-                <div class="captions pull-right">
-                  <p *ngFor="let link of eles.contents" class="contents">{{link}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="content row">
+      <h4 style="width: 930px; font-weight: lighter; left: 10px;">
+        Popular Products
+      </h4>
+      <div class="popular d-inline" *ngFor="let ele of shop">
+        <div class="figure pull-left">
+          <img src="{{ ele.img }}" class="img-responsive" alt="" />
+          <p>{{ ele.title }}</p>
+        </div>
+        <div class="captions pull-right">
+          <p *ngFor="let link of ele.contents" class="contents">{{ link }}</p>
+          <!-- <span style="color: rgb(14, 106, 197);">More....</span> -->
         </div>
       </div>
+      <h4 style="width: 930px; font-weight: lighter; left: 10px;">
+        Popular Services
+      </h4>
+      <div class="popular d-inline" *ngFor="let eles of services">
+        <div class="figure pull-left">
+          <img src="{{ eles.img }}" class="img-responsive" alt="" />
+          <p>{{ eles.title }}</p>
+        </div>
+        <div class="captions pull-right">
+          <p *ngFor="let link of eles.contents" class="contents">{{ link }}</p>
+        </div>
+      </div>
+      <div class="clearfix"></div>
     </div>
   </div>
 </div>

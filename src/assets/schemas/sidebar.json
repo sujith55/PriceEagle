@@ -1,0 +1,92 @@
+[
+    {
+        "img":"/assets/sidebar/picture1.png",
+        "name": "Mobiles",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture2.png",
+        "name":"Electronics",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture3.png",
+        "name":"Home Appliances",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture4.png",
+        "name":"Fashion",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture5.png",
+        "name":"Beauty",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture6.png",
+        "name":"Jewellery",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture7.png",
+        "name":"Agriculture",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture8.png",
+        "name":"Puja",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture9.png",
+        "name":"Medicine",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture10.png",
+        "name":"Books",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture11.png",
+        "name":"Bags & Luggages",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture12.png",
+        "name":"Sports & Fitness",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture13.png",
+        "name":"Travel",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture14.png",
+        "name":"Hotel",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture15.png",
+        "name":"Recharge",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture16.png",
+        "name":"Education",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture17.png",
+        "name":"Food Services",
+        "url":"/"
+      },
+      {
+        "img":"/assets/sidebar/picture18.png",
+        "name":"Repair & Services",
+        "url":"/"
+      }
+]

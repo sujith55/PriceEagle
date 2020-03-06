@@ -1,0 +1,63 @@
+[
+    {
+        "title": "TRAVEL",
+        "img": "/assets/shop/travel.png",
+        "contents": [
+          "Buses",
+          "Cabs",
+          "Flights",
+          "Trains"
+        ]
+      },
+      {
+        "title": "HOTEL",
+        "img": "/assets/shop/hotel.png",
+        "contents": [
+          "Airbnb",
+          "Clear Trip",
+          "Goibibo",
+          "MakeMyTrip",
+          "OYO"
+        ]
+      },
+      {
+        "title": "RECHARGE",
+        "img": "/assets/shop/recharge.png",
+        "contents": [
+          "Amazon",
+          "FreeCharge",
+          "Mobikwik",
+          "Paytm"
+        ]
+      },
+      {
+        "title": "EDUCATION",
+        "img": "/assets/shop/education.png",
+        "contents": [
+          "BYJUS",
+          "SimpliLearn",
+          "Unacademy",
+          "Vedantu"
+        ]
+      },
+      {
+        "title": "FOOD SERVICES",
+        "img": "/assets/shop/food.png",
+        "contents": [
+          "Eatfit",
+          "Swiggy",
+          "Zomato"
+        ]
+      },
+      {
+        "title": "REPAIR & SERVICES",
+        "img": "/assets/shop/repair and services.png",
+        "contents": [
+          "Beautician",
+          "Carpenter",
+          "Electrician",
+          "Painter",
+          "PestControl"
+        ]
+      }
+]

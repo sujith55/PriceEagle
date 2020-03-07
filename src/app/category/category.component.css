@@ -1,0 +1,13 @@
+.container-fluid {
+    display: flex;
+    padding: 0px 5px;
+    max-width: 100%;
+    background-color: #efefef;
+  } 
+  .container {
+    position: relative;
+    background: #e7e7e7;
+    /* border: 1px solid yellow; */
+    padding: 4px 4px;
+    top: 45px;
+  }

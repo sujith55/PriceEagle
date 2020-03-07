@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { SwiperComponent, SwiperDirective, SwiperConfigInterface,
-  SwiperScrollbarInterface, SwiperPaginationInterface } from 'ngx-swiper-wrapper';
 import { Observable, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { ShopComponentService } from './shop/shop.component.service';
 import * as $ from'jquery';
 import { AppComponentService } from '../services/app.component.service';
 import { GlobalComponent } from '../global/global.component';
+import { SwiperOptions } from 'swiper';
 
 @Component({
   selector: 'app-home',
@@ -14,39 +13,21 @@ import { GlobalComponent } from '../global/global.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public config: SwiperConfigInterface = {
-    direction: 'horizontal',
-    slidesPerView: 6,   
-    keyboard: true,
-    mousewheel: true,
-    scrollbar: false,
-    navigation: true,
-    pagination: false,
-    autoplay: false,
-    loop: true
+  config: SwiperOptions = {
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    spaceBetween: 30,
+    loop:true,
+    // autoplay: true,
+    slidesPerView: 10
   };
   shop: any;
   services: any;
   sidebar: any;
   slides: any;
-
-  public main = [
-    {
-      img:"/assets/banner/picture1.jpg"
-    },
-    {
-      img:"/assets/banner/picture1.jpg"
-    },
-    {
-      img:"/assets/banner/picture1.jpg"
-    },
-    {
-      img:"/assets/banner/picture1.jpg"
-    },
-    {
-      img:"/assets/banner/picture1.jpg"
-    }
-  ];
   imageUrl: any[];
   loading: boolean;
   constructor(
@@ -57,7 +38,7 @@ export class HomeComponent implements OnInit {
   ) {
     this.banner();
     this.shop_.getShopContent().subscribe(data => {
-      this.shop = data
+      this.shop = data;
       // console.log(data);
      });
     this.shop_.getServiceContent().subscribe(data=>{

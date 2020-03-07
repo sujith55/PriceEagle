@@ -19,34 +19,20 @@
             [ngClass]="k == 0 ? 'item active' : 'item'"
           >
             <a href="{{ img.url }}" target="_blank">
-              <img src="{{ global.ImgUrls.bannerUrl }}{{ img.imgUrl }}" />
+              <img src="{{ global.ImgUrls.bannerUrl }}{{ img.imgUrl }}" class="img-responsive"/> 
             </a>
           </div>
           <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"><</span>
+            <!-- <span class="sr-only">Previous</span> -->
           </a>
           <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true">></span>
+            <!-- <span class="sr-only">Next</span> -->
           </a>
         </div>
       </div>
     </div>
-    <!-- <div id="slider" class="col pull-right"> 
-      <a class="control_next">></a>
-      <a class="control_prev"><</a>
-      <ul>
-        <li *ngFor="let obj of imageUrl; let k = index" [ngClass]="k == 0 ? 'item active' : 'item'">
-          <a href="{{obj.url}}" target="_blank">
-            <img src="{{global.ImgUrls.bannerUrl}}{{obj.imgUrl}}" alt=""/>
-          </a>
-        </li>
-        <li>SLIDE 2</li>
-        <li>SLIDE 3</li>
-        <li>SLIDE 4</li>
-      </ul>
-    </div> -->
     <div class="wrap">
       <div class="banner2 col">
         <img src="/assets/imgs/3rd banner.png" alt="banner1" />
@@ -55,6 +41,28 @@
         <img src="/assets/imgs/2nd banner.png" alt="banner2" />
       </div>
     </div>
+    <!-- <swiper [config]="config" style="height: 110px; width: 910px;">
+      <h4 style="width: 930px; font-weight: lighter; left: 10px;">
+        Budget Shopping
+      </h4>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+        <div class="swiper-slide">Slide 10</div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </swiper> -->
     <div class="content row">
       <h4 style="width: 930px; font-weight: lighter; left: 10px;">
         Popular Products

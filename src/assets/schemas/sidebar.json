@@ -2,12 +2,12 @@
     {
         "img":"/assets/sidebar/picture1.png",
         "name": "Mobiles",
-        "url":"/"
+        "url":"/Electronics-Mobile-Phones"
       },
       {
         "img":"/assets/sidebar/picture2.png",
         "name":"Electronics",
-        "url":"/"
+        "url":"/Electronics"
       },
       {
         "img":"/assets/sidebar/picture3.png",

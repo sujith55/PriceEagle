@@ -5,12 +5,14 @@
     <div class="sidebar">
       <ul class="list-group">
         <li class="list-group-item" *ngFor="let item of sidebar">
-          <img src="{{ item.img }}" width="30" alt="img" />
-          {{ item.name }}
+          <div routerLink="{{item.url}}">
+            <img src="{{ item.img }}" width="30" alt="img" />
+            {{ item.name }} 
+          </div> 
         </li>
       </ul>
-    </div>
-    <div id="slider" class="col pull-right">
+    </div> 
+    <div id="slider" class="col pull-right"> 
       <div class="carousel slide" data-ride="carousel" id="myCarousel">
         <div class="carousel-inner">
           <div
@@ -41,28 +43,6 @@
         <img src="/assets/imgs/2nd banner.png" alt="banner2" />
       </div>
     </div>
-    <!-- <swiper [config]="config" style="height: 110px; width: 910px;">
-      <h4 style="width: 930px; font-weight: lighter; left: 10px;">
-        Budget Shopping
-      </h4>
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
-        <div class="swiper-slide">Slide 10</div>
-      </div>
-
-      <div class="swiper-pagination"></div>
-
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </swiper> -->
     <div class="content row">
       <h4 style="width: 930px; font-weight: lighter; left: 10px;">
         Popular Products

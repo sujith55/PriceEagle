@@ -28,4 +28,7 @@ export class AppComponentService {
       .get(environment.baseUrl + "categories")
       .pipe(map(response => response["data"]));
   }
+  public getLanguages(): Observable<any> {
+    return this.http.get(environment.baseUrl + "user/language");
+  }
 }

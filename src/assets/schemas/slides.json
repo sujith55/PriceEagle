@@ -1,41 +1,30 @@
 [
   {
-    "img": "/assets/slider/img1.svg"
+    "img": "/assets/slider/watch.png",
+    "title":"Watches under 1000"
   },
   {
-    "img": "/assets/slider/img1.svg"
+    "img":"/assets/slider/laptops.png",
+    "title":"Laptops under 20000"
   },
   {
-    "img": "/assets/slider/img1.svg"
+    "img":"/assets/slider/shoes.png",
+    "title":"Shoes under 1000"
   },
   {
-    "img": "/assets/slider/img1.svg"
+    "img":"/assets/slider/agriculture.png",
+    "title":"Agriculture"
   },
   {
-    "img": "/assets/slider/img1.svg"
+    "img":"/assets/slider/smart tv.png",
+    "title":"Tv's under 20000"
   },
   {
-    "img": "/assets/slider/img1.svg"
+    "img":"/assets/slider/refrigerator.png",
+    "title":"Electronics"
   },
   {
-    "img": "/assets/slider/img1.svg"
-  },
-  {
-    "img": "/assets/slider/img1.svg"
-  },
-  {
-    "img": "/assets/slider/img1.svg"
-  },
-  {
-    "img": "/assets/slider/img1.svg"
-  },
-  {
-    "img": "/assets/slider/img1.svg"
-  },
-  {
-    "img": "/assets/slider/img1.svg"
-  },
-  {
-    "img": "/assets/slider/img1.svg"
+    "img":"/assets/slider/earphone.png",
+    "title":"Mobile Accessories"
   }
 ] 

@@ -12,7 +12,7 @@
         </li>
       </ul>
     </div> 
-    <div id="slider" class="col pull-right"> 
+    <div id="slider" class="col pull-right">  
       <div class="carousel slide" data-ride="carousel" id="myCarousel">
         <div class="carousel-inner">
           <div
@@ -37,13 +37,20 @@
     </div>
     <div class="wrap">
       <div class="banner2 col">
-        <img src="/assets/imgs/3rd banner.png" alt="banner1" />
+        <img src="/assets/imgs/3rd banner.png" alt="banner1" /> 
       </div>
       <div class="banner2 col">
         <img src="/assets/imgs/2nd banner.png" alt="banner2" />
       </div>
     </div>
     <div class="content row">
+      <h4 style="width: 930px; font-weight: lighter; left: 10px;">Budget Shopping</h4>
+      <div class="budget">
+        <div class="col" *ngFor="let slide of slides">
+          <img src="{{slide.img}}" alt="img">
+          <p>{{slide.title}}</p>
+        </div>
+      </div>
       <h4 style="width: 930px; font-weight: lighter; left: 10px;">
         Popular Products
       </h4>

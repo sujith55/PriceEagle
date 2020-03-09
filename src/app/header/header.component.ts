@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+
+import { AppComponentService } from '../services/app.component.service'
 
 @Component({
   selector: 'app-header',
@@ -8,10 +11,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  public language: Observable<any[]>;
+  constructor(private http: HttpClient, private router: ActivatedRoute, private service:AppComponentService) { }
 
-  constructor(private http: HttpClient, private router: ActivatedRoute) { }
-
-  ngOnInit() {
+  ngOnInit(): void{
+    this.service.getLanguages().subscribe(res=>{
+      this.language = res['data'] as Observable<any[]>
+    })
   }
 
 }

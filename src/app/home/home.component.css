@@ -21,17 +21,15 @@ p {
   margin: 0;
 }
 .container-fluid {
-  display: flex;
   padding: 0px 5px;
-  max-width: 100%;
   background-color: #efefef;
 }
-.container #slider {
+.container-fluid .container #slider {
   position: absolute;
   overflow: hidden;
   top: 5px;
   left: 200px;
-  width: 930px;
+  width: 940px;
   height: 160px;
   /* margin: 10px 0 0 0; */
   border-radius: 3px;
@@ -40,11 +38,11 @@ p {
 }
 #slider .carousel{
   height: 150px;
-  width: 930px;
+  width: 940px;
 }
 .carousel .carousel-inner{
   height: 150px;
-  width: 920px;
+  width: 930px;
 }
 .carousel-inner .carousel-item img{
   width: 930px !important;
@@ -84,9 +82,11 @@ p {
   width: 20px;
   height: 20px;
 }
-.container {
+.container-fluid .container {
   position: relative;
+  display: flex;
   background: #e7e7e7;
+  height: 100%;
   /* border: 1px solid yellow; */
   padding: 4px 4px;
   top: 45px;
@@ -105,44 +105,23 @@ p {
 .sidebar .list-group .list-group-item {
   cursor: pointer;
   color: #4d4d4d;
+  letter-spacing: 0.03rem;
 }
 .wrap{
   position: absolute;
   top: 160px;
-  left: 215px;
-  width: 910px;
+  left: 200px;
+  width: 940px;
   height: 110px auto;
   padding: 2px 4px;
 }
-swiper {
-  position: absolute;
-  left: 215px;
-  top: 270px;
-  width: 910px;
-  height: 110px;
-  padding: 2px 2px;
-}
-swiper .swiper-wrapper {
-  box-sizing: border-box;
-  width: 900px;
-  height: 100px;
-  padding: 2px 4px;
-  background: blue;
-}
-.swiper-wrapper .swiper-slide {
-  width: 100px;
-  height: 60px;
-  padding: 2px;
-  background: blue;
-}
-
 .banner2 {
-  position: relative;
+  position: relative; 
   align-items: center;
   display: flex;
   padding: 0px 0px;
   margin: 2px 4px;
-  width: 48%;
+  width: 49%;
   height: 100px;
   background: white;
   float: left;
@@ -152,13 +131,46 @@ swiper .swiper-wrapper {
 .banner2 img{
   max-width: 100%;
   max-height: 100%;
+  border-radius: 3px;
 }
 .content{
   position: absolute;
-  top: 380px;
+  top: 260px;
   left: 210px;
   padding: 4px 4px;
   width: 930px;
+}
+.content .budget{
+  position: relative;
+  display: flex;
+  width: 890px;
+  height: 120px;
+  padding: 2px 4px;
+  left: 25px;
+  background: white;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.11);
+  border-radius: 2px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.budget .col{
+  position: relative;
+  display: flex;
+  width: 150px !important;
+  height: 100px !important;
+  align-items: center;
+  padding: 2px 4px;
+  display: inline-block !important;
+}
+.col img{
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+.col p{
+  position: relative;
+  left: 10px;
+  padding: 2px 4px;
 }
 .content h4{
   position: relative;
@@ -174,6 +186,7 @@ swiper .swiper-wrapper {
 }
 .popular {
   position: relative;
+  display: flex;
   background: white;
   width: 18.5rem;
   height: 130px;
@@ -243,9 +256,9 @@ swiper .swiper-wrapper {
     /* padding: 2px 2px; */
     text-overflow: ellipsis;
 }
-.popular .captions .contents:hover{
-    color: rgb(14, 106, 197);
-    font-weight: bold;
+.popular .captions .contents:hover{ 
+    color: black;
+    font-weight: lighter;
 }
 .pull-left{
     float: left !important;

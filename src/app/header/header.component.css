@@ -49,6 +49,13 @@
   width: 70px;
   cursor: pointer;
 }
+.flipkart-navbar-search .btn{
+  background: none;
+  border: none;
+  padding: 4px;
+  border-radius: 0px;
+  box-shadow: none;
+}
 .lang{
   position: relative;
   align-items: center;
@@ -92,4 +99,83 @@
 .dropdown-menu a{
   align-items: center;
   cursor: pointer;
+}
+.modal-dialog{
+  top: 5%;
+}
+.modal-content{
+  height: 500px;
+  border-radius: 0.5px;
+  border: 2px solid #ffc2df;
+}
+.modal-body{
+  height: 490px;
+  padding: 2px 2px;
+  background: #ffc2df;
+}
+.modal-body .section1{
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 490px;
+  padding: 2px 5px;
+  background: white;
+}
+.modal-body .section1 form{
+  position: relative;
+  top: 20px;
+}
+.modal-body .section1 form p:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.modal-body .section1 .btn{
+  position: relative;
+  top: 0px;
+  background-color: #ffc2df;
+  color: black;
+  border-radius: 25px;
+  border: none;
+  letter-spacing: 0.08rem;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.452); 
+}
+.modal-body .section1 p:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.modal-body .section2{
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 490px;
+  padding: 2px 2px;
+  background: #ffc2df;
+  top: 0 !important;
+}
+.section2 .contents{
+  height: 490px;
+  padding: 2px 4px;
+}
+.section2 .contents .imgs{
+  position: relative;
+  height: 200px;
+  padding: 4px;
+  top: 20px;
+}
+.section2 .contents .imgs img{
+  width: 60%;
+  height: 100px;
+  position: relative;
+  left: 35px;
+}
+.section2 .contents ul{
+  position: relative;
+  padding: 0px 0px 0px 20px;
+  top: 30px;
+}
+.section2 .contents ul li{
+  padding: 2px 2px;
+  font-size: 13px;
+  line-height: 1.43857143;
+  letter-spacing: 0.03rem;
 }

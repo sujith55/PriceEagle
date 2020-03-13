@@ -5,7 +5,6 @@ import { ShopComponentService } from './shop/shop.component.service';
 import * as $ from'jquery';
 import { AppComponentService } from '../services/app.component.service';
 import { GlobalComponent } from '../global/global.component';
-import { SwiperOptions } from 'swiper';
 
 @Component({
   selector: 'app-home',
@@ -13,17 +12,6 @@ import { SwiperOptions } from 'swiper';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  config: SwiperOptions = {
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    spaceBetween: 30,
-    loop:true,
-    // autoplay: true,
-    slidesPerView: 10
-  };
   shop: any;
   services: any;
   sidebar: any;

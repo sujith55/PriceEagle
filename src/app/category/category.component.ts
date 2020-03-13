@@ -14,6 +14,7 @@ import { GlobalComponent } from '../global/global.component';
 })
 export class CategoryComponent implements OnInit {
   categoryurl: any;
+  criterias: any;
 
   constructor(private service_:AppComponentService, private http: HttpClient, private router: ActivatedRoute, private global: GlobalComponent) {
     this.router.params.subscribe(params => {
@@ -25,6 +26,10 @@ export class CategoryComponent implements OnInit {
   ngOnInit(): void{
     this.service_.getCategories().subscribe(res=>{
       console.log(res);
+    });
+    this.service_.getCriteriasByCategoryId(this.categoryurl).subscribe(res=>{
+      this.criterias = res;
+      console.log('criteria:'+ res);
     });
   }
 

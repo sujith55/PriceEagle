@@ -31,4 +31,7 @@ export class AppComponentService {
   public getLanguages(): Observable<any> {
     return this.http.get(environment.baseUrl + "user/language");
   }
+  public getCriteriasByCategoryId(criteria: any): Observable<any[]> {
+    return this.http.get(environment.baseUrl + 'criteria_list?categoryUrl=' + criteria).pipe(map(response => response['data']));
+  }
 }

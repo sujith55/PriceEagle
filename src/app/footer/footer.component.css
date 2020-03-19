@@ -1,0 +1,41 @@
+.container{
+    background:#e7e7e7;
+    padding: 2px 6px;
+    margin-top: 40px;
+}
+.main-footer{
+    padding: 4px 4px;
+    background: #ffc2df;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.main-footer .wrap{
+    position: relative;
+    float: right;
+}
+.main-footer .wrap .content{
+    background: #ffc2df;
+    padding: 3px 3px;
+    width: 25%;
+    vertical-align: middle;
+    display: inline-block;
+    clear: both;
+}
+.low-footer{
+    position: relative;
+    /* margin-top: 5px; */
+  padding: 10px 10px;
+  border-radius: 2px;
+  background: #ffc2e19d;
+}
+.content img{
+    padding: 2px 3px;
+    width: 40px;
+}
+.content p{
+    font-size: 14px;
+    font-weight: lighter; 
+    padding: 0px 4px;
+    letter-spacing: 0.03em;
+    margin: 0;
+}

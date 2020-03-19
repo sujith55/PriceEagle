@@ -11,13 +11,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { GlobalComponent } from './global/global.component';
 import { AppComponentService } from './services/app.component.service';
 import { CategoryComponent } from './category/category.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    CategoryComponent
+    CategoryComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

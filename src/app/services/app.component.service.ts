@@ -34,4 +34,9 @@ export class AppComponentService {
   public getCriteriasByCategoryId(criteria: any): Observable<any[]> {
     return this.http.get(environment.baseUrl + 'criteria_list?categoryUrl=' + criteria).pipe(map(response => response['data']));
   }
+  public getProductsByIdandLimit(url: any, limit: number): Observable<any[]> {
+    if (limit === undefined) limit = 0;
+    //console.log("getProductByIdandLimt method::");
+    return this.http.get(environment.baseUrl + 'products?categoryUrl=' + url + '&limit=' + limit).pipe(map(response => response['data']));
+  }
 }

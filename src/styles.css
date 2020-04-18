@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body{
+  top: 0px !important;
   background-color: #efefef;
 }
 :host {
@@ -9,4 +10,13 @@ body{
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  .skiptranslate{
+    display: none !important;
+  }
+  .goog-te-banner-frame{
+    display: none;
+  }
+  .goog-tooltip{
+    display: none !important;
   }

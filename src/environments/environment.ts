@@ -8,14 +8,15 @@
 //   baseUrl: 'https://api.priceeagle.in/priceEagle/Pe_api/',
 //   baseUrlAdmin: 'https://api.priceeagle.in/priceEagle/admin/'
 // };
+
+export const environment = {
+  production: true,
+  baseUrl: 'http://localhost:8080/priceEagle/Pe_api/',
+  baseUrlAdmin: 'http://localhost:8080/priceEagle/admin/'
+};
+
 // export const environment = {
 //   production: true,
-//   baseUrl: 'http://testingapi.priceeagle.in:8080/priceEagle/Pe_api/',
-//   baseUrlAdmin: 'http://testingapi.priceeagle.in:8080/priceEagle/admin/'
+//   baseUrl: 'http://192.168.43.75:8080/priceEagle/Pe_api/',
+//   baseUrlAdmin: 'http://192.168.43.75:8080/priceEagle/admin/'
 // };
-
-export const environment = { 
-  production: true,
-  baseUrl: 'http://192.168.1.9:8081/priceEagle/Pe_api/',
-  baseUrlAdmin: 'http://192.168.1.9:8081/priceEagle/admin/'
-};    

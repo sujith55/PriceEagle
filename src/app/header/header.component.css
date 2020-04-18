@@ -14,7 +14,7 @@
 .navbar img {
   position: relative;
   margin: 0 16px;
-  bottom: 10px;
+  bottom: 13px;
 }
 .flipkart-navbar-search {
   position: relative;
@@ -55,11 +55,12 @@
   padding: 4px;
   border-radius: 0px;
   box-shadow: none;
+  margin-left: 25px;
 }
-.lang{
+/* .lang{
   position: relative;
   align-items: center;
-  left: 10px;
+  left: 90px;
 }
 .lang .btn-group .btn{
   width: 160px;
@@ -68,7 +69,7 @@
   border: none;
   border-radius: 0px;
   box-shadow: none;
-}
+} */
 .img{
     position: relative;
     top: 0;
@@ -78,10 +79,10 @@
     -moz-animation:spin 4s linear infinite;
     animation:spin 4s linear infinite;
 }
-@keyframes spin { 
-  /* 100% { 
-          -webkit-transform: rotate(360deg); 
-          transform:rotate(360deg); 
+@keyframes spin {
+  /* 100% {
+          -webkit-transform: rotate(360deg);
+          transform:rotate(360deg);
        }  */
        from{
         transform:rotate(0deg);
@@ -105,7 +106,7 @@
 }
 .modal-content{
   height: 500px;
-  border-radius: 0.5px;
+  border-radius: 1.5px;
   border: 2px solid #ffc2df;
 }
 .modal-body{
@@ -137,7 +138,7 @@
   border-radius: 25px;
   border: none;
   letter-spacing: 0.08rem;
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.452); 
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.452);
 }
 .modal-body .section1 p:hover{
   text-decoration: underline;
@@ -178,4 +179,74 @@
   font-size: 13px;
   line-height: 1.43857143;
   letter-spacing: 0.03rem;
+}
+.langmodal-content{
+  height: 235px;
+  padding: 2px 4px;
+  background:#ffc2df;
+  position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+.langmodal-content .langmodal-body .langs{
+  display: flex;
+  position: relative;
+  padding: 2px 4px;
+  margin: 1px 1px;
+  width: 160px;
+  background: white;
+  display: inline-block;
+  /* border: 1px solid #ffc2df; */
+  align-content: center;
+  cursor: pointer;
+}
+.langmodal-content .langmodal-body .langs p{
+  font-weight: lighter;
+  position: relative;
+  color: rgb(36, 173, 228);
+  text-align: center;
+  top: 10px;
+  vertical-align: middle;
+}
+input[type="text"], input[type="email"], input[type="number"], input[type="password"]
+select.form-control {
+  background: transparent;
+  border: none;
+  height: 25px;
+  border-bottom: 1px solid #000000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: #ffc2df;
+}
+.portalmodal-content{
+  /* height: 280px; */
+  padding: 2px 4px;
+  background:white;
+  position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-clip: padding-box;
+    border: 2px solid #ffc2df;
+    border-radius: 0.3rem;
+    outline: 0;
 }

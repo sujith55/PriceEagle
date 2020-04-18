@@ -1,62 +1,87 @@
 <div class="container">
   <div class="sidebar">
     <div class="accordion" id="accordionExample">
-      <div class="card">
         <ul class="list-group">
-          <div
-            *ngFor="let criteria of criterias; let RowIndex = index"
-            id="headingOne"
-          >
-            <li
-              class="list-group-item" 
-              type="button"
-              data-toggle="collapse"
-              data-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-              *ngIf="criteria.crParentid == 0"
-            >
+          <div *ngFor="let criteria of criterias; let RowIndex = index" id="headingOne">
+            <li class="list-group-item" type="button" data-toggle="collapse" data-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne" *ngIf="criteria.crParentid == 0">
               {{ criteria.criteriaName }}
             </li>
-            <div
-              id="collapseOne"
-              class="collapse"
-              aria-labelledby="headingOne"
-              data-parent="#accordionExample"
-            > 
-              <ul class="list-group">
-                <div *ngFor="let criteria_ of criterias">
-                  <li
-                    class="list-group-item"
-                    *ngIf="criteria_.crParentid == criteria.criteriaId"
-                  >
-                    <input
-                      type="checkbox"
-                      class="criteria-filter"
-                      value="{{ criteria_.criteriaName }}"
-                      name="{{ criteria_.crParentid }}"
-                      (change)="
-                        criteriaSelect(
-                          criteria.criteriaId,
-                          criteria.criteriaName
-                        )
-                      "
-                    />
-                    {{ criteria_.criteriaName }}
-                  </li>
-                </div>
-              </ul>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div id="criteria_{{criteria.criteriaId}}">
+                <ul class="list-group">
+                  <div *ngFor="let criteria_ of criterias">
+                    <li class="list-group-item" *ngIf="criteria_.crParentid == criteria.criteriaId">
+                      <input type="checkbox" class="criteria-filter" value="{{ criteria_.criteriaName }}"
+                        name="{{ criteria_.crParentid }}" (change)="criteriaSelect(criteria.criteriaId,criteria.criteriaName)"/>
+                      {{ criteria_.criteriaName }}
+                    </li>
+                  </div>
+                </ul>
+              </div>
             </div>
           </div>
         </ul>
-      </div>
     </div>
+    <!-- <div *ngFor="let criteria of criterias; let RowIndex = index">
+      <h4 data-toggle="collapse" [attr.data-target]="'#demo'+RowIndex" class="filter" *ngIf="criteria.crParentid==0">
+         {{criteria.criteriaName}}
+      </h4>
+      <div id="criteria_{{criteria.criteriaId}}">
+        <div id="demo{{RowIndex}}" class="list-group collapse">
+          <ng-container *ngFor="let criteria_ of criterias">
+            <a class="list-group-item" *ngIf="criteria_.crParentid == criteria.criteriaId">
+              <input type="checkbox" class="criteria-filter" value="{{criteria_.criteriaName}}"
+                name="{{criteria_.crParentid }}"/>
+              {{criteria_.criteriaName}}
+            </a>
+          </ng-container>
+        </div>
+      </div>
+    </div> -->
   </div>
   <div class="main col-md-10" id="body">
-   <div class="card">
-     <div class="content d-inline" *ngFor="let res of result">
-      <img src="{{res.imageUrl}}" alt="img">
-     </div>
-   </div>
+    <div class="sort">
+      <div class="col-md-3">
+        <p>Sort by: Featured</p>
+      </div>
+      <div class="item col-md-4">
+        <p>Price: Low to High</p>
+      </div>
+      <div class="item col-md-4">
+        <p>Price: High to Low</p>
+      </div>
+    </div>
+    <div class="section">
+      <div class="content" *ngFor="let res of result">
+        <div class="img-responsive">
+          <img src="{{res.imageUrl}}" alt="img">
+        </div>
+        <div class="items">
+          <p>{{res.prodName}}</p>
+          <img src="{{global.ImgUrls.storeUrl}}{{res.productsSources[0]['source']['sourceIcon']}}">
+          <p>Best Price: <span
+              style="color:green; font-weight:bold; word-spacing:0.03em">Rs.{{res.productsSources[0]['prodPrice']}}/-</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="pagination">
+      <nav aria-label="...">
+        <ul class="pagination">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item" aria-current="page">
+            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </div>

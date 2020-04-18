@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule }   from '@angular/forms';
 // import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 
 import { GlobalComponent } from './global/global.component';
@@ -25,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
     // NgxUsefulSwiperModule
   ],
   providers: [

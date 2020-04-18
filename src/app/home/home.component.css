@@ -19,14 +19,25 @@ h6 {
 
 p {
   margin: 0;
-  color: #2a2a2a; 
+  color: #2a2a2a;
+}
+.container {
+  position: relative;
+  display: flex;
+  background: white;
+  max-width: 1300px;
+  height: 100%;
+  /* border: 1px solid yellow; */
+  padding: 4px 4px;
+  top: 45px;
+  overflow: hidden;
 }
 .container #slider {
   position: absolute;
   overflow: hidden;
   top: 5px;
   left: 200px;
-  width: 940px;
+  width: 1100px;
   height: 160px;
   /* margin: 10px 0 0 0; */
   border-radius: 3px;
@@ -35,15 +46,16 @@ p {
 }
 #slider .carousel{
   height: 150px;
-  width: 940px;
+  width: 1100px;
 }
 .carousel .carousel-inner{
   height: 150px;
-  width: 930px;
+  width: 1090px;
 }
 .carousel-inner .carousel-item img{
-  width: 930px !important;
+  width: 1100px !important;
   height: 150px;
+  left: 0;
 }
 .carousel-item .img-responsive{
   width: 100%;
@@ -57,7 +69,7 @@ p {
   width: 30px !important;
   height: 70px;
   background: #fff;
-  color: #2a2a2a; 
+  color: #2a2a2a;
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;
@@ -79,16 +91,6 @@ p {
   width: 20px;
   height: 20px;
 }
-.container {
-  position: relative;
-  display: flex;
-  background: #e7e7e7;
-  height: 100%;
-  /* border: 1px solid yellow; */
-  padding: 4px 4px;
-  top: 45px;
-  overflow: hidden;
-}
 .container .sidebar {
   width: 200px;
   display: flex;
@@ -98,78 +100,60 @@ p {
 .sidebar .list-group {
   width: 200px;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.11);
-} 
+}
 .sidebar .list-group .list-group-item {
   cursor: pointer;
   color: #4d4d4d;
+  font-weight: 500;
   letter-spacing: 0.03rem;
 }
-.wrap{
-  position: absolute;
-  top: 160px;
-  left: 200px;
-  width: 940px;
-  height: 110px auto;
-  padding: 2px 4px;
-}
-.banner2 {
-  position: relative; 
-  align-items: center;
-  display: flex;
-  padding: 0px 0px;
-  margin: 2px 4px;
-  width: 49%;
-  height: 100px;
-  background: white;
-  float: left;
-  border-radius: 3px;
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.11);
-}
-.banner2 img{
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 3px;
+.sidebar .list-group .list-group-item:nth-child(even){
+  background-color: #ffc2df;
 }
 .content{
-  /* position: absolute; */
-  display: flexbox;
-  margin-top: 260px;
-  left: 210px;
+  position: relative;
+  display: flex;
+  margin-top: 160px;
+  left: 0px;
   padding: 4px 4px;
-  width: 930px;
+  width: 1120px;
   height: 100% auto;
 }
 .content .budget{
   position: relative;
   display: flex;
-  width: 890px;
-  height: 120px;
+  width: 1090px;
+  height: 140px;
   padding: 2px 4px;
-  left: 25px;
-  background: white;
+  left: 10px;
+  background: #ffc2df;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.11);
   border-radius: 2px;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  /* overflow-x: scroll; */
+  /* overflow-y: hidden; */
+  /* border: 2px solid #ffc2df; */
 }
 .budget .col{
   position: relative;
   display: flex;
-  width: 150px !important;
-  height: 100px !important;
-  align-items: center;
+  height: 100%;
   padding: 2px 4px;
-  display: inline-block !important;
+  display: inline-block;
 }
 .col img{
   position: relative;
-  width: 100%;
-  height: 80px;
+  display: flex;
+  left: 20px;
+  width: 75%;
+  height: 110px;
+  border-radius: 3px;
 }
 .col p{
   position: relative;
-  left: 10px;
   padding: 2px 4px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .content h4{
   position: relative;
@@ -187,16 +171,16 @@ p {
   position: relative;
   display: flex;
   background: white;
-  width: 18.5rem;
+  width: 22.5rem;
   height: 130px;
   padding: 0px 4px;
   display: -webkit-box;
-  margin: 1px 1px;
-  left: 25px;
+  margin: 3px 3px;
+  left: 8px;
   border-radius: 3px;
   border: 2px solid #ffc2df;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.11);
-  cursor: pointer; 
+  cursor: pointer;
   transition: 0.5s ease-in-out;
 }
 .popular .figure{
@@ -223,6 +207,7 @@ p {
     font-weight: 600;
     color: #4d4d4d;
     letter-spacing: 0.03rem;
+    text-align: center;
 }
 .popular .figure .img-responsive {
     position: relative;
@@ -243,20 +228,20 @@ p {
     width: 50%;
     overflow: hidden;
 }
-.captions:nth-child(3){
+/* .captions:nth-child(odd){
   float: left !important;
-}
+} */
 .popular .captions .contents{
     color: #4d4d4d;
     font-family: Roboto, sans-serif;
     font-weight: lighter;
     letter-spacing: 0.03rem;
-    line-height: 1.43857143;
-    /* padding: 2px 2px; */
+    line-height: 1.53857143;
+    padding: 0px 2px;
     text-overflow: ellipsis;
 }
-.popular .captions .contents:hover{ 
-    color: black;
+.popular .captions .contents:hover{
+    color: rgb(7, 89, 136);
     font-weight: lighter;
 }
 .pull-left{

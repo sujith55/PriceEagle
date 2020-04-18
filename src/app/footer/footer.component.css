@@ -1,6 +1,7 @@
 .container{
     background:#e7e7e7;
     padding: 2px 6px;
+    max-width: 1300px;
     margin-top: 40px;
 }
 .main-footer{
@@ -10,16 +11,17 @@
     overflow: hidden;
 }
 .main-footer .wrap{
+  display: flex;
     position: relative;
-    float: right;
+    align-content: center;
+    float: left;
 }
 .main-footer .wrap .content{
+  position: relative;
     background: #ffc2df;
     padding: 3px 3px;
-    width: 25%;
-    vertical-align: middle;
+    display: flex;
     display: inline-block;
-    clear: both;
 }
 .low-footer{
     position: relative;
@@ -34,7 +36,7 @@
 }
 .content p{
     font-size: 14px;
-    font-weight: lighter; 
+    font-weight: lighter;
     padding: 0px 4px;
     letter-spacing: 0.03em;
     margin: 0;

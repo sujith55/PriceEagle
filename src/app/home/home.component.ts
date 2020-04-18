@@ -8,7 +8,7 @@ import { GlobalComponent } from '../global/global.component';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html', 
+  templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   loading: boolean;
   constructor(
     private shop_:ShopComponentService,
-    private global:GlobalComponent,
+    public global:GlobalComponent,
     private service_: AppComponentService,
     private http: HttpClient
   ) {
@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void{
     this.service_.getBannerList().subscribe(res=>{
       this.imageUrl = res;
-      this.loading = false; 
+      this.loading = false;
       console.log(res);
     });
   }

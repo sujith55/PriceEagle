@@ -3,131 +3,308 @@
     "title":"MOBILES",
     "img":"/assets/shop/mobiles.png",
     "contents":[
-      "New Releases",
-      "Smart Phones",
-      "Basic Phones",
-      "Tablets",
-      "Mobile Accessories"
+      {
+      "name":"New Releases",
+      "url":"Mobiles-in-new"
+      },
+      {
+        "name":"Smart Phones",
+        "url":"Mobiles-in-smart"
+      },
+      {
+        "name":"Basic Phones",
+        "url":"Mobiles-in-basic"
+      },
+      {
+        "name":"Tablets",
+        "url":"Mobiles-in-tablets"
+      },
+      {
+        "name":"Mobile Accessories",
+        "url":"Mobiles-in-acessories"
+      }
     ]
   },
   {
     "title":"ELECTRONICS",
-    "img":"/assets/shop/electronics.png", 
+    "img":"/assets/shop/electronics.png",
     "contents":[
-      "Computers",
-      "Television",
-      "Refriegerators",
-      "Washing Machines",
-      "Air Conditioners"
+      {
+        "name":"Computers",
+        "url":"Electronics-in-lap"
+      },
+      {
+        "name":"Television",
+        "url":"Electronics-in-tv"
+      },
+      {
+        "name":"Refrigerators",
+        "url":"Electronics-in-frig"
+      },
+      {
+        "name":"Washing machines",
+        "url":"Electronics-in-wm"
+      },
+      {
+        "name":"Air conditioners",
+        "url":"Electronics-in-ac"
+      }
     ]
   },
   {
     "title":"HOME APPLIANCES",
     "img":"/assets/shop/home appliances.png",
     "contents":[
-      "Cooker",
-      "Mixer & Grinders",
-      "Geysers",
-      "Microwave",
-      "Iron Box"
+      {
+        "name":"Cookers",
+        "url":"Home-Appliances-in-cooker"
+      },
+      {
+        "name":"Mixer & Grinders",
+        "url":"Home-Appliances-in-mixi"
+      },
+      {
+        "name":"Geysers",
+        "url":"Home-Appliances-in-geyser"
+      },
+      {
+        "name":"Microwave",
+        "url":"Home-Appliances-in-mw"
+      },
+      {
+        "name":"Iron Box",
+        "url":"Home-Appliances-in-ibox"
+      }
     ]
   },
   {
     "title":"FASHION",
     "img":"/assets/shop/fashion.png",
     "contents":[
-      "Men",
-      "Women",
-      "Kids",
-      "Watches",
-      "Lingeries"
+      {
+        "name":"Men",
+        "url":"Fashion-in-men"
+      },
+      {
+        "name":"Women",
+        "url":"Fashion-in-women"
+      },
+      {
+        "name":"Kids",
+        "url":"Fashion-in-kids"
+      },
+      {
+        "name":"Watches",
+        "url":"Fashion-in-watches"
+      },
+      {
+        "name":"Lingeries",
+        "url":"Fashion-in-lingeries"
+      }
     ]
   },
   {
     "title":"BEAUTY",
     "img":"/assets/shop/beauty.png",
     "contents":[
-      "Make-up Items",
-      "Creams & Shampoos",
-      "Shaving Products",
-      "Perfume & Deos",
-      "SunGlasses"
+      {
+        "name":"Make-up Items",
+        "url":"Beauty-in-makeup"
+      },
+      {
+        "name":"Creams & Shampoos",
+        "url":"Beauty-in-creams"
+      },
+      {
+        "name":"Shaving Products",
+        "url":"Beauty-in-shavingmen"
+      },
+      {
+        "name":"Perfumes & Deodrants",
+        "url":"Beauty-in-perfume"
+      },
+      {
+        "name":"Sunglasses",
+        "url":"Beauty-in-sunglasses"
+      }
     ]
   },
   {
     "title":"JEWELLERY",
     "img":"/assets/shop/jewellery.png",
     "contents":[
-      "Rings",
-      "Pendents",
-      "Necklace",
-      "Bangles",
-      "Waist Bands"
+      {
+        "name":"Rings",
+        "url":"Jewellery-in-ring"
+      },
+      {
+        "name":"Pendants",
+        "url":"Jewellery-in-pendants"
+      },
+      {
+        "name":"Necklace",
+        "url":"Jewellery-in-necklace"
+      },
+      {
+        "name":"Bangles",
+        "url":"Jewellery-in-bangles"
+      },
+      {
+        "name":"Waist Bands",
+        "url":"Jewellery-in-wb"
+      }
     ]
   },
   {
     "title":"AGRICULTURE",
     "img":"/assets/shop/agriculture.png",
     "contents":[
-      "Fertilisers",
-      "Seeds",
-      "Pesticides",
-      "Trap Sets",
-      "Mulch Film"
+      {
+        "name":"Fertilisers",
+        "url":"Agriculture-in-fert"
+      },
+      {
+        "name":"Seeds",
+        "url":"Agriculture-in-seed"
+      },
+      {
+        "name":"Pesticides",
+        "url":"Agriculture-in-pest"
+      },
+      {
+        "name":"Trap Sets",
+        "url":"Agriculture-in-trap"
+      },
+      {
+        "name":"Farm Equipments",
+        "url":"Agriculture-in-farmequipments"
+      }
     ]
   },
   {
     "title":"PUJA",
     "img":"/assets/shop/puja.png",
     "contents":[
-      "Yantra",
-      "Rudraaksh",
-      "Puja Services",
-      "Idols & Figurines",
-      "Puja Books"
+      {
+        "name":"Yantra",
+        "url":"Puja-in-yantra"
+      },
+      {
+        "name":"Rudraaksh",
+        "url":"Puja-in-rudraaksh"
+      },
+      {
+        "name":"Puja Services",
+        "url":"Puja-in-service"
+      },
+      {
+        "name":"Idols & Figurines",
+        "url":"Puja-in-idols"
+      },
+      {
+        "name":"Puja Books",
+        "url":"Puja-in-books"
+      }
     ]
   },
   {
     "title":"MEDICINE",
     "img":"/assets/shop/medicine.png",
     "contents":[
-      "MedLife",
-      "Netmeds",
-      "1Mg",
-      "Condoms"
+      {
+        "name":"MedLife",
+        "url":""
+      },
+      {
+        "name":"Netmeds",
+        "url":""
+      },
+      {
+        "name":"1Mg",
+        "url":""
+      },
+      {
+        "name":"Condoms",
+        "url":"Medicines-in-condoms"
+      }
     ]
   },
   {
     "title":"BOOKS",
     "img":"/assets/shop/books.png",
     "contents":[
-      "Fiction",
-      "Children",
-      "Biographics",
-      "Text Books",
-      "Business & Econimics"
+      {
+        "name":"Fiction & Literature",
+        "url":"Books-in-fiction"
+      },
+      {
+        "name":"Children",
+        "url":"Books-in-children"
+      },
+      {
+        "name":"Personal Development",
+        "url":"Books-in-personaldev"
+      },
+      {
+        "name":"Business Management",
+        "url":"Books-in-business"
+      },
+      {
+        "name":"Competitive Exams",
+        "url":"Books-in-compititive"
+      }
     ]
   },
   {
     "title":"BAGS & LUGGAGES",
     "img":"/assets/shop/bags and luggages.png",
     "contents":[
-      "Back Packs",
-      "Bags",
-      "Briefcases",
-      "Cosmetic Bags",
-      "Duffel Bags"
+      {
+        "name":"Back Packs",
+        "url":"bagsLuggages-in-backpack"
+      },
+      {
+        "name":"Hand Bags",
+        "url":"bagsLuggages-in-handbags"
+      },
+      {
+        "name":"Luggage Bags",
+        "url":"bagsLuggages-in-luggage"
+      },
+      {
+        "name":"Sports Bags",
+        "url":"bagsLuggages-in-sportsbag"
+      },
+      {
+        "name":"Wallets",
+        "url":"bagsLuggages-in-wallet"
+      }
     ]
   },
   {
     "title":"SPORTS & FITNESS",
     "img":"/assets/shop/sports.png",
     "contents":[
-      "Cricket Balls",
-      "Cricket Bats",
-      "Dumbles",
-      "Foot Balls",
-      "Gloves & Belts"
+      {
+        "name":"Indoor Sports",
+        "url":"SportsFitness-in-indoor"
+      },
+      {
+        "name":"Outdoor Sports",
+        "url":"SportsFitness-in-outdoor"
+      },
+      {
+        "name":"Gym",
+        "url":"SportsFitness-in-gym"
+      },
+      {
+        "name":"Swimming",
+        "url":"SportsFitness-in-swimming"
+      },
+      {
+        "name":"Kids Games",
+        "url":"SportsFitness-in-kids"
+      }
     ]
   }
 ]

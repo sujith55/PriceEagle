@@ -1,29 +1,24 @@
 <nav class="navbar justify-content-between navbar-fixed-top col-sm-12">
-    <img width="180" height="40" src="/assets/imgs/BLACK LOGO.png" alt="" routerLink=""/> 
-    <div class="flipkart-navbar-search col-sm-10 col-sm-8">
-      <div class="row">
-        <input
-        class="flipkart-navbar-input"
-        type=""
-        placeholder="Search for Products, Brands and more"  
-        name=""
-      /> 
-        <button class="flipkart-navbar-button col-xs-1"> 
-          <svg width="15px" height="15px">
-            <path
-              d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 "
-            ></path>
-          </svg>
-        </button>
-      </div>
-      <div class="lang col-sm-2">
+  <img src="/assets/imgs/black logo1.png" alt="" routerLink="" />
+  <div class="flipkart-navbar-search col-sm-10 col-sm-8">
+    <div class="row">
+      <input class="flipkart-navbar-input" type="" placeholder="Search for Products, Brands and more" name="" />
+      <button class="flipkart-navbar-button col-xs-1">
+        <svg width="15px" height="15px">
+          <path
+            d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 ">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <!-- <div class="lang col-sm-2">
         <div class="btn-group">
           <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <!-- <span><img src="https://img.icons8.com/color/24/000000/google-logo.png" class="img"></span> --> 
+            <span><img src="https://img.icons8.com/color/24/000000/google-logo.png" class="img"></span>
             Select Language
           </button>
-          <div class="dropdown-menu"> 
-           <a class="dropdown-item">English</a> 
+          <div class="dropdown-menu">
+           <a class="dropdown-item">English</a>
            <a class="dropdown-item">తెలుగు</a>
            <a class="dropdown-item">हिंदी</a>
            <a class="dropdown-item">বাংলা</a>
@@ -36,36 +31,46 @@
            <a class="dropdown-item">മലയാളം</a>
           </div>
         </div>
-      </div>
+      </div> -->
+    <div style="position: relative; left: 100px;">
+      <button type="button" class="btn" data-toggle="modal" data-target="#LangModal">Select Language</button>
       <button type="button" class="btn" data-toggle="modal" data-target="#LoginModal">
-        Login/Register
+        Login
       </button>
+      <button type="button" class="btn" data-toggle="modal" data-target="#PortalModal">Portal Feedback</button>
+      <button type="button" class="btn">Blog</button>
     </div>
+  </div>
 </nav>
 
-<div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel" aria-hidden="true">
+<div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
         <div class="section1 col">
-          <form>
+          <form #loginForm="ngForm" role="form" (ngSubmit)="submitForm(loginForm)">
             <div class="form-group">
-              <label for="exampleInputEmail1">Enter Email/ Mobile Number *</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with anyone else.</small>
+              <label for="email">Enter Email/ Mobile Number *</label>
+              <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" [(ngModel)]="userlogin.email">
+              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with
+                anyone else.</small> -->
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Enter Password *</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <input type="text" class="form-control" id="password" name="password" [(ngModel)]="userlogin.password">
             </div>
-            <p style="float: right; font-size: 13px;letter-spacing: 0.03rem;" data-toggle="modal" data-target="#forgotModal" data-dismiss="modal">Forgot Password..?</p>
+            <p style="float: right; font-size: 13px;letter-spacing: 0.03rem; font-weight: bold;" data-toggle="modal"
+              data-target="#forgotModal" data-dismiss="modal">Forgot?</p>
             <!-- <div class="form-group form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div> -->
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
           </form>
-          <p style="position: relative;top: 160px; font-size: 14px;letter-spacing: 0.03rem; left: 50px;" data-toggle="modal" data-target="#RegisterModal" data-dismiss="modal">New to PriceEagle? <br> Create an account</p>
+          <p style="position: relative;top: 160px; font-size: 12px;letter-spacing: 0.03rem; left: 0px; font-weight: bold;"
+            data-toggle="modal" data-target="#RegisterModal" data-dismiss="modal">New to PriceEagle? Create an
+            account</p>
         </div>
         <div class="section2 col">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -74,15 +79,14 @@
           <div class="contents">
             <div class="imgs">
               <img src="/assets/imgs/black logo2.png" alt="">
-              <img src="/assets/imgs/covers.png" alt=""> 
+              <img src="/assets/imgs/covers.png" alt="">
             </div>
             <ul>
-              <li>Local Language Pocket Mall</li>
-              <li>Easy Product Review</li>
-              <li>Quick Product Recommendation</li>
-              <li>Zero Charges To Customers</li>
-              <li>Price Comparison For Electronics</li>
-              <li>Buy Products& Services</li>
+              <li>Give product feedback</li>
+              <li>Take product advice</li>
+              <li>Local language option</li>
+              <li>Buy products and services</li>
+              <li>No commision charged</li>
             </ul>
           </div>
         </div>
@@ -91,27 +95,49 @@
   </div>
 </div>
 
-<div class="modal fade" tabindex="-1" id="forgotModal" role="dialog" tabindex="-1" aria-labelledby="forgotModalLabel" aria-hidden="true">
+<div class="modal fade" tabindex="-1" id="forgotModal" role="dialog" tabindex="-1" aria-labelledby="forgotModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
         <div class="section1 col">
-          <form>
+          <form #forgotPass="ngForm" (ngSubmit)="forgotP(forgotPass)" *ngIf="otpstatus != 0000;">
             <div class="form-group">
               <label for="exampleInputEmail1">Enter Email *</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" #email="ngModel" [(ngModel)]="forgotPassword.email">
               <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with anyone else.</small> -->
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Enter Mobile Number *</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <input type="text" class="form-control" id="mobile" name="mobile" #mobile="ngModel" [(ngModel)]="forgotPassword.mobile">
+            </div>
+            <!-- <div class="form-group">
+              <label for="exampleInputPassword1">Enter OTP *</label>
+              <input type="text" class="form-control" id="otp" placeholder="Enter 6-digit OTP" readonly>
+            </div> -->
+            <p style="float: right; font-size: 13px;letter-spacing: 0.03rem;">Resend OTP</p>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </form>
+          <form role="form" #forgotpass="ngForm" (ngSubmit)="newpassword(forgotpass)" *ngIf="otpstatus == 0000;">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Enter Email *</label>
+              <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" #email="ngModel" [(ngModel)]="forgotPassword.email" readonly>
+              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with anyone else.</small> -->
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Enter OTP *</label>
-              <input type="number" class="form-control" id="otp" placeholder="Enter 6-digit OTP" readonly>
+              <label for="exampleInputPassword1">Enter Mobile Number *</label>
+              <input type="text" class="form-control" id="mobile" name="mobile" #mobile="ngModel" [(ngModel)]="forgotPassword.mobile" readonly>
             </div>
-            <p style="float: right; font-size: 13px;letter-spacing: 0.03rem;">Resend OTP</p>
-            <button type="submit" class="btn btn-primary">Submit</button>
+             <div class="form-group">
+              <label for="exampleInputPassword1">Enter OTP *</label>
+              <input type="text" class="form-control" id="otp" placeholder="Enter 6-digit OTP">
+            </div>
+            <div class="form-group">
+              <label for="password">Set New Password *</label>
+              <input type="text" class="form-control" id="password" name="password" aria-describedby="passHelp"
+                [(ngModel)]="forgotPassword.password" #password="ngModel">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
           </form>
           <!-- <p style="position: relative;top: 160px; font-size: 14px;letter-spacing: 0.03rem; left: 50px;">New to PriceEagle? <br> Create an account</p> -->
         </div>
@@ -122,17 +148,17 @@
           <div class="contents">
             <div class="imgs">
               <img src="/assets/imgs/black logo2.png" alt="">
-              <img src="/assets/imgs/covers.png" alt=""> 
+              <img src="/assets/imgs/covers.png" alt="">
             </div>
-            <!-- <ul>
-              <li>Local Language Pocket Mall</li>
-              <li>Easy Product Review</li>
-              <li>Quick Product Recommendation</li>
-              <li>Zero Charges To Customers</li>
-              <li>Price Comparison For Electronics</li>
-              <li>Buy Products& Services</li>
-            </ul> -->
-            <p style="position: relative;top: 160px; font-size: 14px;letter-spacing: 0.03rem; left: 10px;">Get access to your orders, wishlist <br> and recommendations in your <br> language</p>
+            <ul>
+              <li>Give product feedback</li>
+              <li>Take product advice</li>
+              <li>Local language option</li>
+              <li>Buy products and services</li>
+              <li>No commision charged</li>
+            </ul>
+            <!-- <p style="position: relative;top: 160px; font-size: 14px;letter-spacing: 0.03rem; left: 10px;">Get access to
+              your orders, wishlist <br> and recommendations in your <br> language</p> -->
           </div>
         </div>
       </div>
@@ -140,45 +166,72 @@
   </div>
 </div>
 
-<div class="modal fade" tabindex="-1" id="RegisterModal" role="dialog" tabindex="-1" aria-labelledby="RegisterModalLabel" aria-hidden="true">
+<div class="modal fade" id="RegisterModal" role="dialog" tabindex="-1" aria-labelledby="RegisterModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
         <div class="section1 col">
-          <form>
+          <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" *ngIf="!submitReg">
             <div class="form-group">
-              <label for="exampleInputEmail1">Enter Your Name *</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="name">Enter Your Name *</label>
+              <input type="text" class="form-control" id="name" #name="ngModel" name="name" aria-describedby="nameHelp"
+                [(ngModel)]="registerUser.name">
               <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with anyone else.</small> -->
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Enter Mobile Number *</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <label for="mobile">Enter Mobile Number *</label>
+              <input type="text" class="form-control" id="mobile" name="mobile" #mobile="ngModel" aria-describedby="mobileHelp"
+                [(ngModel)]="registerUser.mobile">
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Enter Email (Optional)</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="email">Enter Email (Optional)</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" name="email" #email="ngModel" aria-describedby="emailHelp"
+                [(ngModel)]="registerUser.email">
               <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with anyone else.</small> -->
             </div>
             <div class="form-group">
               <label>Select your language.
-                  <span class="required">*</span> 
+                <span class="required">*</span>
               </label>
-              <select class="form-control" id="lang_id" name="lang_id">
-                  <option *ngFor="let l of language " [value]="l.langId">{{l.langName}}
-                  </option>
+              <select class="form-control" id="lang_id" name="lang_id" [(ngModel)]="registerUser.lang" #lang="ngModel">
+                <option *ngFor="let l of language" [value]="l.langId" >{{l.langName}}
+                </option>
               </select>
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Set Password *</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <label for="password">Set Password *</label>
+              <input type="text" class="form-control" id="password" name="password" aria-describedby="passHelp"
+                [(ngModel)]="registerUser.password" #password="ngModel">
             </div>
             <!-- <div class="form-group">
               <label for="exampleInputPassword1">Enter OTP *</label>
               <input type="number" class="form-control" id="otp" placeholder="Enter 6-digit OTP" readonly>
             </div> -->
             <!-- <p style="float: right; font-size: 13px;letter-spacing: 0.03rem;">Resend OTP</p> -->
-            <button type="submit" class="btn btn-primary">Signup</button>
+            <button type="submit" class="btn btn-primary btn-block" [disabled]="!registerForm.valid">
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="submitReg"></span>
+              Signup
+            </button>
+          </form>
+          <form #otpVerify="ngForm" (ngSubmit)="verify(otpVerify)" *ngIf="submitReg">
+            <div class="form-group">
+              <label for="mobile">Enter Mobile Number *</label>
+              <input type="text" class="form-control" id="mobile" name="mobile" aria-describedby="mobileHelp"
+                [(ngModel)]="registerUser.mobile" readonly>
+            </div>
+            <div class="form-group">
+              <label for="email">Enter Email (Optional)</label>
+              <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+                [(ngModel)]="registerUser.email" readonly>
+              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with anyone else.</small> -->
+            </div>
+            <div class="form-group">
+              <label for="otp">Enter OTP *</label>
+              <input type="text" class="form-control" placeholder="Enter 6-digit OTP" name="otp" id="otp"
+                [(ngModel)]="otpData.otp">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" [disabled]="!otpVerify.valid">Verify</button>
           </form>
           <!-- <p style="position: relative;top: 160px; font-size: 14px;letter-spacing: 0.03rem; left: 50px;">New to PriceEagle? <br> Create an account</p> -->
         </div>
@@ -189,22 +242,132 @@
           <div class="contents">
             <div class="imgs">
               <img src="/assets/imgs/black logo2.png" alt="">
-              <img src="/assets/imgs/covers.png" alt=""> 
+              <img src="/assets/imgs/covers.png" alt="">
             </div>
-            <!-- <ul>
-              <li>Local Language Pocket Mall</li>
-              <li>Easy Product Review</li>
-              <li>Quick Product Recommendation</li>
-              <li>Zero Charges To Customers</li>
-              <li>Price Comparison For Electronics</li>
-              <li>Buy Products& Services</li>
-            </ul> -->
-            <p style="position: relative;top: 160px; font-size: 14px;letter-spacing: 0.03rem; left: 10px;">Get access to your orders, wishlist <br> and recommendations in your <br> language</p>
+            <ul>
+              <li>Give product feedback</li>
+              <li>Take product advice</li>
+              <li>Local language option</li>
+              <li>Buy products and services</li>
+              <li>No commision charged</li>
+            </ul>
+            <!-- <p style="position: relative;top: 160px; font-size: 14px;letter-spacing: 0.03rem; left: 10px;">Get access to
+              your orders, wishlist <br> and recommendations in your <br> language</p> -->
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
+<div class="modal fade" tabindex="-1" id="LangModal" role="dialog" aria-labelledby="LangModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="langmodal-content">
+      <div class="modal-header" style="padding: 4px;">
+        <h5 class="modal-title" class="notranslate">Select Language</h5>
+        <button type="button" class="bi-x-square" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="langmodal-body">
+        <div class="langs" onclick="lang_select('en')">
+          <p class="notranslate">English</p>
+        </div>
+        <div class="langs" onclick="lang_select('te')">
+          <p class="notranslate">తెలుగు</p>
+        </div>
+        <div class="langs" onclick="lang_select('hi')">
+          <p class="notranslate">हिंदी</p>
+        </div>
+        <div class="langs" onclick="lang_select('bn')">
+          <p class="notranslate">বাংলা</p>
+        </div>
+        <div class="langs" onclick="lang_select('ta')">
+          <p class="notranslate">தமிழ்</p>
+        </div>
+        <div class="langs" onclick="lang_select('mr')">
+          <p class="notranslate">मराठी</p>
+        </div>
+        <div class="langs" onclick="lang_select('ur')">
+          <p class="notranslate"> اردو</p>
+        </div>
+        <div class="langs" onclick="lang_select('kn')">
+          <p class="notranslate">ಕನ್ನಡವನ್ನು</p>
+        </div>
+        <div class="langs" onclick="lang_select('pa')">
+          <p class="notranslate">ਪੰਜਾਬੀ</p>
+        </div>
+        <div class="langs" onclick="lang_select('gu')">
+          <p class="notranslate">ગુજરાતી</p>
+        </div>
+        <div class="langs" onclick="lang_select('ml')">
+          <p class="notranslate">മലയാളം</p>
+        </div>
+        <div class="langs" onclick="lang_select('en')">
+          <p class="notranslate">English</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" tabindex="-1" id="PortalModal" role="dialog" aria-labelledby="PortalModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="portalmodal-content">
+      <div class="modal-header" style="padding: 4px;">
+        <h5 class="modal-title" class="notranslate">Portal Feedback</h5>
+        <button type="button" class="bi-x-square" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="portalmodal-body" style="padding: 2px 10px;">
+        <form action="">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter Your Username" aria-describedby="nameHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with anyone else.</small> -->
+          </div>
+          <div class="form-group">
+            <label for="name">Mobile Number *</label>
+            <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Enter Your Mobile Number" aria-describedby="mobileHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with anyone else.</small> -->
+          </div>
+          <div class="form-group">
+            <label for="name">E-Mail *</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Enter Your Email Address" aria-describedby="emailHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with anyone else.</small> -->
+          </div>
+          <div class="form-group">
+            <label for="name">Transaction Number *</label>
+            <input type="text" class="form-control" id="transaction" name="transaction" placeholder="Enter Your Transacation Number" aria-describedby="transactionHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with anyone else.</small> -->
+          </div>
+          <div class="form-group">
+            <label for="name">Product Purchased *</label>
+            <input type="text" class="form-control" id="product" name="product" placeholder="Enter Product Purchased" aria-describedby="productHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with anyone else.</small> -->
+          </div>
+          <div class="form-group">
+            <label for="name">Cost of Product *</label>
+            <input type="text" class="form-control" id="cost" name="cost" placeholder="Enter Cost of Product" aria-describedby="costHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with anyone else.</small> -->
+          </div>
+          <div class="form-group">
+            <label for="name">Date of Purchase *</label>
+            <input type="date" class="form-control" id="date" name="date" aria-describedby="nameHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with anyone else.</small> -->
+          </div>
+          <div class="form-group">
+            <label for="name">Name of E-commerce Portal *</label>
+            <input type="text" class="form-control" id="portalname" name="portalname" placeholder="Enter The Name of E-Commerce Portal" aria-describedby="portalnameHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with anyone else.</small> -->
+          </div>
+          <div class="form-group">
+            <label for="improve">How can we improve our service ?</label>
+            <textarea name="improve" id="improve" cols="30" rows="3" class="form-control" placeholder="Describe here:"></textarea>
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with anyone else.</small> -->
+          </div>
+          <button type="submit" class="btn btn-primary" style="position: relative;left: 45%; background: #ffc2df; border: none;box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.452);">Next</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

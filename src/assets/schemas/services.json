@@ -3,61 +3,151 @@
         "title": "TRAVEL",
         "img": "/assets/shop/travel.png",
         "contents": [
-          "Buses",
-          "Cabs",
-          "Flights",
-          "Trains"
+          {
+            "name":"ClearTrip",
+            "url":""
+          },
+          {
+            "name":"Goibibo",
+            "url":""
+          },
+          {
+            "name":"MakeMyTrip",
+            "url":""
+          },
+          {
+            "name":"Yathra",
+            "url":""
+          },
+          {
+            "name":"EasyTrip",
+            "url":""
+          }
         ]
       },
       {
-        "title": "HOTEL",
+        "title": "HOTELS",
         "img": "/assets/shop/hotel.png",
         "contents": [
-          "Airbnb",
-          "Clear Trip",
-          "Goibibo",
-          "MakeMyTrip",
-          "OYO"
+          {
+            "name":"ClearTrip",
+            "url":""
+          },
+          {
+            "name":"Goibibo",
+            "url":""
+          },
+          {
+            "name":"MakeMyTrip",
+            "url":""
+          },
+          {
+            "name":"OYO",
+            "url":""
+          },
+          {
+            "name":"Yathra",
+            "url":""
+          }
         ]
       },
       {
         "title": "RECHARGE",
         "img": "/assets/shop/recharge.png",
         "contents": [
-          "Amazon",
-          "FreeCharge",
-          "Mobikwik",
-          "Paytm"
+          {
+            "name":"Amazon",
+            "url":""
+          },
+          {
+            "name":"FreeCharge",
+            "url":""
+          },
+          {
+            "name":"mobikwik",
+            "url":""
+          },
+          {
+            "name":"Paytm",
+            "url":""
+          },
+          {
+            "name":"PhonePe",
+            "url":""
+          }
         ]
       },
       {
         "title": "EDUCATION",
         "img": "/assets/shop/education.png",
         "contents": [
-          "BYJUS",
-          "SimpliLearn",
-          "Unacademy",
-          "Vedantu"
+          {
+            "name":"BYJU'S",
+            "url":""
+          },
+          {
+            "name":"Audible",
+            "url":""
+          },
+          {
+            "name":"SimpliLearn",
+            "url":""
+          },
+          {
+            "name":"Unacademy",
+            "url":""
+          },
+          {
+            "name":"Vedantu"
+          }
         ]
       },
       {
-        "title": "FOOD SERVICES",
+        "title": "FOOD & Grocery",
         "img": "/assets/shop/food.png",
         "contents": [
-          "Eatfit",
-          "Swiggy",
-          "Zomato"
+          {
+            "name":"Swiggy",
+            "url":""
+          },
+          {
+            "name":"Zomato",
+            "url":""
+          },
+          {
+            "name":"Big Basket",
+            "url":""
+          },
+          {
+            "name":"Grofers",
+            "url":""
+          },
+          {
+            "name":"Dunzo",
+            "url":""
+          }
         ]
       },
       {
         "title": "REPAIR & SERVICES",
         "img": "/assets/shop/repair and services.png",
         "contents": [
-          "Beautician",
-          "Carpenter",
-          "Electrician",
-          "Painter",
-          "PestControl"
+          {
+            "name":"Urban Company",
+            "url":""
+          },
+          {
+            "name":"House Joy",
+            "url":""
+          },
+          {
+            "name":"Dunzo",
+            "url":""
+          },
+          {
+            "name":"DriveU",
+            "url":""
+          }
         ]
       }
 ]

@@ -9,5 +9,61 @@
 </head>
 <body>
   <app-root></app-root>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="https://apis.google.com/js/client.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <script>
+    if (sessionStorage.getItem('langcode') == null) {
+        function readCookie(name) {
+            var c = document.cookie.split('; '),
+                cookies = {},
+                i, C;
+            for (i = c.length - 1; i >= 0; i--) {
+                C = c[i].split('=');
+                cookies[C[0]] = C[1];
+                console.log(name);
+            }
+            return cookies[name];
+        }
+        var langs = readCookie('googtrans').split("/");
+        sessionStorage.setItem("langcode", langs[2]);
+        if (sessionStorage.getItem("langcode") != null) {
+            location.reload();
+        }
+    }
+</script>
 </body>
+<script>
+  var x;
+
+  function googleTranslateElementInit() {
+      if (x != 1) {
+          new google.translate.TranslateElement({
+              includedLanguages: 'en,hi,te,ur,bn,ta,kn,ml,gu,mr,pa',
+              autoDisplay: false,
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element_l');
+          x = 1;
+      }
+  }
+
+  function lang_select(lang) {
+      //console.log("success::" + lang);
+      (function() {
+          window.location = window.location + '#googtrans(en|' + lang + ')';
+          var visit = sessionStorage.getItem(lang);
+          sessionStorage.setItem('langcode', lang);
+          localStorage.setItem('langcode', lang);
+          if (!visit) {
+              sessionStorage.setItem(lang, true);
+          } else {
+              window.location.reload();
+          }
+          window.location.reload();
+          AndroidFunction.changeLanguage(lang);
+          AndroidFunction.updateview(0);
+      })();
+  }
+</script>
 </html>

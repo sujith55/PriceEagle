@@ -24,7 +24,7 @@ const routes: Routes = [
   },
   {
     path:'category/:categoryId',
-    component: CategoryComponent  
+    component: CategoryComponent
   }
   // { path: '**', component: PageNotFoundComponent }
 ];

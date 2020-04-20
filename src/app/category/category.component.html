@@ -1,6 +1,6 @@
 <div class="container">
   <div class="sidebar">
-    <div class="accordion" id="accordionExample">
+    <!-- <div class="accordion" id="accordionExample">
         <ul class="list-group">
           <div *ngFor="let criteria of criterias; let RowIndex = index" id="headingOne">
             <li class="list-group-item" type="button" data-toggle="collapse" data-target="#collapseOne"
@@ -22,23 +22,25 @@
             </div>
           </div>
         </ul>
-    </div>
-    <!-- <div *ngFor="let criteria of criterias; let RowIndex = index">
-      <h4 data-toggle="collapse" [attr.data-target]="'#demo'+RowIndex" class="filter" *ngIf="criteria.crParentid==0">
-         {{criteria.criteriaName}}
-      </h4>
-      <div id="criteria_{{criteria.criteriaId}}">
-        <div id="demo{{RowIndex}}" class="list-group collapse">
-          <ng-container *ngFor="let criteria_ of criterias">
-            <a class="list-group-item" *ngIf="criteria_.crParentid == criteria.criteriaId">
-              <input type="checkbox" class="criteria-filter" value="{{criteria_.criteriaName}}"
-                name="{{criteria_.crParentid }}"/>
-              {{criteria_.criteriaName}}
-            </a>
-          </ng-container>
+    </div> -->
+    <div class="filtertags">
+      <div *ngFor="let criteria of criterias; let RowIndex = index">
+        <p data-toggle="collapse" [attr.data-target]="'#demo'+RowIndex" class="filter" *ngIf="criteria.crParentid==0">
+           {{criteria.criteriaName}}
+        </p>
+        <div id="criteria_{{criteria.criteriaId}}">
+          <div id="demo{{RowIndex}}" class="list-group collapse">
+            <ng-container *ngFor="let criteria_ of criterias">
+              <a class="list-group-item" *ngIf="criteria_.crParentid == criteria.criteriaId">
+                <input type="checkbox" class="criteria-filter" value="{{criteria_.criteriaName}}"
+                  name="{{criteria_.crParentid }}"/>
+                {{criteria_.criteriaName}}
+              </a>
+            </ng-container>
+          </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
   <div class="main col-md-10" id="body">
     <div class="sort">
@@ -73,12 +75,12 @@
             <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
           </li>
           <li class="page-item active"><a class="page-link" href="#">1</a></li>
-          <li class="page-item" aria-current="page">
+          <!-- <li class="page-item" aria-current="page">
             <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
           </li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li> -->
           <li class="page-item">
-            <a class="page-link" href="#">Next</a>
+            <a class="page-link" href="#" disabled>Next</a>
           </li>
         </ul>
       </nav>

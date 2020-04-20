@@ -12,13 +12,20 @@
   top: 5px;
   padding: 4px 4px;
 }
-.container .sidebar .accordion{
-  width: 100%;
-}
-.filter{
+.filtertags{
   background: white;
   padding: 2px 4px;
+  width: 100%;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.452);
+}
+.filtertags .filter{
+  position: relative;
+  display: flex;
+  padding: 5px 5px;
+  width: 100%;
+}
+.filtertags .filter:nth-child(even){
+  background: #ffc2df;
 }
 .list-group{
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.452);
@@ -90,8 +97,9 @@
   width: 100%;
   top: 5px;
 }
-.main .pagination ul{
-  left: 50px;
+.main .pagination nav{
+  position: relative;
+  left: 40%;
 }
 .main .sort{
   position: relative;

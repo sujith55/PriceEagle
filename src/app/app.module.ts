@@ -13,6 +13,7 @@ import { GlobalComponent } from './global/global.component';
 import { AppComponentService } from './services/app.component.service';
 import { CategoryComponent } from './category/category.component';
 import { FooterComponent } from './footer/footer.component';
+import { MaincategoriesComponent } from './maincategories/maincategories.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     HomeComponent,
     CategoryComponent,
-    FooterComponent
+    FooterComponent,
+    MaincategoriesComponent
   ],
   imports: [
     BrowserModule,

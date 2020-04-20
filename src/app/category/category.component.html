@@ -33,7 +33,7 @@
             <ng-container *ngFor="let criteria_ of criterias">
               <a class="list-group-item" *ngIf="criteria_.crParentid == criteria.criteriaId">
                 <input type="checkbox" class="criteria-filter" value="{{criteria_.criteriaName}}"
-                  name="{{criteria_.crParentid }}"/>
+                  name="{{criteria_.crParentid }}" (change)="criteriaSelect(criteria.criteriaId,criteria.criteriaName)"/>
                 {{criteria_.criteriaName}}
               </a>
             </ng-container>

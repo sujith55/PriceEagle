@@ -16,23 +16,25 @@
   background: white;
   padding: 2px 4px;
   width: 100%;
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.452);
 }
-.filtertags .filter{
+.filtertags p{
   position: relative;
   display: flex;
   padding: 5px 5px;
+  margin-bottom: 5px;
   width: 100%;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.452);
 }
-.filtertags .filter:nth-child(even){
+.filtertags p:nth-child(even){
   background: #ffc2df;
 }
-.list-group{
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.452);
+.filtertags .list-group{
+  margin-top: 0px;
+  padding: 5px 2px;
 }
 .list-group-item {
   font-weight: lighter;
-  padding: 10px 15px;
+  padding: 10px 10px;
 
 }
 /* .list-group-item:nth-child(odd){

@@ -1,28 +1,5 @@
 <div class="container">
   <div class="sidebar">
-    <!-- <div class="accordion" id="accordionExample">
-        <ul class="list-group">
-          <div *ngFor="let criteria of criterias; let RowIndex = index" id="headingOne">
-            <li class="list-group-item" type="button" data-toggle="collapse" data-target="#collapseOne"
-              aria-expanded="true" aria-controls="collapseOne" *ngIf="criteria.crParentid == 0">
-              {{ criteria.criteriaName }}
-            </li>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-              <div id="criteria_{{criteria.criteriaId}}">
-                <ul class="list-group">
-                  <div *ngFor="let criteria_ of criterias">
-                    <li class="list-group-item" *ngIf="criteria_.crParentid == criteria.criteriaId">
-                      <input type="checkbox" class="criteria-filter" value="{{ criteria_.criteriaName }}"
-                        name="{{ criteria_.crParentid }}" (change)="criteriaSelect(criteria.criteriaId,criteria.criteriaName)"/>
-                      {{ criteria_.criteriaName }}
-                    </li>
-                  </div>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </ul>
-    </div> -->
     <div class="filtertags">
       <div *ngFor="let criteria of criterias; let RowIndex = index">
         <p data-toggle="collapse" [attr.data-target]="'#demo'+RowIndex" class="filter" *ngIf="criteria.crParentid==0">

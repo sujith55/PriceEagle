@@ -384,9 +384,9 @@ export class DetailpageComponent implements OnInit {
       var answr2 = $('#secnd_ques').val();
       var answr3 = $('#third_ques').val();
       var answr4 = $('#forth_ques').val();
-      var answr5 = $('#frst_ques');
+      var answr5 = $('#option').val();
       var answr6 = $('#sixth_ques').val();
-      var answr7 = $('#frst_ques');
+      var answr7 = $('#option1').val();
       var obj=[
         {
           questionId: quest1,

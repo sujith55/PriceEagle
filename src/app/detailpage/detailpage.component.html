@@ -1,0 +1,205 @@
+<div class="container" *ngIf="isLoad">
+  <div class="wrap col-md-3">
+    <img src="{{(detail)?.imageUrl}}" alt="">
+  </div>
+  <div class="content col-md-9">
+    <div class="section1">
+      <h4 style="font-weight: lighter; width: 100%;">{{(detail)?.prodName}}</h4>
+      <div class="items" *ngIf="isHigh">
+        <div>
+          <p style="font-weight: bold; display: inline">Highlights:</p>
+          <button class="btn btn-primary" routerLink="feedback/portal">Portal Feedback &copy;</button>
+        </div>
+        <div class="highlight" *ngFor="let highlight of highlights">
+          <div *ngIf="highlight.categoryUrl==categoryurl" style="display: flex;">
+            <div style="padding: 4px;">
+              <p *ngFor="let item of highlight.highlightName">{{item.name}}</p>
+            </div>
+            <div style="padding: 4px;">
+              <p *ngFor="let i of list2"> :  {{i}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="links" *ngFor="let sources of (detail)?.productsSources;let k = index">
+        <img width="100" height="33" src="{{global.ImgUrls.storeUrl}}{{sources.source['sourceIcon']}}">
+        <h5>
+          {{sources.prodPrice}}/-
+        </h5>
+        <a routerLink="/sourcepage/{{sources['source']['sourceId']}}/Category/{{categoryname}}/productsource/{{sources['psId']}}">
+          <button class="btn btn-primary" type="submit">Best Buy</button>
+        </a>
+      </div>
+      <div class="features">
+        <button class="btn" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">Users Recommendation &copy;</button>
+        <button class="btn notranslate" role="button"(click)="waah()">
+          <i class="fa fa-thumbs-up"></i>Waah.!&copy;
+          <audio id="audio" src="\assets\audio\Wah.mp3"></audio>
+        </button>
+        <button class="btn" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">Product Feedback &copy;</button>
+      </div>
+      <div class="collapse" id="collapseExample1">
+        <div class="card card-body" *ngIf="!isRecommend">
+          <p>No reviews given for this product yet!</p>
+        </div>
+        <div class="card card-body" *ngIf="isRecommend" style="padding: 3px 2px;">
+          <div style="width: 100%; position: relative;">
+            <div style="width: 50%;">
+              <div class="good-Rev" *ngFor="let rev of goodReview">
+                {{rev.question}}
+                <span style="float: right;">{{rev.usersCount}}</span>
+              </div>
+            </div>
+            <div style="width: 50%; display: inline-block;">
+              <div class="bad-Rev" *ngFor="let rev of badReview">
+                {{rev.question}}
+                <span style="float: right;">{{rev.usersCount}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse" id="collapseExample3">
+        <div class="card card-body" *ngIf="!userId">
+          <div class="text-center">
+            <h5>Please Login to continue..!</h5>
+          <button class="btn" data-toggle="modal" data-target="#LoginModal">Login</button>
+          </div>
+        </div>
+        <div class="card card-body" style="width: 160%;" *ngIf="userId">
+          <form [formGroup]="form" id="myForm" (ngSubmit)="submit()">
+            <div class="goodReview">
+              <p style="font-weight: bold;">Good product Experience</p>
+              <div class="goodRev" formArrayName="good_review" *ngFor="let list of form.controls.good_review.controls; let i = index">
+                <label class="toggle">
+                  <input class="toggle__input" [(ngModel)]="list.isChecked" id="checkbox_good" type="checkbox"
+                      [formControlName]="i">
+                  <span class="toggle__label">
+                      <span class="toggle__text">{{good_review[i].question}}</span>
+                  </span>
+                </label>
+                <div class="revImg">
+                  <img src="{{good_review[i].url}}" alt="img">
+                </div>
+              </div>
+            </div>
+            <div class="badReview">
+              <p style="font-weight: bold;">Bad product Experience</p>
+              <div class="badRev" formArrayName="bad_review" *ngFor="let list of form.controls.bad_review.controls; let i = index">
+                <label class="toggle2">
+                  <input class="toggle__input" [(ngModel)]="list.isChecked" id="checkbox_bad" type="checkbox"
+                      [formControlName]="i">
+                  <span class="toggle__label">
+                      <span class="toggle__text">{{bad_review[i].question}}</span>
+                  </span>
+                </label>
+                <div class="revImg">
+                  <img src="{{bad_review[i].url}}" alt="img">
+                </div>
+              </div>
+            </div>
+            <div class="questions">
+              <p style="font-weight: bold;">Optional product feedback to be  answered in maximum 60 characters.</p>
+              <div class="form-group">
+                <label for="frst_ques" id="question1" value="qustn1">1. Write one feature of the product that you feel is not necessary and can be removed.</label>
+                <input type="text" class="form-control" id="frst_ques" aria-describedby="frstHelp">
+              </div>
+              <div class="form-group">
+                <label for="secnd_ques" id="question2" value="qustn2">2. Write one more feature of the product that you feel should be added by manufacturer.</label>
+                <input type="text" class="form-control" id="secnd_ques" aria-describedby="secndHelp">
+              </div>
+              <div class="form-group">
+                <label for="third_ques" id="question3" value="qustn3">3. Write one feature of this product that you loved most.</label>
+                <input type="text" class="form-control" id="third_ques" aria-describedby="thirdHelp">
+              </div>
+              <div class="form-group">
+                <label for="forth_ques" id="question4" value="qustn4">4. Write one more alternative use of this product (if any).</label>
+                <input type="text" class="form-control" id="forth_ques" aria-describedby="forthHelp">
+              </div>
+              <div class="form-group">
+                <label for="fifth_ques" id="question5" value="qustn5">5. How do you rate this product in terms of overall quality among its competitors?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="fifth_ques" value="Excellent">
+                  <label class="form-check-label" for="inlineRadio1">Excellent</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="fifth_ques" value="Good">
+                  <label class="form-check-label" for="inlineRadio2">Good</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="fifth_ques" value="Bad">
+                  <label class="form-check-label" for="inlineRadio3">Bad</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="fifth_ques" value="Worst">
+                  <label class="form-check-label" for="inlineRadio4">Worst</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="sixth_ques" id="question6" value="qustn6">6. Which is the first brand that comes to your mind when you think of buying this product?</label>
+                <input type="text" class="form-control" id="sixth_ques" aria-describedby="sixthHelp">
+              </div>
+              <div class="form-group">
+                <label for="seven_ques" id="question7" value="qustn7">7. Will you recommend this product to your friends?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="seven_ques" value="Yes">
+                  <label class="form-check-label" for="inlineRadio1">Yes</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="seven_ques" value="No">
+                  <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="seven_ques" value="Not Sure">
+                  <label class="form-check-label" for="inlineRadio3">Not Sure</label>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button class="btn" type="submit">Submit</button>
+              <i class="fa fa-question-circle" id="guidelines" style="float: right; font-size: 30px; padding: 3px;color: red; cursor: pointer;"></i>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" style="margin-top: 10px;" *ngIf="isLoad">
+  <div class="specs" style="position: relative;float:left; clear: both;">
+   <button class="btn-spec" type="button" data-toggle="collapse" data-target="#specs" aria-expanded="false" aria-controls="specs">Specifications</button>
+   <div class="collapse" id="specs">
+    <div class="card card-body">
+      <table id="table">
+        <tr *ngFor="let spec of specF | keyvalue">
+          <th>{{spec.key}}</th>
+          <td>: {{spec.value}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="guide">
+  <h6>Product feedback guidelines:</h6>
+  <div class="lines">
+    <p>1. Please register to ensure feedback and authenticity.</p>
+    <p>2. You can provide input about the same product more than depending on your continuous usage experience.</p>
+    <p>3. But only your latest input will be considered for product recommendation advice.</p>
+    <p>4. Out of 16 click boxes, you can click minimum 1 and maximum 3.</p>
+  </div>
+  <div class="text-center">
+    <h6>Please be sincere in your review.</h6>
+  </div>
+</div>
+<div class="container" *ngIf="!isLoad">
+  <div class="screen col-12">
+    <div class="text-center">
+      <p style="font-weight: lighter;">Loading data please wait...!</p>
+      <div class="spinner-grow" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+</div>

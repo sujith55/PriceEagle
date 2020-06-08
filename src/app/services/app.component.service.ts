@@ -92,4 +92,61 @@ export class AppComponentService {
         return res;
       }));
   }
+  public getProductDetailsById(productid: number): Observable<any[]> {
+    return this.http.get(environment.baseUrl + 'product_dec?productId=' + productid).pipe(map(response => response['data']));
+  }
+  public setProductGoodReview(selectedReviews: any[]) {
+    return this.http.post(environment.baseUrl + "Review/review_submit_byuser", selectedReviews, {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+      , responseType: 'json'
+    }).pipe(map(res => {return res}));
+  }
+  public getProductReview(productId:any){
+    return this.http.get(environment.baseUrl+ 'Review/get/'+ productId +'/reviews',{
+     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+     , responseType: 'json'}).pipe(map(res =>{return res}));
+  }
+  public setviewCount(productid: number, view_count: number, apikey: any): any {
+    let httpHeaders: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json'
+    }).set('api-key', apikey);
+    return this.http.get(environment.baseUrl + "setView_count?prod_Id=" + productid + "&viewcount=" + view_count,
+      {
+        responseType: 'json', headers: httpHeaders
+      }).pipe(map(response => response));
+  }
+  public getReviews(language: string): Observable<any[]> {
+    return this.http.get(environment.baseUrl + 'Review/structrue_review_list?language=' + language).pipe(map(res => res['data']));
+  }
+  public userreviewForm(user: any, lang:any): Observable<any> {
+    let httpHeaders: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json'
+    }).set('language', lang);
+    return this.http.post(environment.baseUrl + "Review/set_feedback_form", user,
+      {
+        responseType: 'json', headers: httpHeaders
+      }).pipe(map(res => { return res }));
+  }
+  public getBudget() {
+    return this.http.get(environment.baseUrl + "circle_price_range").pipe(map(response => response['data']));
+  }
+  public getCricleFilter(categoryId: string, min: number, max: number): Observable<any> {
+    return this.http.get(environment.baseUrl + 'circle_filter?categoryId=' + categoryId + '&minRange=' + min + '&maxRange=' + max).pipe(map(response => response['data']));
+  }
+  public getProductSource(id: number) {
+    return this.http.get(environment.baseUrl + 'product_source?psId=' + id).pipe(map(response => response['data']));
+  }
+   public search(postdata: any){
+        return this.http.get(environment.baseUrl+"apiSearch?searchByword="+postdata.searchByword).pipe(map(response=> response));
+  }
+  public setReviewAnswers(obj: any, feedId: any): any {
+    let httpHeaders: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json'
+    }).set('feedback_id', feedId);
+    return this.http.post(environment.baseUrl + 'Review/setReviewAnswers', obj, {
+      responseType: 'json', headers: httpHeaders
+    }).pipe(map(res => {
+      return res;
+    }))
+  }
 }

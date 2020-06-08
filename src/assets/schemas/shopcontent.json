@@ -2,6 +2,7 @@
   {
     "title":"MOBILES",
     "img":"/assets/shop/mobiles.png",
+    "url":"/maincat/Mobiles/1",
     "contents":[
       {
       "name":"New Releases",
@@ -31,15 +32,15 @@
     "contents":[
       {
         "name":"Computers",
-        "url":"Electronics-in-lap"
+        "url":"Electronics-in-Computer-laptop"
       },
       {
         "name":"Television",
-        "url":"Electronics-in-tv"
+        "url":"Electronics-in-Telivision"
       },
       {
         "name":"Refrigerators",
-        "url":"Electronics-in-frig"
+        "url":"Electronics-in-Refrigetor"
       },
       {
         "name":"Washing machines",
@@ -47,7 +48,7 @@
       },
       {
         "name":"Air conditioners",
-        "url":"Electronics-in-ac"
+        "url":"Electronics-in-AirConditioner"
       }
     ]
   },
@@ -61,7 +62,7 @@
       },
       {
         "name":"Mixer & Grinders",
-        "url":"Home-Appliances-in-mixi"
+        "url":"Home-Appliances-in-Mixer"
       },
       {
         "name":"Geysers",
@@ -69,15 +70,16 @@
       },
       {
         "name":"Microwave",
-        "url":"Home-Appliances-in-mw"
+        "url":"Home-Appliances-in-MicroWave"
       },
       {
         "name":"Iron Box",
-        "url":"Home-Appliances-in-ibox"
+        "url":"Home-Appliances-in-IronBox"
       }
     ]
   },
   {
+    "id":1,
     "title":"FASHION",
     "img":"/assets/shop/fashion.png",
     "contents":[
@@ -94,12 +96,8 @@
         "url":"Fashion-in-kids"
       },
       {
-        "name":"Watches",
+        "name":"Infants",
         "url":"Fashion-in-watches"
-      },
-      {
-        "name":"Lingeries",
-        "url":"Fashion-in-lingeries"
       }
     ]
   },
@@ -135,23 +133,23 @@
     "contents":[
       {
         "name":"Rings",
-        "url":"Jewellery-in-ring"
+        "url":"Jewellery-in-Ring"
       },
       {
         "name":"Pendants",
-        "url":"Jewellery-in-pendants"
+        "url":"Jewellery-in-Pendants"
       },
       {
         "name":"Necklace",
-        "url":"Jewellery-in-necklace"
+        "url":"Jewellery-in-Necklace"
       },
       {
         "name":"Bangles",
-        "url":"Jewellery-in-bangles"
+        "url":"Jewellery-in-Bangles"
       },
       {
         "name":"Waist Bands",
-        "url":"Jewellery-in-wb"
+        "url":"Jewellery-in-waistBand"
       }
     ]
   },
@@ -161,7 +159,7 @@
     "contents":[
       {
         "name":"Fertilisers",
-        "url":"Agriculture-in-fert"
+        "url":"Agriculture-in-Fertilisers"
       },
       {
         "name":"Seeds",
@@ -187,7 +185,7 @@
     "contents":[
       {
         "name":"Yantra",
-        "url":"Puja-in-yantra"
+        "url":"Puja-in-Yantra"
       },
       {
         "name":"Rudraaksh",
@@ -251,7 +249,7 @@
       },
       {
         "name":"Competitive Exams",
-        "url":"Books-in-compititive"
+        "url":"Books-in-competitive"
       }
     ]
   },

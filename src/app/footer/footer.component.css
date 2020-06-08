@@ -41,3 +41,32 @@
     letter-spacing: 0.03em;
     margin: 0;
 }
+.content ul li:focus{
+  outline: none !important;
+}
+.content ul li:hover{
+  color: white;
+}
+.keywords{
+  position: relative;
+  width: 100%;
+  padding: 5px 5px;
+}
+.keywords .section{
+  position: relative;
+  padding: 3px 2px;
+  line-height: 1.0em;
+}
+.section p{
+  display: inline-block;
+  padding: 0px 2px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: lighter;
+  color: gray;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+}
+.section p:hover{
+  color: black;
+}

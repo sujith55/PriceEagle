@@ -250,3 +250,18 @@ select.form-control:focus {
     border-radius: 0.3rem;
     outline: 0;
 }
+.searchResults{
+  position: absolute;
+  display: none;
+  top: 50px;
+  left: 240px;
+  padding: 5px 5px;
+  background: white;
+  z-index: 999;
+  border-radius: 3px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.452);
+  /* border: 1px solid black; */
+}
+.searchResults .content{
+  cursor: pointer;
+}

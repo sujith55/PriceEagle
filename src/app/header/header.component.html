@@ -2,7 +2,7 @@
   <img src="/assets/imgs/black logo1.png" alt="" routerLink="" />
   <div class="flipkart-navbar-search col-sm-10 col-sm-8">
     <div class="row">
-      <input class="flipkart-navbar-input" type="" placeholder="Search for Products, Brands and more" name="" />
+      <input class="flipkart-navbar-input" type="" placeholder="Search for Products, Brands and more" name="" (keyup)="onKey($event)"/>
       <button class="flipkart-navbar-button col-xs-1">
         <svg width="15px" height="15px">
           <path
@@ -37,12 +37,17 @@
       <button type="button" class="btn" data-toggle="modal" data-target="#LoginModal">
         Login
       </button>
-      <button type="button" class="btn" data-toggle="modal" data-target="#PortalModal">Portal Feedback</button>
+      <button type="button" class="btn" routerLink="/feedback/portal">Portal Feedback</button>
       <button type="button" class="btn">Blog</button>
     </div>
   </div>
 </nav>
-
+<div class="searchResults">
+  <div class="content" *ngFor="let val of search">
+   <p *ngIf="!val.id" routerLink="/{{val.url}}">{{val.tagName}}</p>
+   <p *ngIf="val.id">{{val.tagName}}</p>
+  </div>
+</div>
 <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">

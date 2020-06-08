@@ -18,6 +18,11 @@ export class HomeComponent implements OnInit {
   slides: any;
   imageUrl: any[];
   loading: boolean;
+  circle: any;
+  men: any;
+  women: any;
+  kids: any;
+  infants: any;
   constructor(
     private shop_:ShopComponentService,
     public global:GlobalComponent,
@@ -37,13 +42,26 @@ export class HomeComponent implements OnInit {
     this.shop_.getSlideContent().subscribe(data=>{
       this.slides = data;
     });
+    this.shop_.getFashion().subscribe(data=>{
+      this.men = data[0];
+      this.women = data[1];
+      this.kids = data[2];
+      this.infants = data[3];
+    });
   }
 
   ngOnInit(): void{
+    $(document).ready(()=>{
+
+    });
     this.service_.getBannerList().subscribe(res=>{
       this.imageUrl = res;
       this.loading = false;
-      console.log(res);
+      // console.log(res);
+    });
+    this.service_.getBudget().subscribe(res=>{
+      this.circle = res;
+      // console.log('data is:' + JSON.stringify(this.circle));
     });
   }
 }

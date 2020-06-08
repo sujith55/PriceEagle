@@ -1,0 +1,533 @@
+[
+  [
+    {
+      "name":"Mens fashion",
+      "title":"Top wear",
+      "contents":[
+        {
+          "name":"Casual Shirts",
+          "url":"Fashion-in-men-casualshirts"
+        },
+        {
+          "name":"Formal Shirts",
+          "url":"Fashion-in-men-formalshirts"
+        },
+        {
+          "name":"T-shirts",
+          "url":"Fashion-in-men-tshirts"
+        },
+        {
+          "name":"Jackets",
+          "url":"Fashion-in-men-jackets"
+        },
+        {
+          "name":"Men's Sweaters",
+          "url":"Fashion-in-men-sweaters"
+        },
+        {
+          "name":"Suits and Blazers",
+          "url":""
+        },
+        {
+          "name":"Ethnic Wear",
+          "url":"Fashion-in-men-ethnicware"
+        },
+        {
+          "name":"Kurtha",
+          "url":"Fashion-in-men-kurta"
+        }
+      ]
+    },
+    {
+      "title":"Bottom wear",
+      "contents":[
+        {
+          "name":"Trousers",
+          "url":"Fashion-in-men-trousers"
+        },
+        {
+          "name":"Jeans",
+          "url":"Fashion-in-men-jeans"
+        },
+        {
+          "name":"Shorts",
+          "url":"Fashion-in-men-shorts"
+        },
+        {
+          "name":"Bermuda",
+          "url":"Fashion-in-men-bermuda"
+        }
+      ]
+    },
+    {
+      "title":"Inner wear",
+      "contents":[
+        {
+          "name":"Brief",
+          "url":"Fashion-in-men-brief"
+        },
+        {
+          "name":"Trunks",
+          "url":"Fashion-in-men-trunks"
+        },
+        {
+          "name":"Vest",
+          "url":"Fashion-in-men-vest"
+        }
+      ]
+    },
+    {
+      "title":"Footwear",
+      "contents":[
+        {
+          "name":"Shoes",
+          "url":"Fashion-in-men-shoes"
+        },
+        {
+          "name":"Sneakers",
+          "url":"Fashion-in-men-sneakers"
+        },
+        {
+          "name":"Socks",
+          "url":"Fashion-in-men-socks"
+        }
+      ]
+    },
+    {
+      "title":"Accessories",
+      "contents":[
+        {
+          "name":"HanKerchiefs",
+          "url":"Fashion-in-men-hankerchiefs"
+        },
+        {
+          "name":"Belt",
+          "url":"Fashion-in-men-belts"
+        },
+        {
+          "name":"Watches",
+          "url":"Fashion-in-men-watches"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "name":"Womens fashion",
+      "title":"Top wear",
+      "contents":[
+        {
+          "name":"Formal wear",
+          "url":"Fashion-women-formalwear"
+        },
+        {
+          "name":"Fusion wear",
+          "url":"Fashion-women-fusionwear"
+        },
+        {
+          "name":"Maternity wear",
+          "url":"Fashion-women-maternivwear"
+        },
+        {
+          "name":"Night suits",
+          "url":"Fashion-women-nightsuits"
+        },
+        {
+          "name":"Nighties",
+          "url":"Fashion-women-nighties"
+        },
+        {
+          "name":"Sarees",
+          "url":"Fashion-women-saree"
+        },
+        {
+          "name":"Salwar suits",
+          "url":"Fashion-women-salwar"
+        },
+        {
+          "name":"Ethnic wear",
+          "url":"Fashion-women-ethnicwear"
+        },
+        {
+          "name":"Gown",
+          "url":"Fashion-women-gown"
+        },
+        {
+          "name":"Long Frock",
+          "url":"Fashion-women-longfrock"
+        },
+        {
+          "name":"Westren wears",
+          "url":"Fashion-women-westernwear"
+        },
+        {
+          "name":"Frock",
+          "url":"Fashion-women-frock"
+        },
+        {
+          "name":"Tops",
+          "url":""
+        },
+        {
+          "name":"Dupatta",
+          "url":""
+        },
+        {
+          "name":"Stoles",
+          "url":""
+        }
+      ]
+    },
+    {
+      "title":"Bottom wear",
+      "contents":[
+        {
+          "name":"Skirt",
+          "url":""
+        },
+        {
+          "name":"Plazo",
+          "url":""
+        },
+        {
+          "name":"Churidar",
+          "url":""
+        },
+        {
+          "name":"Trousers",
+          "url":""
+        },
+        {
+          "name":"Leggings & Jeggings",
+          "url":""
+        }
+      ]
+    },
+    {
+      "title":"Lingeries",
+      "contents":[
+        {
+          "name":"Bras",
+          "url":""
+        },
+        {
+          "name":"Sports Bras",
+          "url":""
+        },
+        {
+          "name":"Babydolls",
+          "url":""
+        },
+        {
+          "name":"Slips",
+          "url":""
+        },
+        {
+          "name":"Panties",
+          "url":""
+        },
+        {
+          "name":"Lingerie sets",
+          "url":""
+        },
+        {
+          "name":"Shape wears",
+          "url":""
+        },
+        {
+          "name":"Night Dresses",
+          "url":""
+        },
+        {
+          "name":"Boxers",
+          "url":""
+        },
+        {
+          "name":"pyjamas",
+          "url":""
+        }
+      ]
+    },
+    {
+      "title":"Footwear",
+      "contents":[
+        {
+          "name":"Shoes",
+          "url":""
+        },
+        {
+          "name":"Sneakers",
+          "url":""
+        },
+        {
+          "name":"Sandals",
+          "url":""
+        },
+        {
+          "name":"Socks",
+          "url":""
+        }
+      ]
+    },
+    {
+      "title":"Accessories",
+      "contents":[
+        {
+          "name":"Handbags",
+          "url":""
+        },
+        {
+          "name":"Belts",
+          "url":""
+        },
+        {
+          "name":"Watches",
+          "url":""
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "name":"kids fashion",
+      "title":"Boys wear",
+      "contents":[
+        {
+          "name":"Top wear",
+          "url":""
+        },
+        {
+          "name":"Ethnic wear",
+          "url":""
+        },
+        {
+          "name":"Jumpsuits",
+          "url":""
+        },
+        {
+          "name":"Suits and Blazers",
+          "url":""
+        },
+        {
+          "name":"Shirts",
+          "url":""
+        },
+        {
+          "name":"T-Shirts",
+          "url":""
+        },
+        {
+          "name":"Kurta",
+          "url":""
+        }
+      ]
+    },
+    {
+      "title":"Girls wear",
+      "contents":[
+        {
+          "name":"Top wear",
+          "url":""
+        },
+        {
+          "name":"Western wear",
+          "url":""
+        },
+        {
+          "name":"Ethnic wear",
+          "url":""
+        },
+        {
+          "name":"Jumpsuits",
+          "url":""
+        },
+        {
+          "name":"T-Shirts",
+          "url":""
+        },
+        {
+          "name":"Frocks",
+          "url":""
+        },
+        {
+          "name":"Tops",
+          "url":""
+        }
+      ]
+    },
+    {
+      "title":"Foot wear",
+      "contents":[
+        {
+          "name":"Shoes",
+          "url":""
+        },
+        {
+          "name":"Sandels",
+          "url":""
+        },
+        {
+          "name":"Chappal",
+          "url":""
+        }
+      ]
+    },
+    {
+      "title":"Boys bottom wear",
+      "contents":[
+        {
+          "name":"Trousers & Cargos",
+          "url":""
+        },
+        {
+          "name":"Jeans",
+          "url":""
+        },
+        {
+          "name":"Shorts",
+          "url":""
+        },
+        {
+          "name":"Sleep wear",
+          "url":""
+        },
+        {
+          "name":"Sports wear",
+          "url":""
+        }
+      ]
+    },
+    {
+      "title":"Girls bottom wear",
+      "contents":[
+        {
+          "name":"Trousers & Cargos",
+          "url":""
+        },
+        {
+          "name":"Leggings & Jeggings",
+          "url":""
+        },
+        {
+          "name":"Jeans",
+          "url":""
+        },
+        {
+          "name":"Capris",
+          "url":""
+        },
+        {
+          "name":"Skirts",
+          "url":""
+        },
+        {
+          "name":"Sleep wear",
+          "url":""
+        }
+      ]
+    },
+    {
+      "title":"Inner wear(Boys)",
+      "contents":[
+        {
+          "name":"Trunk",
+          "url":""
+        },
+        {
+          "name":"Brief",
+          "url":""
+        },
+        {
+          "name":"Vest",
+          "url":""
+        }
+      ]
+    },
+    {
+      "title":"Inner wear(Girls)",
+      "contents":[
+        {
+          "name":"Panty",
+          "url":""
+        },
+        {
+          "name":"Slips",
+          "url":""
+        }
+      ]
+    },
+    {
+      "title":"Accessories",
+      "contents":[
+        {
+          "name":"Watches",
+          "url":""
+        },
+        {
+          "name":"Belts",
+          "url":""
+        },
+        {
+          "name":"Handkerchief",
+          "url":""
+        },
+        {
+          "name":"Cap",
+          "url":""
+        },
+        {
+          "name":"Goggles",
+          "url":""
+        },
+        {
+          "name":"Socks",
+          "url":""
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "name":"Infants fashion",
+      "title":"Infants",
+      "contents":[
+        {
+          "name":"Baby Boy",
+          "url":""
+        },
+        {
+          "name":"Baby Carrier",
+          "url":""
+        },
+        {
+          "name":"Baby Girl",
+          "url":""
+        },
+        {
+          "name":"Baby sleeping bag",
+          "url":""
+        },
+        {
+          "name":"Diaper",
+          "url":""
+        },
+        {
+          "name":"Night wear",
+          "url":""
+        },
+        {
+          "name":"Socks",
+          "url":""
+        },
+        {
+          "name":"Hand Gloves",
+          "url":""
+        },
+        {
+          "name":"Cap",
+          "url":""
+        }
+      ]
+    }
+  ]
+]

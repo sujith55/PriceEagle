@@ -2,91 +2,102 @@
     {
         "img":"/assets/sidebar/picture1.png",
         "name": "Mobiles",
-        "url":"/Mobiles" 
+        "url":"/maincat/Mobiles/1",
+        "pid":1
       },
       {
         "img":"/assets/sidebar/picture2.png",
         "name":"Electronics",
-        "url":"/Electronics"
+        "url":"/maincat/Electronics/2",
+        "pid":2
       },
       {
         "img":"/assets/sidebar/picture3.png",
         "name":"Home Appliances",
-        "url":"/"
+        "url":"/maincat/Home-Appliances/3",
+        "pid":3
       },
       {
         "img":"/assets/sidebar/picture4.png",
         "name":"Fashion",
-        "url":"/"
+        "url":"/maincat/Fashion/4",
+        "pid":4
       },
       {
         "img":"/assets/sidebar/picture5.png",
         "name":"Beauty",
-        "url":"/"
+        "url":"/maincat/Beauty/5",
+        "pid":5
       },
       {
         "img":"/assets/sidebar/picture6.png",
         "name":"Jewellery",
-        "url":"/"
+        "url":"/maincat/Jewellery/6",
+        "pid":6
       },
       {
         "img":"/assets/sidebar/picture7.png",
         "name":"Agriculture",
-        "url":"/"
+        "url":"/maincat/Agriculture/7",
+        "pid":7
       },
       {
         "img":"/assets/sidebar/picture8.png",
         "name":"Puja",
-        "url":"/"
+        "url":"/maincat/Puja/8",
+        "pid":8
       },
       {
         "img":"/assets/sidebar/picture9.png",
         "name":"Medicine",
-        "url":"/"
+        "url":"/maincat/Medicine/9"
       },
       {
         "img":"/assets/sidebar/picture10.png",
         "name":"Books",
-        "url":"/"
-      },
-      {
-        "img":"/assets/sidebar/picture11.png",
-        "name":"Bags & Luggages",
-        "url":"/"
+        "url":"/maincat/Books/10",
+        "pid":10
       },
       {
         "img":"/assets/sidebar/picture12.png",
         "name":"Sports & Fitness",
-        "url":"/"
+        "url":"/maincat/Sports-Fitness/12",
+        "pid":12
       },
+      {
+        "img":"/assets/sidebar/picture11.png",
+        "name":"Bags & Luggages",
+        "url":"/maincat/Bags-Luggages/11",
+        "pid":11
+       },
       {
         "img":"/assets/sidebar/picture13.png",
         "name":"Travel",
-        "url":"/"
+        "url":"/maincat/Travel/13"
       },
       {
         "img":"/assets/sidebar/picture14.png",
         "name":"Hotel",
-        "url":"/"
+        "url":"/maincat/Hotel/14"
       },
       {
         "img":"/assets/sidebar/picture15.png",
         "name":"Recharge",
-        "url":"/"
+        "url":"/maincat/Recharge/15"
       },
       {
         "img":"/assets/sidebar/picture16.png",
         "name":"Education",
-        "url":"/"
+        "url":"/maincat/Education/16"
       },
       {
         "img":"/assets/sidebar/picture17.png",
         "name":"Food Services",
-        "url":"/"
+        "url":"/maincat/Food-Services/17"
       },
       {
         "img":"/assets/sidebar/picture18.png",
         "name":"Repair & Services",
-        "url":"/"
+        "url":"/maincat/Repair-Services/18"
       }
 ]

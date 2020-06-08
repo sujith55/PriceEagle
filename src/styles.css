@@ -20,3 +20,15 @@ body{
   .goog-tooltip{
     display: none !important;
   }
+  .swal2-styled.swal2-confirm{
+    border: 0;
+    border-radius: 25px !important;
+    background: initial;
+    background-color: #ffc2df !important;
+    color: black;
+    font-size: 1.0625em;
+  }
+  .btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }

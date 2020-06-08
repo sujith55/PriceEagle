@@ -8,6 +8,7 @@ import { AppComponentService } from '../services/app.component.service';
 import { ShopComponentService } from '../home/shop/shop.component.service';
 
 // import swal from 'sweetalert';
+import * as $ from 'jquery';
 import Swal from 'sweetalert2';
 @Component({
   selector: 'app-header',
@@ -26,7 +27,11 @@ export class HeaderComponent implements OnInit {
   otpSent: boolean = false;
   otpstatus: any;
   Otpmessage: any;
-  constructor(private http: HttpClient, private router: ActivatedRoute, private service:AppComponentService, private shop: ShopComponentService) { }
+  values: any;
+  search: any;
+  constructor(private http: HttpClient, private router: ActivatedRoute, private service:AppComponentService, private shop: ShopComponentService) {
+    jQuery.noConflict();
+  }
 
   ngOnInit(): void{
     this.service.getLanguages().subscribe(res=>{
@@ -49,11 +54,18 @@ export class HeaderComponent implements OnInit {
           icon:"success"
         }).then(() => {
           location.href = location.origin;
+          data.resetForm({});
         });
-        // .then(()=>{
-        //   location.href=location.origin;
-        //  });
-      } else {
+      } else if(res.status == "1034"){
+        jQuery('#LoginModal').modal('hide');
+        jQuery('#RegisterModal').modal('show');
+        Swal.fire({
+          text: 'Please register yourself for logging in..!',
+          icon:"info"
+        }).then(() => {
+          data.resetForm({});
+        });
+      }else {
         Swal.fire({
           text: '' + JSON.stringify(res['mesg']),
           icon:"error"
@@ -71,10 +83,7 @@ export class HeaderComponent implements OnInit {
         Swal.fire({
             text: '' + JSON.stringify(res['mesg']),
             icon:"success"
-        }
-        ).then(() => {
-          // window.location.reload();
-        });
+          });
       } else {
         this.submitReg = false;
         Swal.fire("sorry..", "" + JSON.stringify(res["mesg"]), "error");
@@ -93,7 +102,7 @@ export class HeaderComponent implements OnInit {
         text:"OTP Verification is Successfull",
         icon:"success"
       }).then(() => {
-        // location.href = location.origin;
+        location.href = location.origin;
       });
     } else if (res.status == "1029") {
       Swal.fire("sorry..", "" + JSON.stringify(res["mesg"]), "error");
@@ -134,6 +143,7 @@ export class HeaderComponent implements OnInit {
           icon: 'success'
         }).then(() => {
           // location.href = "./user-login/login/user-login.htm";
+           location.href=location.origin;
         });
       } else if (res.status == "1029") {
         Swal.fire(
@@ -150,7 +160,32 @@ export class HeaderComponent implements OnInit {
       }
     });
   }
-  lang_select(lang){
-    console.log(lang);
+  onKey(ev: any){
+    this.values = ev.target.value;
+    this.searchBy(this.values);
+    // console.log('search working.....'+ this.values);
+    if(this.values == ''){
+      $('.searchResults').css('display','none');
+      // this.searchBy(this.values);
+    }
+  }
+  searchBy(val){
+    let postData = {
+      searchByword : val
+    }
+    if(postData != null){
+      $('.searchResults').css('display','block');
+      this.service.search(postData).subscribe(res=>{
+        if(res['status']=="0000" && res['data'] != ""){
+          this.search = res['data'];
+          // console.log('search working.....'+ this.search);
+        }else{
+          // $('.searchResults').css('display','none');
+        }
+      });
+    }else{
+      this.search = null;
+    }
+    // console.log('search working.....'+ postData);
   }
 }

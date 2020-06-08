@@ -1,30 +1,40 @@
 [
   {
     "img": "/assets/slider/Watch.png",
-    "title":"Watches under 1000"
+    "title":"Watches under 1000",
+    "url":" "
   },
   {
     "img":"/assets/slider/Laptops.png",
-    "title":"Laptops under 20000"
+    "title":"Laptops under 20000",
+    "url":"budget/budgetshop/cateId=24&",
+    "id":24
   },
   {
     "img":"/assets/slider/Shoes.png",
-    "title":"Shoes under 1000"
+    "title":"Shoes under 1000",
+    "url":"budget/budgetshop"
   },
   {
     "img":"/assets/slider/Agriculture.png",
-    "title":"Agriculture"
+    "title":"Agriculture",
+    "url":"budget/budgetshop"
   },
   {
     "img":"/assets/slider/Smart TV.png",
-    "title":"Tv's under 20000"
+    "title":"Tv's under 20000",
+    "url":"budget/budgetshop",
+    "id":26
   },
   {
     "img":"/assets/slider/Refrigerator.png",
-    "title":"Electronics"
+    "title":"Electronics",
+    "url":"budget/budgetshop"
   },
   {
     "img":"/assets/slider/Headphones.png",
-    "title":"Mobile Accessories"
+    "title":"Mobile Accessories",
+    "url":"Mobiles-in-acessories",
+    "id":23
   }
 ]

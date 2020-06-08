@@ -1,0 +1,1529 @@
+[
+  [
+    {
+      "name": "portal quality",
+      "id": 1,
+      "createdDate": null,
+      "createdBy": 1,
+      "type": 1,
+      "reviewQuestionsCollection": [
+        {
+          "id": 1,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 4,
+          "serialId": 1,
+          "reviewOptionsCollection": [
+            {
+              "id": 22,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 5,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 22,
+                "optionTitle": "Superb",
+                "language": "en"
+              }
+            },
+            {
+              "id": 23,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 4,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 23,
+                "optionTitle": "Extremely nice",
+                "language": "en"
+              }
+            },
+            {
+              "id": 24,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 2,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 24,
+                "optionTitle": "Good",
+                "language": "en"
+              }
+            },
+            {
+              "id": 25,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 25,
+                "optionTitle": "Average",
+                "language": "en"
+              }
+            },
+            {
+              "id": 26,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 6,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 26,
+                "optionTitle": "Bad",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 1,
+            "questionTitle": "Overall look and feel of the E-commerce website/app",
+            "language": "en"
+          }
+        },
+        {
+          "id": 2,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 5,
+          "serialId": 2,
+          "reviewOptionsCollection": [
+            {
+              "id": 32,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 6,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 32,
+                "optionTitle": "Superb and beyond expectations",
+                "language": "en"
+              }
+            },
+            {
+              "id": 33,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 5,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 33,
+                "optionTitle": "Extremely nice",
+                "language": "en"
+              }
+            },
+            {
+              "id": 34,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 2,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 34,
+                "optionTitle": "Good, as expected",
+                "language": "en"
+              }
+            },
+            {
+              "id": 35,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 35,
+                "optionTitle": "Average, not fulfilling my expectation",
+                "language": "en"
+              }
+            },
+            {
+              "id": 36,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 36,
+                "optionTitle": "Not intelligent enough",
+                "language": "en"
+              }
+            },
+            {
+              "id": 37,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 6,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 37,
+                "optionTitle": "Unintelligent",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 2,
+            "questionTitle": "Built in intelligence (Product recommendations etc..)",
+            "language": "en"
+          }
+        },
+        {
+          "id": 3,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 4,
+          "serialId": 3,
+          "reviewOptionsCollection": [
+            {
+              "id": 38,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 5,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 38,
+                "optionTitle": "Superb, it opened in a flash",
+                "language": "en"
+              }
+            },
+            {
+              "id": 40,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 40,
+                "optionTitle": "Good, it opened within an acceptable time limit",
+                "language": "en"
+              }
+            },
+            {
+              "id": 41,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 41,
+                "optionTitle": "Bad, it took a lot of time",
+                "language": "en"
+              }
+            },
+            {
+              "id": 42,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 6,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 42,
+                "optionTitle": "Extremely slow",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 3,
+            "questionTitle": "Responsiveness of web page/ app",
+            "language": "en"
+          }
+        },
+        {
+          "id": 4,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 4,
+          "serialId": 4,
+          "reviewOptionsCollection": [
+            {
+              "id": 27,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 5,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 27,
+                "optionTitle": "Superb",
+                "language": "en"
+              }
+            },
+            {
+              "id": 28,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 4,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 28,
+                "optionTitle": "Extremely nice",
+                "language": "en"
+              }
+            },
+            {
+              "id": 29,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 2,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 29,
+                "optionTitle": "Good",
+                "language": "en"
+              }
+            },
+            {
+              "id": 30,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 30,
+                "optionTitle": "Average",
+                "language": "en"
+              }
+            },
+            {
+              "id": 31,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 7,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 31,
+                "optionTitle": "Bad",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 4,
+            "questionTitle": "Technical functionality of the E-commerce website/app (Link workability, next page opening etc..)",
+            "language": "en"
+          }
+        },
+        {
+          "id": 5,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 4,
+          "serialId": 5,
+          "reviewOptionsCollection": [
+            {
+              "id": 48,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 4,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 48,
+                "optionTitle": "Sharp images, nicely placed and properly spaced",
+                "language": "en"
+              }
+            },
+            {
+              "id": 49,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 49,
+                "optionTitle": "Average image and average arrangement",
+                "language": "en"
+              }
+            },
+            {
+              "id": 50,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 50,
+                "optionTitle": "Blurred images, too many images stuffed in a small place",
+                "language": "en"
+              }
+            },
+            {
+              "id": 51,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 6,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 51,
+                "optionTitle": "Images are misleading and don’t match with the product",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 5,
+            "questionTitle": "Clarity of images",
+            "language": "en"
+          }
+        },
+        {
+          "id": 6,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 4,
+          "serialId": 6,
+          "reviewOptionsCollection": [
+            {
+              "id": 43,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 5,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 43,
+                "optionTitle": "Eye catching, attractive and easy to read",
+                "language": "en"
+              }
+            },
+            {
+              "id": 44,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 4,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 44,
+                "optionTitle": "Legible print",
+                "language": "en"
+              }
+            },
+            {
+              "id": 45,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 45,
+                "optionTitle": "Average",
+                "language": "en"
+              }
+            },
+            {
+              "id": 46,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 46,
+                "optionTitle": "Difficult to read",
+                "language": "en"
+              }
+            },
+            {
+              "id": 47,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 6,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 47,
+                "optionTitle": "Painful for the eyes",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 6,
+            "questionTitle": "Lettering (Font, font size, colour etc.. )",
+            "language": "en"
+          }
+        }
+      ],
+      "reviewCategoriesDesc": null,
+      "language": "en",
+      "pageaccess": 2,
+      "prevPageaccess": 1
+    }
+  ],
+  [
+    {
+      "name": "Product",
+      "id": 2,
+      "createdDate": null,
+      "createdBy": 1,
+      "type": 1,
+      "reviewQuestionsCollection": [
+        {
+          "id": 7,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 7,
+          "serialId": 7,
+          "reviewOptionsCollection": [
+            {
+              "id": 52,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 5,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 52,
+                "optionTitle": "100% original. I have no doubt",
+                "language": "en"
+              }
+            },
+            {
+              "id": 53,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 53,
+                "optionTitle": "Seems to be original",
+                "language": "en"
+              }
+            },
+            {
+              "id": 54,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 54,
+                "optionTitle": "I have a doubt regarding the genuineness of the product.",
+                "language": "en"
+              }
+            },
+            {
+              "id": 55,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -5,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 55,
+                "optionTitle": "Most likely fake",
+                "language": "en"
+              }
+            },
+            {
+              "id": 56,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 6,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 56,
+                "optionTitle": "100% fake product",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 7,
+            "questionTitle": "Originality of product",
+            "language": "en"
+          }
+        },
+        {
+          "id": 8,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 7,
+          "serialId": 8,
+          "reviewOptionsCollection": [
+            {
+              "id": 57,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 5,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 57,
+                "optionTitle": "Better than market",
+                "language": "en"
+              }
+            },
+            {
+              "id": 58,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 4,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 58,
+                "optionTitle": "Right price",
+                "language": "en"
+              }
+            },
+            {
+              "id": 59,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 59,
+                "optionTitle": "Reasonable",
+                "language": "en"
+              }
+            },
+            {
+              "id": 60,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 60,
+                "optionTitle": "High",
+                "language": "en"
+              }
+            },
+            {
+              "id": 61,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 7,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 61,
+                "optionTitle": "Unjustified",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 8,
+            "questionTitle": "Price",
+            "language": "en"
+          }
+        }
+      ],
+      "reviewCategoriesDesc": null,
+      "language": "en",
+      "pageaccess": 3,
+      "prevPageaccess": 2
+    }
+  ],
+  [
+    {
+      "name": "Payment",
+      "id": 3,
+      "createdDate": null,
+      "createdBy": 0,
+      "type": 1,
+      "reviewQuestionsCollection": [
+        {
+          "id": 9,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 4,
+          "serialId": 9,
+          "reviewOptionsCollection": [
+            {
+              "id": 62,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 6,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 62,
+                "optionTitle": "Order placement was simple, straightforward and effortless",
+                "language": "en"
+              }
+            },
+            {
+              "id": 63,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 3,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 63,
+                "optionTitle": "There were no issues during order placement",
+                "language": "en"
+              }
+            },
+            {
+              "id": 64,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 2,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 64,
+                "optionTitle": "Order was placed but the process was not smooth",
+                "language": "en"
+              }
+            },
+            {
+              "id": 65,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 65,
+                "optionTitle": "Order placement was slow and difficult.",
+                "language": "en"
+              }
+            },
+            {
+              "id": 66,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -3,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 66,
+                "optionTitle": "Difficult process, completed only after multiple attempts",
+                "language": "en"
+              }
+            },
+            {
+              "id": 67,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 7,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 67,
+                "optionTitle": "Order placement process is poor and substandard.",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 9,
+            "questionTitle": "Order placement",
+            "language": "en"
+          }
+        },
+        {
+          "id": 10,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 5,
+          "serialId": 10,
+          "reviewOptionsCollection": [
+            {
+              "id": 72,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 5,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 72,
+                "optionTitle": "Payment was done within seconds and the payment gateway was user friendly.",
+                "language": "en"
+              }
+            },
+            {
+              "id": 73,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 3,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 73,
+                "optionTitle": "Payment options work fine but the process took some time",
+                "language": "en"
+              }
+            },
+            {
+              "id": 74,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 74,
+                "optionTitle": "It took a long time to receive the OTP",
+                "language": "en"
+              }
+            },
+            {
+              "id": 75,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 75,
+                "optionTitle": "Payment was a major issue. Completed in multiple attempts",
+                "language": "en"
+              }
+            },
+            {
+              "id": 76,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 5,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 76,
+                "optionTitle": "Money deducted from bank account but no purchase confirmation received",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 10,
+            "questionTitle": "Payment gateway experience",
+            "language": "en"
+          }
+        },
+        {
+          "id": 11,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 5,
+          "serialId": 11,
+          "reviewOptionsCollection": [
+            {
+              "id": 68,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 6,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 68,
+                "optionTitle": "All payment options are available including COD, EMI’s and credit cards",
+                "language": "en"
+              }
+            },
+            {
+              "id": 69,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 4,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 69,
+                "optionTitle": "All popular payment options are available. No credit cards and EMI facility.",
+                "language": "en"
+              }
+            },
+            {
+              "id": 70,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 70,
+                "optionTitle": "Most payment options are available. No COD on low purchase value",
+                "language": "en"
+              }
+            },
+            {
+              "id": 71,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 6,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 71,
+                "optionTitle": "Very few payment options available. COD missing completely.",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 11,
+            "questionTitle": "Payment options",
+            "language": "en"
+          }
+        }
+      ],
+      "reviewCategoriesDesc": null,
+      "language": "en",
+      "pageaccess": 4,
+      "prevPageaccess": 3
+    }
+  ],
+  [
+    {
+      "name": "Packaging and Delivery",
+      "id": 4,
+      "createdDate": null,
+      "createdBy": 0,
+      "type": 1,
+      "reviewQuestionsCollection": [
+        {
+          "id": 12,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 4,
+          "serialId": 12,
+          "reviewOptionsCollection": [
+            {
+              "id": 89,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 2,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 89,
+                "optionTitle": "Nicely packed and sealed. Received the product in perfect condition",
+                "language": "en"
+              }
+            },
+            {
+              "id": 90,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 90,
+                "optionTitle": "Average packaging but sealed. There is scope for improvement",
+                "language": "en"
+              }
+            },
+            {
+              "id": 91,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -3,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 91,
+                "optionTitle": "Poor packaging with bad packing materials",
+                "language": "en"
+              }
+            },
+            {
+              "id": 92,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 6,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 92,
+                "optionTitle": "Box was broken and seal opened",
+                "language": "en"
+              }
+            },
+            {
+              "id": 93,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 4,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 93,
+                "optionTitle": "Product received was broken and damaged. Seal was tampered.",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 12,
+            "questionTitle": "Packaging",
+            "language": "en"
+          }
+        },
+        {
+          "id": 13,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 4,
+          "serialId": 13,
+          "reviewOptionsCollection": [
+            {
+              "id": 79,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 3,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 79,
+                "optionTitle": "Delivered at the right place and at the right time",
+                "language": "en"
+              }
+            },
+            {
+              "id": 80,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 80,
+                "optionTitle": "Delivered at the right place but before the delivery date",
+                "language": "en"
+              }
+            },
+            {
+              "id": 81,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -2,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 81,
+                "optionTitle": "Delivered at the right place but after the delivery date",
+                "language": "en"
+              }
+            },
+            {
+              "id": 82,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 7,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 82,
+                "optionTitle": "Delivered only after multiple follow-ups.",
+                "language": "en"
+              }
+            },
+            {
+              "id": 83,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 5,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 83,
+                "optionTitle": "Delivered long after the promised date. Bad service quality",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 13,
+            "questionTitle": "Delivery process",
+            "language": "en"
+          }
+        },
+        {
+            "id": 14,
+            "createdDate": null,
+            "createdBy": 0,
+            "score": 4,
+            "serialId": 14,
+            "reviewOptionsCollection": [
+              {
+                "id": 84,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 3,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 84,
+                  "optionTitle": "Very strong customer engagement process right from placing the order to the final delivery",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 85,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": -1,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 85,
+                  "optionTitle": "Constantly intimated before the delivery but tracking the shipment was somewhat difficult",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 86,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": -3,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 86,
+                  "optionTitle": "Only intimated just before the delivery.",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 87,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 6,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 87,
+                  "optionTitle": "Incorrect intimation. The intimated time of delivery was different than the actual delivery time.",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 88,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 4,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 88,
+                  "optionTitle": "No intimation was given before delivery",
+                  "language": "en"
+                }
+              }
+            ],
+            "reviewQuestionsDesc": {
+              "reviewQuestionDescId": 14,
+              "questionTitle": "Delivery intimation",
+              "language": "en"
+            }
+          },
+          {
+            "id": 15,
+            "createdDate": null,
+            "createdBy": 0,
+            "score": 4,
+            "serialId": 15,
+            "reviewOptionsCollection": [
+              {
+                "id": 98,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 6,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 98,
+                  "optionTitle": "Courteous and stuck to promised time",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 99,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 2,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 99,
+                  "optionTitle": "Courteous but the delivery was delayed",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 100,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": -1,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 100,
+                  "optionTitle": "Knowledgeable and equipped with required gadgets to complete the delivery",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 101,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 7,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 101,
+                  "optionTitle": "Rude and impolite but delivered on right time.",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 102,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 5,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 102,
+                  "optionTitle": "Rude, impolite and late delivery.",
+                  "language": "en"
+                }
+              }
+            ],
+            "reviewQuestionsDesc": {
+              "reviewQuestionDescId": 15,
+              "questionTitle": "Delivery agent",
+              "language": "en"
+            }
+          },
+          {
+            "id": 16,
+            "createdDate": null,
+            "createdBy": 0,
+            "score": 4,
+            "serialId": 16,
+            "reviewOptionsCollection": [
+              {
+                "id": 103,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 3,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 103,
+                  "optionTitle": "The product was returned with no questions asked. Great experience",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 104,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 1,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 104,
+                  "optionTitle": "Return facility was available on some conditions. Free pickup",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 105,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": -1,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 105,
+                  "optionTitle": "Return facility was available but courier charges had to be paid",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 106,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 7,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 106,
+                  "optionTitle": "Return possible only after repeated mail/phone calls to support executive",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 107,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 5,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 107,
+                  "optionTitle": "Return was impossible even after repeated mails/phone calls",
+                  "language": "en"
+                }
+              }
+            ],
+            "reviewQuestionsDesc": {
+              "reviewQuestionDescId": 16,
+              "questionTitle": "Product return experience",
+              "language": "en"
+            }
+          },
+          {
+            "id": 17,
+            "createdDate": null,
+            "createdBy": 0,
+            "score": 4,
+            "serialId": 17,
+            "reviewOptionsCollection": [
+              {
+                "id": 94,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 3,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 94,
+                  "optionTitle": "Captured with physical signature",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 95,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 1,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 95,
+                  "optionTitle": "Captured with digital signature",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 96,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 6,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 96,
+                  "optionTitle": "Signature provision was part of the procedure but the delivery guy did not take it",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 97,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 5,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 97,
+                  "optionTitle": "Signature provision was not a part of the delivery procedure",
+                  "language": "en"
+                }
+              }
+            ],
+            "reviewQuestionsDesc": {
+              "reviewQuestionDescId": 17,
+              "questionTitle": "Goods receipt",
+              "language": "en"
+            }
+          },
+        {
+          "id": 18,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 7,
+          "serialId": 18,
+          "reviewOptionsCollection": [
+            {
+              "id": 77,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -7,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 77,
+                "optionTitle": "Got the product I ordered",
+                "language": "en"
+              }
+            },
+            {
+              "id": 78,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 5,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 78,
+                "optionTitle": "The wrong product was delivered",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 18,
+            "questionTitle": "Product delivery",
+            "language": "en"
+          }
+        }
+      ],
+      "reviewCategoriesDesc": null,
+      "language": "en",
+      "pageaccess": 5,
+      "prevPageaccess": 4
+    }
+  ],
+  [
+    {
+      "name":"Overall experience",
+      "id": 5,
+      "createdDate": null,
+      "createdBy": 0,
+      "type": 1,
+      "reviewQuestionsCollection": [
+        {
+            "id": 19,
+            "createdDate": null,
+            "createdBy": 0,
+            "score": 5,
+            "serialId": 19,
+            "reviewOptionsCollection": [
+              {
+                "id": 116,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 4,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 116,
+                  "optionTitle": "Extremely easy to navigate. Products were displayed perfectly. Amazing experience",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 117,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 1,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 117,
+                  "optionTitle": "Accurate and required information at every page, easy to browse, read and navigate",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 118,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": -1,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 118,
+                  "optionTitle": "Average experience",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 119,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 8,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 119,
+                  "optionTitle": "Difficult to navigate and find/browse products.",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 120,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 6,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 120,
+                  "optionTitle": "Difficult to navigate/understand. Excess information on a single page",
+                  "language": "en"
+                }
+              }
+            ],
+            "reviewQuestionsDesc": {
+              "reviewQuestionDescId": 19,
+              "questionTitle": "Overall e-commerce web portal/app experience",
+              "language": "en"
+            }
+          },
+          {
+            "id": 20,
+            "createdDate": null,
+            "createdBy": 0,
+            "score": 5,
+            "serialId": 20,
+            "reviewOptionsCollection": [
+              {
+                "id": 111,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 3,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 111,
+                  "optionTitle": "Delighted",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 112,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": -1,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 112,
+                  "optionTitle": "Extremely satisfied",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 113,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": -3,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 113,
+                  "optionTitle": "Indifferent",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 114,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 7,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 114,
+                  "optionTitle": "Unhappy",
+                  "language": "en"
+                }
+              },
+              {
+                "id": 115,
+                "createdDate": null,
+                "createdBy": 0,
+                "score": 6,
+                "reviewOptionsDesc": {
+                  "reviewOptionDescId": 115,
+                  "optionTitle": "I’d rather shop offline. This was a bad experience",
+                  "language": "en"
+                }
+              }
+            ],
+            "reviewQuestionsDesc": {
+              "reviewQuestionDescId": 20,
+              "questionTitle": "Overall experience of online purchase",
+              "language": "en"
+            }
+          },
+        {
+          "id": 21,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 4,
+          "serialId": 21,
+          "reviewOptionsCollection": [
+            {
+              "id": 108,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 2,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 108,
+                "optionTitle": "I was well notified at every stage of the process.",
+                "language": "en"
+              }
+            },
+            {
+              "id": 109,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 7,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 109,
+                "optionTitle": "Informed after placing the order but no information about the movement of products was shared.",
+                "language": "en"
+              }
+            },
+            {
+              "id": 110,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 6,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 110,
+                "optionTitle": "Overall, there was a lack of sharing of information and I felt ill-informed",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 21,
+            "questionTitle": "Overall shipment notification",
+            "language": "en"
+          }
+        },
+        {
+          "id": 22,
+          "createdDate": null,
+          "createdBy": 0,
+          "score": 5,
+          "serialId": 22,
+          "reviewOptionsCollection": [
+            {
+              "id": 121,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 5,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 121,
+                "optionTitle": "Awesome experience",
+                "language": "en"
+              }
+            },
+            {
+              "id": 122,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 3,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 122,
+                "optionTitle": "Good",
+                "language": "en"
+              }
+            },
+            {
+              "id": 123,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 123,
+                "optionTitle": "Average",
+                "language": "en"
+              }
+            },
+            {
+              "id": 124,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 124,
+                "optionTitle": "Not so good. Needs improvement.",
+                "language": "en"
+              }
+            },
+            {
+              "id": 125,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": 1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 125,
+                "optionTitle": "Poor",
+                "language": "en"
+              }
+            },
+            {
+              "id": 126,
+              "createdDate": null,
+              "createdBy": 0,
+              "score": -1,
+              "reviewOptionsDesc": {
+                "reviewOptionDescId": 126,
+                "optionTitle": "Pathetic",
+                "language": "en"
+              }
+            }
+          ],
+          "reviewQuestionsDesc": {
+            "reviewQuestionDescId": 22,
+            "questionTitle": "Overall service quality",
+            "language": "en"
+          }
+        }
+      ],
+      "reviewCategoriesDesc": null,
+      "language": "en",
+      "pageaccess": 6,
+      "prevPageaccess": 5
+    }
+  ]
+]

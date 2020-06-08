@@ -1,0 +1,47 @@
+@font-face{
+  font-family:"roboto";
+  src:url("../../assets/fonts/English/RobotoSlab-Regular.ttf");
+  }
+  @font-face{
+  font-family:"Courgette";
+  src:url("../../assets/fonts/English/Courgette-Regular.ttf");
+  }
+  @font-face{
+  font-family:"hind";
+  src:url("../../assets/fonts/Hindi/Hind-Regular.ttf");
+  }
+  @font-face{
+  font-family:"kalam";
+  src:url("../../assets/fonts/Hindi/Kalam-Regular.ttf");
+  }
+  @font-face{
+  font-family:"muktamahee";
+  src:url("../../assets/fonts/Punjabi/MuktaMahee-Regular.ttf");
+  }
+  @font-face{
+  font-family:"baloopaaji";
+  src:url("../../assets/fonts/Punjabi/BalooPaaji-Regular.ttf");
+  }
+  html,body{
+  width:100%;
+  font-family:"roboto","hind","muktamahee";
+  }
+  .box{
+  width:800px;
+  margin:auto;
+  padding:20px;
+  border:3px dashed black;
+  border-radius: 15px;
+  }
+  #thought{
+  font-family:"Courgette","kalam","baloopaaji";
+  font-size:140%;
+  line-height: 160%;
+  }
+  #affiliates tr{
+  text-align:center;
+  height:100px;
+  }
+  p{
+  text-align:justify;
+  }

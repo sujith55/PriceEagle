@@ -45,9 +45,11 @@
     <div class="content row">
       <h5 style="width: 930px; font-weight: bold; margin: 2px 0 5px 20px;">Budget Shopping</h5>
       <div class="budget">
-        <div class="col" *ngFor="let slide of slides">
-          <img src="{{slide.img}}" alt="img">
-          <p>{{slide.title}}</p>
+        <div class="col" *ngFor="let cre of circle">
+          <div routerLink="budget/budgetshop/{{cre.categoryId}}/{{cre.lowPrice}}/{{cre.highPrice}}">
+          <img src="{{global.ImgUrls.circleUrl}}{{cre.imgUrl}}" alt="img">
+          <p>{{cre.name}}</p>
+          </div>
         </div>
       </div>
       <div class="clearfix"></div>
@@ -55,13 +57,34 @@
         Popular Products
       </h5>
       <div class="popular d-inline" *ngFor="let ele of shop">
-        <div class="figure pull-left">
-          <img src="{{ ele.img }}" class="img-responsive" alt="" />
-          <p>{{ ele.title }}</p>
+        <div routerLink="/{{ele.url}}">
+          <div class="figure pull-left">
+            <img src="{{ ele.img }}" class="img-responsive" alt="" />
+            <p>{{ ele.title }}</p>
+          </div>
         </div>
-        <div class="captions pull-right">
-          <p class="contents" *ngFor="let link of ele.contents" routerLink="/{{link.url}}">{{ link.name }}</p>
-          <!-- <span style="color: rgb(14, 106, 197);">More....</span> -->
+        <div class="captions pull-right" *ngIf="ele.id != 1">
+          <div *ngFor="let link of ele.contents">
+            <div>
+              <p class="contents" routerLink="/{{link.url}}">
+                {{ link.name }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="captions pull-right" *ngIf="ele.id == 1">
+            <p class="contents dropdown-toggle" type="button" data-toggle="modal" data-target="#menModal">
+              Men
+            </p>
+            <p class="contents dropdown-toggle" type="button" data-toggle="modal" data-target="#womenModal">
+              Women
+            </p>
+            <p class="contents dropdown-toggle" type="button" data-toggle="modal" data-target="#kidsModal">
+              Kids
+            </p>
+            <p class="contents dropdown-toggle" type="button" data-toggle="modal" data-target="#infantsModal">
+              Infants
+            </p>
         </div>
       </div>
       <h5 style="width: 930px; font-weight: bold; margin: 2px 0 2px 20px;">
@@ -75,6 +98,54 @@
         </div>
         <div class="captions pull-right">
           <p class="contents" *ngFor="let link of eles.contents" routerLink="/{{link.url}}">{{ link.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="menModal" tabindex="-1" role="dialog" aria-labelledby="menModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="men-content">
+        <div class="main-sec">
+          <div class="wears" *ngFor="let item of men">
+              <p style="font-weight: bold;">{{item.title}}</p>
+                <p class="items" *ngFor="let t of item.contents" data-dismiss="modal" routerLink="/{{t.url}}">{{t.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="womenModal" tabindex="-1" role="dialog" aria-labelledby="womenModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="women-content">
+        <div class="main-sec">
+          <div class="wears" *ngFor="let item of women">
+            <p style="font-weight: bold;">{{item.title}}</p>
+            <p class="items" *ngFor="let t of item.contents" data-dismiss="modal" routerLink="/{{t.url}}">{{t.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="kidsModal" tabindex="-1" role="dialog" aria-labelledby="kidsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="kids-content">
+        <div class="main-sec">
+          <div class="wears" *ngFor="let item of kids">
+            <p style="font-weight: bold;">{{item.title}}</p>
+            <p class="items" *ngFor="let t of item.contents" data-dismiss="modal" routerLink="/{{t.url}}">{{t.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="infantsModal" tabindex="-1" role="dialog" aria-labelledby="infantsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="infants-content">
+        <div class="main-sec">
+          <div class="wears" *ngFor="let item of infants">
+            <p style="font-weight: bold;">{{item.title}}</p>
+            <p class="items" *ngFor="let t of item.contents" data-dismiss="modal" routerLink="/{{t.url}}">{{t.name}}</p>
+          </div>
         </div>
       </div>
     </div>

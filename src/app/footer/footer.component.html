@@ -1,43 +1,52 @@
 <div class="container">
-    <div class="main-footer">
-        <div class="wrap col-md-12">
-            <div class="content" style="width: 450px;">
-                <h6>Our Mission</h6>
-                <p>Indian e-commerce  ecosystem  is evolving. We believe customers will eventually need a very simple click based  local language product feedback and recommendation advisory before buying any product either online or even offline. We just provide an unbiased, authentic and third party platform to fulfill this customer need which is quick, simple and easy to be used in their mother tongue.</p>
-            </div>
-            <div class="content" style="width: 200px; left: 20px;">
-                <h6>Information</h6>
-                <ul style="margin-bottom: 0; padding: 0px 0px 0px 15px;">
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Privacy Policy</li>
-                    <li>Sitemap</li>
-                </ul>
-            </div>
-            <div class="content">
-                <h6>Find Us On</h6>
-                <a href=""><img src="/assets/imgs/facebook.png" alt=""></a>
-                <a href=""><img src="/assets/imgs/twitter.png" alt=""></a>
-                <a href=""><img src="/assets/imgs/instagram.png" alt=""></a>
-                <a href=""><img src="/assets/imgs/linkedin.png" alt=""></a>
-                <a href=""><img src="/assets/imgs/pinterest.png" alt=""></a>
-                <a href=""><img src="/assets/imgs/youtube.png" alt=""></a>
-                <a href=""><img src="/assets/imgs/google-play.png" alt=""></a>
-            </div>
-            <div class="content" style="left: 20px;">
-                <h6>Our Contacts</h6>
-                <p>Hybrid Mind India Pvt. Ltd.</p>
-                <p>Phone: +91 984-904-6240</p>
-                <p>Email: contact@priceeagle.in</p>
-            </div>
-        </div>
+  <div class="keywords">
+    <div class="section" *ngFor="let obj of keywords">
+        <h6 style="font-size: 14px; margin: 0; font-weight: lighter;">{{obj.title}}</h6>
+          <p *ngFor="let keys of obj.contents" routerLink="/{{keys.url}}">{{keys.name}}<span style="color: grey; padding: 0px 3px">/</span></p>
     </div>
-    <div class="low-footer">
-        <div class="col-md-6" style="display: inline-block;">
-            <p>2020 &copy; PriceEagle All Rights Reserved.</p>
-        </div>
-        <!-- <div class="col-md-6" style="display: inline-block;">
+  </div>
+  <div class="main-footer">
+    <div class="wrap col-md-12">
+      <div class="content" style="width: 450px;">
+        <h6>Our Mission</h6>
+        <p>Indian e-commerce ecosystem is evolving. We believe customers will eventually need a very simple click based
+          local language product feedback and recommendation advisory before buying any product either online or even
+          offline. We just provide an unbiased, authentic and third party platform to fulfill this customer need which
+          is quick, simple and easy to be used in their mother tongue.</p>
+      </div>
+      <div class="content" style="width: 200px; left: 20px;">
+        <h6>Information</h6>
+        <ul style="margin-bottom: 0; padding: 0px 0px 0px 15px;">
+          <li routerLink="shop/home/about" style="cursor: pointer;">About Us</li>
+          <li routerLink="shop/home/contact" style="cursor: pointer;">Contact Us</li>
+          <li routerLink="shop/home/privacy" style="cursor: pointer;">Privacy Policy</li>
+          <li>Sitemap</li>
+        </ul>
+      </div>
+      <div class="content">
+        <h6>Find Us On</h6>
+        <a href=""><img src="/assets/imgs/facebook.png" alt=""></a>
+        <a href=""><img src="/assets/imgs/twitter.png" alt=""></a>
+        <a href=""><img src="/assets/imgs/instagram.png" alt=""></a>
+        <a href=""><img src="/assets/imgs/linkedin.png" alt=""></a>
+        <a href=""><img src="/assets/imgs/pinterest.png" alt=""></a>
+        <a href=""><img src="/assets/imgs/youtube.png" alt=""></a>
+        <a href=""><img src="/assets/imgs/google-play.png" alt=""></a>
+      </div>
+      <div class="content" style="left: 20px;">
+        <h6>Our Contacts</h6>
+        <p>Hybrid Mind India Pvt. Ltd.</p>
+        <p>Phone: +91 984-904-6240</p>
+        <p>Email: contact@priceeagle.in</p>
+      </div>
+    </div>
+  </div>
+  <div class="low-footer">
+    <div class="col-md-6" style="display: inline-block;">
+      <p>2020 &copy; PriceEagle All Rights Reserved.</p>
+    </div>
+    <!-- <div class="col-md-6" style="display: inline-block;">
             <p style="margin-left: 60%;">Powered by: <a href="" style="color: red; font-weight: bold;">PriceEagle.in</a></p>
         </div> -->
-    </div>
+  </div>
 </div>

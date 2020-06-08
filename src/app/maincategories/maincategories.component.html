@@ -1,1 +1,25 @@
-<p>maincategories works!</p>
+<div class="container" *ngIf="first">
+  <div class="section">
+    <div class="content" *ngFor="let res of list">
+      <div class="pi-img-wrapper">
+        <img class="img-responsive res-img" style="height:250px" src="{{res.imageUrl}}" alt="img">
+      </div>
+      <div class="items">
+        <p>{{res.prodName}}</p>
+        <img src="{{global.ImgUrls.storeUrl}}{{res.productsSources[0]['source']['sourceIcon']}}">
+        <p>Best Price: <span style="color:green; font-weight:bold; word-spacing:0.03em">Rs.{{res.productsSources[0]['prodPrice']}}/-</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" *ngIf="!first">
+  <div class="screen col-12">
+    <div class="text-center">
+      <p style="font-weight: lighter;">Loading data please wait...!</p>
+      <div class="spinner-grow" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+</div>

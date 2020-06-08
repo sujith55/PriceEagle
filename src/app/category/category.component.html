@@ -1,6 +1,24 @@
-<div class="container">
+<div class="container" *ngIf="criterias">
   <div class="sidebar">
     <div class="filtertags">
+      <div *ngIf="categoryurl == 'Electronics-in-Computer-laptop' || categoryurl == 'Electronics-in-Computer-desktop' ">
+        <div>
+          <p style="font-size: 15px;background: #ffc2df;color: black;">Select Type:</p>
+          <ul style="list-style: none;">
+            <li (click)="typeChange(1)" style="font-weight: lighter; font-size: 18px; padding: 8px; cursor: pointer;"><a>Laptops</a></li>
+            <li (click)="typeChange(2)" style="font-weight: lighter; font-size: 18px; padding: 8px; cursor: pointer;"><a>Desktops</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div *ngIf="categoryurl == 'Electronics-in-Computer-desktop' ">
+        <div>
+          <p style="font-size: 15px;background: #ffc2df;color: black;">Select Type:</p>
+          <ul style="list-style: none;">
+            <li (click)="typeChange(1)" style="font-weight: lighter; font-size: 18px; padding: 8px; cursor: pointer;"><a>Laptops</a></li>
+            <li (click)="typeChange(2)" style="font-weight: lighter; font-size: 18px; padding: 8px; cursor: pointer;"><a>Desktops</a></li>
+          </ul>
+        </div>
+      </div> -->
       <div *ngFor="let criteria of criterias; let RowIndex = index">
         <p data-toggle="collapse" [attr.data-target]="'#demo'+RowIndex" class="filter" *ngIf="criteria.crParentid==0">
            {{criteria.criteriaName}}
@@ -19,22 +37,29 @@
       </div>
     </div>
   </div>
-  <div class="main col-md-10" id="body">
+  <div class="main col-md-10" id="body" *ngIf="result">
     <div class="sort">
       <div class="col-md-3">
         <p>Sort by: Featured</p>
       </div>
-      <div class="item col-md-4">
-        <p>Price: Low to High</p>
+      <div class="item col-md-8">
+        <div class="text">
+          <ul>
+            <li class="active" (click)="sortProducts(1)"><a>Price: Low to High</a></li>
+            <li (click)="sortProducts(2)"><a>Price: High to Low</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="item col-md-4">
-        <p>Price: High to Low</p>
-      </div>
+      <!-- <div class="item col-md-4" (click)="sortProducts(2)">
+        <div class="text-center">
+          <p>Price: High to Low</p>
+        </div>
+      </div> -->
     </div>
     <div class="section">
-      <div class="content" *ngFor="let res of result">
-        <div class="img-responsive">
-          <img src="{{res.imageUrl}}" alt="img">
+      <div class="content" *ngFor="let res of result" routerLink="/{{categoryurl}}/{{res.productId}}">
+        <div class="pi-img-wrapper">
+          <img class="img-responsive res-img" style="height:250px" src="{{res.imageUrl}}" alt="img">
         </div>
         <div class="items">
           <p>{{res.prodName}}</p>
@@ -61,6 +86,26 @@
           </li>
         </ul>
       </nav>
+    </div>
+  </div>
+  <div class="main col-md-10" id="body" *ngIf="!result">
+    <div style="position: relative; top: 35%;">
+      <div class="text-center">
+        <p style="font-weight: lighter;">Loading data please wait...!</p>
+        <div class="spinner-grow" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" *ngIf="!criterias">
+  <div class="screen col-12">
+    <div class="text-center">
+      <p style="font-weight: lighter;">Loading data please wait...!</p>
+      <div class="spinner-grow" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,658 @@
+[
+  {
+    "parentid":1,
+    "categoryid":19,
+    "categoryUrl":"Mobiles-in-new",
+    "highlightName":[
+      {
+        "name":"RAM",
+        "value":"RAM"
+      },
+      {
+        "name":"Storage",
+        "value":"Internal Memory"
+      },
+      {
+        "name":"Camera",
+        "value":"Camera"
+      },
+      {
+        "name":"Display",
+        "value":"Screen Size"
+      },
+      {
+        "name":"Battery Capacity",
+        "value":"Battery Capacity"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":21,
+    "categoryUrl":"Mobiles-in-basic",
+    "highlightName":[
+      {
+        "name":"RAM",
+        "value":"RAM"
+      },
+      {
+        "name":"Storage",
+        "value":"Internal Memory"
+      },
+      {
+        "name":"Camera",
+        "value":"Camera"
+      },
+      {
+        "name":"Display",
+        "value":"Screen Size"
+      },
+      {
+        "name":"Battery Capacity",
+        "value":"Battery Capacity"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":20,
+    "categoryUrl":"Mobiles-in-smart",
+    "highlightName":[
+      {
+        "name":"RAM",
+        "value":"RAM"
+      },
+      {
+        "name":"Storage",
+        "value":"Internal Storage"
+      },
+      {
+        "name":"Camera",
+        "value":"Primary Camera"
+      },
+      {
+        "name":"Display",
+        "value":"Display Size"
+      },
+      {
+        "name":"Battery Capacity",
+        "value":"Battery Capacity"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":24,
+    "categoryUrl":"Electronics-in-Computer-laptop",
+    "highlightName":[
+      {
+        "name":"RAM",
+        "value":"RAM"
+      },
+      {
+        "name":"Storage",
+        "value":"Storage Capacity"
+      },
+      {
+        "name":"Operating System",
+        "value":"Operating System"
+      },
+      {
+        "name":"Display Size",
+        "value":"Screen Size"
+      },
+      {
+        "name":"Processor",
+        "value":"Processor"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":25,
+    "categoryUrl":"Electronics-in-Computer-desktop",
+    "highlightName":[
+      {
+        "name":"RAM",
+        "value":"System Memory"
+      },
+      {
+        "name":"Storage",
+        "value":"Hard Drive"
+      },
+      {
+        "name":"Operating System",
+        "value":"Operating System"
+      },
+      {
+        "name":"Display Size",
+        "value":"Display Size"
+      },
+      {
+        "name":"Processor",
+        "value":"Processor Name"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":26,
+    "categoryUrl":"Electronics-in-Telivision",
+    "highlightName":[
+      {
+        "name":"Speaker Output",
+        "value":"Speaker type"
+      },
+      {
+        "name":"WIFI",
+        "value":"Built-in Wi-Fi"
+      },
+      {
+        "name":"Display Size",
+        "value":"Screen Size"
+      },
+      {
+        "name":"Resolution",
+        "value":"Screen Resolution(In Pixel)"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":27,
+    "categoryUrl":"Electronics-in-refriegerators",
+    "highlightName":[
+      {
+        "name":"Capacity",
+        "value":"Gross Capacity Range"
+      },
+      {
+        "name":"Star Rating",
+        "value":"Energy Rating"
+      },
+      {
+        "name":"Built-in Stabilizer",
+        "value":""
+      },
+      {
+        "name":"Refirgerator Type",
+        "value":"Door Type"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":28,
+    "categoryUrl":"Electronics-in-wm",
+    "highlightName":[
+      {
+        "name":"Type",
+        "value":"Function Type"
+      },
+      {
+        "name":"Washing Capacity",
+        "value":"Wash Load Range"
+      },
+      {
+        "name":"Star Rating",
+        "value":""
+      },
+      {
+        "name":"Loading Type",
+        "value":"Loading Type"
+      },
+      {
+        "name":"In-built Header",
+        "value":""
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":29,
+    "categoryUrl":"Electronics-in-AirConditioner",
+    "highlightName":[
+      {
+        "name":"Type",
+        "value":"Type of AC"
+      },
+      {
+        "name":"Condenser Coil",
+        "value":"Condensor Type"
+      },
+      {
+        "name":"Power Consumption",
+        "value":""
+      },
+      {
+        "name":"Star Rating",
+        "value":"Star Rating"
+      },
+      {
+        "name":"Noise Level",
+        "value":""
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":30,
+    "categoryUrl":"Home-Appliances-in-cooker",
+    "highlightName":[
+      {
+        "name":"Capacity",
+        "value":"Capacity"
+      },
+      {
+        "name":"Power Code",
+        "value":"Power Consumption"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":32,
+    "categoryUrl":"Home-Appliances-in-geyser",
+    "highlightName":[
+      {
+        "name":"Capacity",
+        "value":"Capacity"
+      },
+      {
+        "name":"Star Rating",
+        "value":""
+      },
+      {
+        "name":"Bar Pressure",
+        "value":""
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":33,
+    "categoryUrl":"Home-Appliances-in-MicroWave",
+    "highlightName":[
+     {
+       "name":"Capacity",
+       "value":"Capacity"
+     },
+     {
+       "name":"Star Rating",
+       "value":""
+     },
+     {
+       "name":"Control Type",
+       "value":"Type"
+     }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":34,
+    "categoryUrl":"Home-Appliances-in-IronBox",
+    "highlightName":[
+      {
+        "name":"Type",
+        "value":""
+      },
+      {
+        "name":"Watt",
+        "value":""
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":42,
+    "categoryUrl":"Beauty-in-shavingmen",
+    "highlightName":[
+      {
+        "name":"Brand",
+        "value":"Brand"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":44,
+    "categoryUrl":"Beauty-in-perfume",
+    "highlightName":[
+      {
+        "name":"Brand",
+        "value":"Brand"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":45,
+    "categoryUrl":"Beauty-in-sunglasses",
+    "highlightName":[
+      {
+        "name":"Brand",
+        "value":"Brand"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":46,
+    "categoryUrl":"Jewellery-in-ring",
+    "highlightName":[
+      {
+        "name":"Metal Type",
+        "value":"Base Material"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":47,
+    "categoryUrl":"Jewellery-in-pendants",
+    "highlightName":[
+      {
+        "name":"Metal Type",
+        "value":"Base Material"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":48,
+    "categoryUrl":"Jewellery-in-necklace",
+    "highlightName":[
+      {
+        "name":"Metal Type",
+        "value":"Base Material"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":49,
+    "categoryUrl":"Jewellery-in-bangles",
+    "highlightName":[
+      {
+        "name":"Metal Type",
+        "value":"Base Material"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":50,
+    "categoryUrl":"Jewellery-in-waistBand",
+    "highlightName":[
+      {
+        "name":"Metal Type",
+        "value":"Base Material"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":65,
+    "categoryUrl":"Books-in-fiction",
+    "highlightName":[
+      {
+        "name":"Type",
+        "value":"Type"
+      },
+      {
+        "name":"Author",
+        "value":""
+      },
+      {
+        "name":"Publisher",
+        "value":""
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":66,
+    "categoryUrl":"Books-in-children",
+    "highlightName":[
+      {
+        "name":"Type",
+        "value":"Type"
+      },
+      {
+        "name":"Author",
+        "value":""
+      },
+      {
+        "name":"Publisher",
+        "value":""
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":67,
+    "categoryUrl":"Books-in-personaldev",
+    "highlightName":[
+      {
+        "name":"Type",
+        "value":"Type"
+      },
+      {
+        "name":"Author",
+        "value":""
+      },
+      {
+        "name":"Publisher",
+        "value":""
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":68,
+    "categoryUrl":"Books-in-business",
+    "highlightName":[
+      {
+        "name":"Type",
+        "value":"Type"
+      },
+      {
+        "name":"Author",
+        "value":""
+      },
+      {
+        "name":"Publisher",
+        "value":""
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":69,
+    "categoryUrl":"Books-in-competitive",
+    "highlightName":[
+      {
+        "name":"Type",
+        "value":"Type"
+      },
+      {
+        "name":"Author",
+        "value":""
+      },
+      {
+        "name":"Publisher",
+        "value":""
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":70,
+    "categoryUrl":"BagsLuggages-in-backpack",
+    "highlightName":[
+      {
+        "name":"Brand",
+        "value":""
+      },
+      {
+        "name":"Capacity",
+        "value":"Capacity"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":71,
+    "categoryUrl":"BagsLuggages-in-handbags",
+    "highlightName":[
+      {
+        "name":"Brand",
+        "value":"Brand"
+      },
+      {
+        "name":"Capacity",
+        "value":"Capacity"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":72,
+    "categoryUrl":"BagsLuggages-in-luggage",
+    "highlightName":[
+      {
+        "name":"Brand",
+        "value":"Brand"
+      },
+      {
+        "name":"Capacity",
+        "value":"Capacity"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":73,
+    "categoryUrl":"BagsLuggages-in-sportsbag",
+    "highlightName":[
+      {
+        "name":"Brand",
+        "value":"Brand"
+      },
+      {
+        "name":"Capacity",
+        "value":"Capacity"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":74,
+    "categoryUrl":"BagsLuggages-in-wallet",
+    "highlightName":[
+      {
+        "name":"Brand",
+        "value":"Brand"
+      },
+      {
+        "name":"Capacity",
+        "value":"Capacity"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":75,
+    "categoryUrl":"SportsFitness-in-indoor",
+    "highlightName":[
+      {
+        "name":"Brand",
+        "value":"Brand"
+      },
+      {
+        "name":"Weight",
+        "value":"Weight"
+      },
+      {
+        "name":"Type",
+        "value":"Type"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":76,
+    "categoryUrl":"SportsFitness-in-outdoor",
+    "highlightName":[
+      {
+        "name":"Brand",
+        "value":"Brand"
+      },
+      {
+        "name":"Weight",
+        "value":"Weight"
+      },
+      {
+        "name":"Type",
+        "value":"Type"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":77,
+    "categoryUrl":"SportsFitness-in-gym",
+    "highlightName":[
+      {
+        "name":"Brand",
+        "value":"Brand"
+      },
+      {
+        "name":"Weight",
+        "value":"Weight"
+      },
+      {
+        "name":"Type",
+        "value":"Type"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":78,
+    "categoryUrl":"SportsFitness-in-swimming",
+    "highlightName":[
+      {
+        "name":"Brand",
+        "value":"Brand"
+      },
+      {
+        "name":"Weight",
+        "value":"Weight"
+      },
+      {
+        "name":"Type",
+        "value":"Type"
+      }
+    ]
+  },
+  {
+    "parentid":1,
+    "categoryid":79,
+    "categoryUrl":"SportsFitness-in-kids",
+    "highlightName":[
+      {
+        "name":"Brand",
+        "value":"Brand"
+      },
+      {
+        "name":"Weight",
+        "value":"Weight"
+      },
+      {
+        "name":"Type",
+        "value":"Type"
+      }
+    ]
+  }
+]

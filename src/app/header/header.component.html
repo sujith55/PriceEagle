@@ -34,8 +34,11 @@
       </div> -->
     <div style="position: relative; left: 100px;">
       <button type="button" class="btn" data-toggle="modal" data-target="#LangModal">Select Language</button>
-      <button type="button" class="btn" data-toggle="modal" data-target="#LoginModal">
+      <button type="button" class="btn" data-toggle="modal" data-target="#LoginModal" *ngIf="!user">
         Login
+      </button>
+      <button type="button" class="btn" routerLink="/shop/home/profile" *ngIf="user">
+        My profile
       </button>
       <button type="button" class="btn" routerLink="/feedback/portal">Portal Feedback &copy;</button>
       <button type="button" class="btn">Blog</button>
@@ -57,10 +60,11 @@
           <form #loginForm="ngForm" role="form" (ngSubmit)="submitForm(loginForm)">
             <div class="form-group">
               <label for="email">Enter Email/ Mobile Number *</label>
-              <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" [(ngModel)]="userlogin.email">
-              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email (or) mobile number with
-                anyone else.</small> -->
+              <input type="text" class="form-control" id="email" name="email" #email="ngModel" aria-describedby="emailHelp" [(ngModel)]="userlogin.email">
             </div>
+            <!-- <div *ngIf="email.invalid && (email.dirty || email.touched)">
+              <p>Please enter valid email address..!</p>
+            </div> -->
             <div class="form-group">
               <label for="exampleInputPassword1">Enter Password *</label>
               <input type="text" class="form-control" id="password" name="password" [(ngModel)]="userlogin.password">
@@ -71,7 +75,7 @@
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div> -->
-            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <button type="submit" class="btn btn-primary btn-block" [disabled]="loginForm.invalid">Login</button>
           </form>
           <p style="position: relative;top: 160px; font-size: 12px;letter-spacing: 0.03rem; left: 0px; font-weight: bold;"
             data-toggle="modal" data-target="#RegisterModal" data-dismiss="modal">New to PriceEagle? Create an
@@ -135,14 +139,14 @@
             </div>
              <div class="form-group">
               <label for="exampleInputPassword1">Enter OTP *</label>
-              <input type="text" class="form-control" id="otp" placeholder="Enter 6-digit OTP">
+              <input type="text" class="form-control" id="otp" name="otp" #otp="ngModel" [(ngModel)]="forgotPassword.otp" placeholder="Enter 6-digit OTP">
             </div>
             <div class="form-group">
               <label for="password">Set New Password *</label>
               <input type="text" class="form-control" id="password" name="password" aria-describedby="passHelp"
                 [(ngModel)]="forgotPassword.password" #password="ngModel">
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            <button type="submit" class="btn btn-primary btn-block" [disabled]="forgotPass.invalid">Submit</button>
           </form>
           <!-- <p style="position: relative;top: 160px; font-size: 14px;letter-spacing: 0.03rem; left: 50px;">New to PriceEagle? <br> Create an account</p> -->
         </div>

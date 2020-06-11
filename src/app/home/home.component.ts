@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { ShopComponentService } from './shop/shop.component.service';
 import * as $ from'jquery';
@@ -51,9 +50,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void{
-    $(document).ready(()=>{
-
-    });
     this.service_.getBannerList().subscribe(res=>{
       this.imageUrl = res;
       this.loading = false;
@@ -63,5 +59,6 @@ export class HomeComponent implements OnInit {
       this.circle = res;
       // console.log('data is:' + JSON.stringify(this.circle));
     });
+
   }
 }

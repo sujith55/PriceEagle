@@ -152,6 +152,13 @@ export class DetailpageComponent implements OnInit {
             $(this).prop("checked", false);
           }
         });
+      //   // $("input[type='radio']").change(function(){
+      //   //   var count = $("input[type='radio']:checked").length;
+      //   // if(count>1){
+      //   //   $(this).prop('checked', false);
+      //   //     alert("You cannot add more than 1");
+      //   // }
+      // });
       });
     });
     // this.highLights();
@@ -384,56 +391,56 @@ export class DetailpageComponent implements OnInit {
       var answr2 = $('#secnd_ques').val();
       var answr3 = $('#third_ques').val();
       var answr4 = $('#forth_ques').val();
-      var answr5 = $('#option').val();
+      var answr5 = $('input[name="option"]:checked').val();
       var answr6 = $('#sixth_ques').val();
-      var answr7 = $('#option1').val();
+      var answr7 = $('input[name="option1"]:checked').val();
       var obj=[
         {
-          questionId: quest1,
-          answer: answr1
+          question: quest1,
+          descriptive_response: answr1
         },
         {
-          questionId: quest2,
-          answer: answr2
+          question: quest2,
+          descriptive_response: answr2
         },
         {
-          questionId: quest3,
-          answer: answr3
+          question: quest3,
+          descriptive_response: answr3
         },
         {
-          questionId: quest4,
-          answer: answr4
+          question: quest4,
+          descriptive_response: answr4
         },
         {
-          questionId: quest5,
-          answer:'test'
+          question: quest5,
+          descriptive_response:answr5
         },
         {
-          questionId: quest6,
-          answer: answr6
+          question: quest6,
+          descriptive_response: answr6
         },
         {
-          questionId: quest7,
-          answer:'test'
+          question: quest7,
+          descriptive_response:answr7
         }
       ];
       var temp = opts.concat(obj);
       console.log('review form data:'+ JSON.stringify(temp));
-      // this.appService.setProductGoodReview(opts).subscribe((res) => {
-      //   if (res["status"] == "0000") {
-      //     Swal.fire(
-      //       "Thank you!",
-      //       "(Your Valuable feedback is being used for recommendation)",
-      //       "success"
-      //     ).then(()=>{
-      //       this.form.reset();
-      //       location.href = location.origin;
-      //     });
-      //   } else {
-      //     Swal.fire("Sorry!", "" + res["mesg"], "error");
-      //   }
-      // });
-      // console.log("selected data:" + JSON.stringify(opts));
+      this.appService.setProductGoodReview(opts).subscribe((res) => {
+        if (res["status"] == "0000") {
+          Swal.fire(
+            "Thank you!",
+            "(Your Valuable feedback is being used for recommendation)",
+            "success"
+          ).then(()=>{
+            this.form.reset();
+            location.href = location.origin;
+          });
+        } else {
+          Swal.fire("Sorry!", "" + res["mesg"], "error");
+        }
+      });
+      console.log("selected data:" + JSON.stringify(opts));
     } else {
       Swal.fire("Sorry!", "Please choose atleast 1 option!", "warning");
     }

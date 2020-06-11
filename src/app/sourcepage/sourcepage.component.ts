@@ -31,8 +31,8 @@ export class SourcepageComponent implements OnInit {
       this.url = res['sourceUrl'];
       this.icon = res['source']['sourceIcon'];
       setTimeout(()=>{
-        // window.location.href = this.url;
-   }, 2000);
+        window.location.href = this.url;
+   }, 4000);
     });
   }
 

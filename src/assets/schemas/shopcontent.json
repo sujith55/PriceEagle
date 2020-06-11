@@ -5,6 +5,10 @@
     "url":"/maincat/Mobiles/1",
     "contents":[
       {
+        "name":"Exclusive deals",
+        "url":"Mobiles-in-exclusive"
+      },
+      {
       "name":"New Releases",
       "url":"Mobiles-in-new"
       },

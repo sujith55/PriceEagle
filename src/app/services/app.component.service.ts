@@ -149,4 +149,8 @@ export class AppComponentService {
       return res;
     }))
   }
+  public getUserDetails(apiKey: any) {
+    return this.http.get(environment.baseUrl + 'user/getAccoutProfile?apikey=' + apiKey).pipe(map(res => { return res as any }));
+
+  }
 }

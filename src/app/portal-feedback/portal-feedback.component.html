@@ -108,22 +108,24 @@
       <h6>Portal Quality</h6>
       <div class="portal">
         <div class="questions" *ngFor="let point of portal;let j = index">
-          <ng-container *ngFor="let quest of point.reviewQuestionsCollection; let i = index">
-            <h2 class="current notranslate" id="quest_{{quest.serialId}}"
-              attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
-              {{quest.reviewQuestionsDesc.questionTitle}}</h2>
-            <!-- <div *ngFor="let option of quest.reviewOptionsCollection">
-              <input type="radio" id ="select_{{quest.serialId}}" required=true name="answerId"
-                value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
-              <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
-            </div> -->
-            <select class="notranslate" id="select_{{quest.serialId}}" type='text' required="true" name="answerId">
-              <option value="0"></option>
-              <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
-                {{option.reviewOptionsDesc.optionTitle}}
-              </option>
-            </select>
-          </ng-container>
+          <div style="display: inline-block;">
+            <ng-container *ngFor="let quest of point.reviewQuestionsCollection; let i = index">
+              <h2 class="current notranslate" id="quest_{{quest.serialId}}"
+                attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
+                {{quest.reviewQuestionsDesc.questionTitle}}</h2>
+              <div *ngFor="let option of quest.reviewOptionsCollection">
+                <input type="radio" id ="select_{{quest.serialId}}" required=true name="select_{{quest.serialId}}"
+                  value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
+                <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
+              </div>
+              <!-- <select class="notranslate" id="select_{{quest.serialId}}" type='text' required="true" name="answerId">
+                <option value="0"></option>
+                <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
+                  {{option.reviewOptionsDesc.optionTitle}}
+                </option>
+              </select> -->
+            </ng-container>
+          </div>
         </div>
       </div>
       <h6>Product</h6>
@@ -134,17 +136,17 @@
             <h2 class="current notranslate" id="quest_{{quest.serialId}}"
               attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
               {{quest.reviewQuestionsDesc.questionTitle}}</h2>
-            <!-- <div *ngFor="let option of quest.reviewOptionsCollection">
-              <input type="radio" id="select_{{quest.serialId}}" required=true name="answerId"
+            <div *ngFor="let option of quest.reviewOptionsCollection">
+              <input type="radio" id="select_{{quest.serialId}}" required=true name="select_{{quest.serialId}}"
                 value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
               <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
-            </div> -->
-            <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
+            </div>
+            <!-- <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
               <option value="0"></option>
               <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
                 {{option.reviewOptionsDesc.optionTitle}}
               </option>
-            </select>
+            </select> -->
           </ng-container>
         </div>
       </div>
@@ -156,17 +158,17 @@
             <h2 class="current notranslate" id="quest_{{quest.serialId}}"
               attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
               {{quest.reviewQuestionsDesc.questionTitle}}</h2>
-            <!-- <div *ngFor="let option of quest.reviewOptionsCollection">
-              <input type="radio" id="select_{{quest.serialId}}" required=true name="answerId"
+            <div *ngFor="let option of quest.reviewOptionsCollection">
+              <input type="radio" id="select_{{quest.serialId}}" required=true name="select_{{quest.serialId}}"
                 value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
               <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
-            </div> -->
-            <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
+            </div>
+            <!-- <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
               <option value="0"></option>
               <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
                 {{option.reviewOptionsDesc.optionTitle}}
               </option>
-            </select>
+            </select> -->
           </ng-container>
         </div>
       </div>
@@ -178,17 +180,17 @@
             <h2 class="current notranslate" id="quest_{{quest.serialId}}"
               attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
               {{quest.reviewQuestionsDesc.questionTitle}}</h2>
-            <!-- <div *ngFor="let option of quest.reviewOptionsCollection">
-              <input type="radio" id="select_{{quest.serialId}}" required=true name="answerId"
+            <div *ngFor="let option of quest.reviewOptionsCollection">
+              <input type="radio" id="select_{{quest.serialId}}" required=true name="select_{{quest.serialId}}"
                 value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
               <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
-            </div> -->
-            <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
+            </div>
+            <!-- <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
               <option value="0"></option>
               <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
                 {{option.reviewOptionsDesc.optionTitle}}
               </option>
-            </select>
+            </select> -->
           </ng-container>
         </div>
       </div>
@@ -200,17 +202,17 @@
             <h2 class="current notranslate" id="quest_{{quest.serialId}}"
               attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
               {{quest.reviewQuestionsDesc.questionTitle}}</h2>
-            <!-- <div *ngFor="let option of quest.reviewOptionsCollection">
-              <input type="radio" id="select_{{quest.serialId}}" required=true name="answerId"
+            <div *ngFor="let option of quest.reviewOptionsCollection">
+              <input type="radio" id="select_{{quest.serialId}}" required=true name="select_{{quest.serialId}}"
                 value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
               <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
-            </div> -->
-            <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
+            </div>
+            <!-- <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
               <option value="0"></option>
               <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
                 {{option.reviewOptionsDesc.optionTitle}}
               </option>
-            </select>
+            </select> -->
           </ng-container>
         </div>
       </div>

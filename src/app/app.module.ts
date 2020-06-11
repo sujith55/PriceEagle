@@ -24,6 +24,7 @@ import { SourcepageComponent } from './sourcepage/sourcepage.component';
 import { AboutComponent } from './about/about.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ContactComponent } from './contact/contact.component';
     SourcepageComponent,
     AboutComponent,
     PrivacyComponent,
-    ContactComponent
+    ContactComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

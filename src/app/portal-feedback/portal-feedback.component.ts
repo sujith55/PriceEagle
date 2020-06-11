@@ -7,6 +7,8 @@ import { categories } from '../model/categories';
 
 import { AppComponentService } from '../services/app.component.service';
 import { ShopComponentService } from '../home/shop/shop.component.service';
+
+import * as $ from "jquery";
 import Swal from 'sweetalert2';
 @Component({
   selector: 'app-portal-feedback',
@@ -93,28 +95,50 @@ export class PortalFeedbackComponent implements OnInit {
     var quest20 = $("#quest_20").attr('data-value');
     var quest21 = $("#quest_21").attr('data-value');
     var quest22 = $("#quest_22").attr('data-value');
-     var select1 = $("#select_1  option:selected").val();
-    var select2 = $("#select_2  option:selected").val();
-    var select3 = $("#select_3  option:selected").val();
-    var select4 = $("#select_4  option:selected").val();
-    var select5 = $("#select_5  option:selected").val();
-    var select6 = $("#select_6  option:selected").val();
-    var select7 = $("#select_7  option:selected").val();
-    var select8 = $("#select_8  option:selected").val();
-    var select9 = $("#select_9  option:selected").val();
-    var select10 = $("#select_10  option:selected").val();
-    var select11 = $("#select_11  option:selected").val();
-    var select12 = $("#select_12  option:selected").val();
-    var select13 = $("#select_13  option:selected").val();
-    var select14 = $("#select_14  option:selected").val();
-    var select15 = $("#select_15  option:selected").val();
-    var select16 = $("#select_16  option:selected").val();
-    var select17 = $("#select_17  option:selected").val();
-    var select18 = $("#select_18 option:selected").val();
-    var select19 = $("#select_19  option:selected").val();
-    var select20 = $("#select_20  option:selected").val();
-    var select21 = $("#select_21  option:selected").val();
-    var select22 = $("#select_22  option:selected").val();
+    var select1 = $('input[id="select_1"]:checked').val();
+    var select2 = $('input[id="select_2"]:checked').val();
+    var select3 = $('input[id="select_3"]:checked').val();
+    var select4 = $('input[id="select_4"]:checked').val();
+    var select5 = $('input[id="select_5"]:checked').val();
+    var select6 = $('input[id="select_6"]:checked').val();
+    var select7 = $('input[id="select_7"]:checked').val();
+    var select8 = $('input[id="select_8"]:checked').val();
+    var select9 = $('input[id="select_9"]:checked').val();
+    var select10 = $('input[id="select_10"]:checked').val();
+    var select11 = $('input[id="select_11"]:checked').val();
+    var select12 = $('input[id="select_12"]:checked').val();
+    var select13 = $('input[id="select_13"]:checked').val();
+    var select14 = $('input[id="select_14"]:checked').val();
+    var select15 = $('input[id="select_15"]:checked').val();
+    var select16 = $('input[id="select_16"]:checked').val();
+    var select17 = $('input[id="select_17"]:checked').val();
+    var select18 = $('input[id="select_18"]:checked').val();
+    var select19 = $('input[id="select_19"]:checked').val();
+    var select20 = $('input[id="select_20"]:checked').val();
+    var select21 = $('input[id="select_21"]:checked').val();
+    var select22 = $('input[id="select_22"]:checked').val();
+    // var select1 = $("#select_1  option:selected").val();
+    // var select2 = $("#select_2  option:selected").val();
+    // var select3 = $("#select_3  option:selected").val();
+    // var select4 = $("#select_4  option:selected").val();
+    // var select5 = $("#select_5  option:selected").val();
+    // var select6 = $("#select_6  option:selected").val();
+    // var select7 = $("#select_7  option:selected").val();
+    // var select8 = $("#select_8  option:selected").val();
+    // var select9 = $("#select_9  option:selected").val();
+    // var select10 = $("#select_10  option:selected").val();
+    // var select11 = $("#select_11  option:selected").val();
+    // var select12 = $("#select_12  option:selected").val();
+    // var select13 = $("#select_13  option:selected").val();
+    // var select14 = $("#select_14  option:selected").val();
+    // var select15 = $("#select_15  option:selected").val();
+    // var select16 = $("#select_16  option:selected").val();
+    // var select17 = $("#select_17  option:selected").val();
+    // var select18 = $("#select_18 option:selected").val();
+    // var select19 = $("#select_19  option:selected").val();
+    // var select20 = $("#select_20  option:selected").val();
+    // var select21 = $("#select_21  option:selected").val();
+    // var select22 = $("#select_22  option:selected").val();
     var lang = 'en';
     var obj = [{
       answerId: select1,
@@ -228,13 +252,13 @@ export class PortalFeedbackComponent implements OnInit {
       }
     ]
     console.log('form data is:' + JSON.stringify(obj));
-    this.service_.setReviewAnswers(obj, this.feedId).subscribe(res=>{
-      if(res['status']=="0000"){
-        Swal.fire('Thank you','We have received your valuable feedback','success');
-        location.reload();
-      }else{
-        Swal.fire('Sorry',''+res['mesg'],'warning');
-      }
-    });
+    // this.service_.setReviewAnswers(obj, this.feedId).subscribe(res=>{
+    //   if(res['status']=="0000"){
+    //     Swal.fire('Thank you','We have received your valuable feedback','success');
+    //     location.reload();
+    //   }else{
+    //     Swal.fire('Sorry',''+res['mesg'],'warning');
+    //   }
+    // });
   }
 }

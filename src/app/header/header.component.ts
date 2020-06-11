@@ -29,6 +29,8 @@ export class HeaderComponent implements OnInit {
   Otpmessage: any;
   values: any;
   search: any;
+  user: string;
+  userDetails: any;
   constructor(private http: HttpClient, private router: ActivatedRoute, private service:AppComponentService, private shop: ShopComponentService) {
     jQuery.noConflict();
   }
@@ -40,6 +42,7 @@ export class HeaderComponent implements OnInit {
     this.shop.getLangs().subscribe(res=>{
       this.langs = res;
     });
+    this.user = sessionStorage.getItem('user');
   }
 
   submitForm(data:any){
@@ -135,7 +138,7 @@ export class HeaderComponent implements OnInit {
     // console.log(data.value)
   }
   newpassword(data:any){
-    // console.log(data.value);
+    console.log(data.value);
     this.service.NewPassword(data.value).subscribe(res=>{
       if (res.status == "1031") {
         Swal.fire({

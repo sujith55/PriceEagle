@@ -1,3 +1,12 @@
 <app-header></app-header>
+<div class="overlay" scroll="no" style="overflow: hidden" *ngIf="!isConnected">
+  <div class="contains">
+    <div class="text-center">
+      <p style="font-size:25px; font-weight: lighter;color: grey; padding: 4px 4px;">Check your internet connection and try again</p>
+      <p style="padding: 5px 3px; font-size: 15px;">We couldn't connect to the server.</p>
+      <button class="btn btn-primary" (click)="reloadPage()">Refresh this page</button>
+    </div>
+  </div>
+</div>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

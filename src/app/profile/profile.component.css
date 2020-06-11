@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  background: white;
+  /* border: 1px solid yellow; */
+  height: 500px;
+  padding: 4px 4px;
+  margin-top: 45px;
+  max-width: 1300px;
+}
+.info{
+  position: relative;
+  padding: 4px 4px;
+  width: 500px;
+  top: 10px;
+  border: 1px solid #ffc2df;
+  margin: 0;
+  border-radius: 3px;
+}
+.info p{
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  color: grey;
+}
+.info p span{
+  font-weight: lighter;
+  color: rgb(17, 139, 48);
+  padding: 4px 0px;
+  margin: 0;
+  letter-spacing: 0.03em;
+}

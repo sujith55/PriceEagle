@@ -1,0 +1,20 @@
+<div class="container">
+  <!-- <p>profile works!</p> -->
+  <div class="info">
+    <div style="display: flex;">
+      <h2>My profile</h2>
+      <div style="position: relative; left: 50%;">
+        <button class="btn btn-danger" (click)="logOut()">Logout</button>
+      </div>
+    </div>
+    <div>
+      <p>Name: <span>{{userInfo['name']}}</span></p>
+    </div>
+    <div>
+      <p>Email: <span>{{userInfo['email']}}</span></p>
+    </div>
+    <div>
+      <p>Mobile No: <span>{{userInfo['mobile']}}</span></p>
+    </div>
+  </div>
+</div>

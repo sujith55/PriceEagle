@@ -10,6 +10,7 @@ import { SourcepageComponent } from './sourcepage/sourcepage.component';
 import { AboutComponent } from './about/about.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -77,6 +78,10 @@ const routes: Routes = [
   {
     path:'shop/home/contact',
     component:ContactComponent
+  },
+  {
+    path:'shop/home/profile',
+    component:ProfileComponent
   }
   // { path: '**', component: PageNotFoundComponent }
 ];

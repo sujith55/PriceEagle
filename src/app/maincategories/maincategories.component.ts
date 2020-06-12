@@ -24,18 +24,18 @@ export class MaincategoriesComponent implements OnInit {
     url5: "Mobiles-in-accessories",
   };
   subcat2 = {
-    url1: "Electronics-in-laptops",
+    url1: "Electronics-in-Computer-laptop",
     url2: "Electronics-in-Telivision",
-    url3: "Electronics-in-refrigerators",
-    url4: "Electronics-in-washingmachine",
-    url5: "Electronics-in-ac",
+    url3: "Electronics-in-Refrigetor",
+    url4: "Electronics-in-wm",
+    url5: "Electronics-in-AirConditioner",
   };
   subcat3 = {
     url1: "Home-Appliances-in-cooker",
     url2: "Home-Appliances-in-Mixer",
     url3: "Home-Appliances-in-geyser",
-    url4: "Home-Appliances-in-microwave",
-    url5: "Home-Appliances-in-ironBox",
+    url4: "Home-Appliances-in-MicroWave",
+    url5: "Home-Appliances-in-IronBox",
   };
   subcat4 = {
 
@@ -44,9 +44,8 @@ export class MaincategoriesComponent implements OnInit {
     url1:"Beauty-in-makeup",
     url2:"Beauty-in-creams",
     url3:"Beauty-in-shavingmen",
-    url4:"Beauty-in-shavingwomen",
-    url5:"Beauty-in-perfume",
-    url6:"Beauty-in-sunglasses"
+    url4:"Beauty-in-perfume",
+    url5:"Beauty-in-sunglasses"
   };
   subcat6 = {
     url1:"Jewellery-in-Ring",
@@ -200,7 +199,7 @@ export class MaincategoriesComponent implements OnInit {
           //   this.list.push(obj);
           // })
         }
-        console.log('data is :' + this.list)
+        // console.log('data is :' + this.list)
       });
   }
 }

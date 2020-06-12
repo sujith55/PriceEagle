@@ -1,14 +1,13 @@
 import { Component, OnInit } from "@angular/core";
-import { Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
-import { fromEvent } from "rxjs";
-import {Router, ActivatedRoute } from "@angular/router";
+import { Observable, fromEvent, forkJoin, merge } from "rxjs";
+import { Router, ActivatedRoute } from "@angular/router";
 import { categories } from "../model/categories";
 
 import { AppComponentService } from "../services/app.component.service";
 import { GlobalComponent } from "../global/global.component";
 
-import * as $ from 'jquery';
+import * as $ from "jquery";
 @Component({
   selector: "app-category",
   templateUrl: "./category.component.html",
@@ -21,26 +20,29 @@ export class CategoryComponent implements OnInit {
   all_categories: categories[];
   result: any[];
   private criteriamap = {};
+  isDataexist: boolean = false;
+  static count: number = 0;
+  public pages =[];
+  cnt: number;
+  noData: boolean = false;
   constructor(
     private service_: AppComponentService,
     private http: HttpClient,
     private router: ActivatedRoute,
-    private route:Router,
+    private route: Router,
     private global: GlobalComponent
   ) {
     this.router.params.subscribe((params) => {
       this.categoryurl = params["categoryUrl"];
-      console.log("Category url:" + this.categoryurl);
+      // console.log("Category url:" + this.categoryurl);
     });
     this.subscription();
   }
 
-  ngOnInit(): void {
-    $(document).ready(()=>{
-      $('.text').on('click',()=>{
-        $('ul li').addClass('active').siblings().removeClass('active');
-      });
-    });
+  ngOnInit(){
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    $(document).off("dblclick", ".firstlevel, .secondlevel, .thirdlevel");
+    // console.log(this.pages);
     // this.service_.getCategories().subscribe(res=>{
     //   this.all_categories = res;
     //   console.log(this.all_categories);
@@ -57,7 +59,7 @@ export class CategoryComponent implements OnInit {
   subscription() {
     this.service_.getCategories().subscribe((res) => {
       this.all_categories = res;
-      console.log(this.all_categories);
+      // console.log(this.all_categories);
     });
     this.service_
       .getCriteriasByCategoryId(this.categoryurl)
@@ -68,9 +70,61 @@ export class CategoryComponent implements OnInit {
     this.service_
       .getProductsByIdandLimit(this.categoryurl, this.limit)
       .subscribe((res) => {
-        this.result = res;
+        if (res) {
+          this.result = res;
+          this.isDataexist = true;
+        }
         // console.log("Fetching data:" + res);
       });
+  }
+  loadMore() {
+    CategoryComponent.count +=1;
+    this.pages.push(CategoryComponent.count);
+    // console.log('pages'+ this.pages);
+    var loadPages = this.service_.getProductsByIdandLimit(
+      this.categoryurl,
+      CategoryComponent.count
+    );
+    loadPages.subscribe((res) => {
+      if (res != null && res.length != 0) {
+        this.cnt = 0;
+          this.result = res;
+          for(let val of this.result){
+            this.cnt++;
+          }
+          if(this.cnt != 20){
+            this.noData = true;
+            CategoryComponent.count = 0;
+          }else{
+            // console.log('obj are below 20 ')
+          }
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        // console.log("data coming:" + check);
+      }
+    });
+  }
+  loadPages(count){
+    if(count != 0){
+      // count++;
+      var loadPages = this.service_.getProductsByIdandLimit(
+        this.categoryurl,
+        count
+      );
+      loadPages.subscribe((res) => {
+        if (res != null && res.length != 0) {
+          this.result = res;
+          $("html, body").animate({ scrollTop: 0 }, "slow");
+          // console.log("data coming:" + );
+        }
+      });
+    }
+  }
+  strtPage(count){
+    // console.log(key);
+    this.service_.getProductsByIdandLimit(this.categoryurl, 0).subscribe(res=>{
+      this.result = res;
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+    });
   }
   criteriaSelect(ev, cr_name) {
     var arr = [];
@@ -78,7 +132,7 @@ export class CategoryComponent implements OnInit {
     var inputbox = "#criteria_" + ev + " input:checked";
     // console.log("criteria select changed:-" + ev);
     $(inputbox).each(function (i) {
-      arr[i] = cr_name+':';
+      arr[i] = cr_name + ":";
       arr.push($(this).val());
       // console.log("da::}}"+$(this).val()+":cr name:"+cr_name);
       check = true;
@@ -91,7 +145,7 @@ export class CategoryComponent implements OnInit {
       check
     ) {
       this.criteriamap[ev] = arr;
-      console.log("map object::condition:::::" + JSON.stringify(this.criteriamap));
+      // console.log("map object::condition:::::" + JSON.stringify(this.criteriamap));
     } else {
       delete this.criteriamap[ev];
     }
@@ -117,51 +171,45 @@ export class CategoryComponent implements OnInit {
         arr.push(obj);
         this.result = arr.sort((a, b) => {
           return (
-            a["productsSources"][0]["prodPrice"] - b["productsSources"][0]["prodPrice"]
+            a["productsSources"][0]["prodPrice"] -
+            b["productsSources"][0]["prodPrice"]
           );
         });
       }
-    }else if(id == 2){
+    } else if (id == 2) {
       for (let obj of this.result) {
         arr.push(obj);
         this.result = arr.sort((a, b) => {
           return (
-            b["productsSources"][0]["prodPrice"] - a["productsSources"][0]["prodPrice"]
+            b["productsSources"][0]["prodPrice"] -
+            a["productsSources"][0]["prodPrice"]
           );
         });
       }
     }
     // console.log(arr);
   }
-  typeChange(id){
+  typeChange(id) {
     var limit = 0;
-    if(id == 1){
-      this.route.navigate(['/Electronics-in-Computer-laptop']);
-      let cateUrl = 'Electronics-in-Computer-laptop';
-      this.service_
-      .getProductsByIdandLimit(cateUrl, limit)
-      .subscribe((res) => {
+    if (id == 1) {
+      this.route.navigate(["/Electronics-in-Computer-laptop"]);
+      let cateUrl = "Electronics-in-Computer-laptop";
+      this.service_.getProductsByIdandLimit(cateUrl, limit).subscribe((res) => {
         this.result = res;
         // console.log("Fetching data:" + res);
       });
-      this.service_
-      .getCriteriasByCategoryId(cateUrl)
-      .subscribe((res) => {
+      this.service_.getCriteriasByCategoryId(cateUrl).subscribe((res) => {
         this.criterias = res;
         // console.log("criteria:" + JSON.stringify(this.criterias));
       });
-    }else if(id == 2){
-      this.route.navigate(['/Electronics-in-Computer-desktop']);
-      let cateUrl = 'Electronics-in-Computer-desktop';
-      this.service_
-      .getProductsByIdandLimit(cateUrl, limit)
-      .subscribe((res) => {
+    } else if (id == 2) {
+      this.route.navigate(["/Electronics-in-Computer-desktop"]);
+      let cateUrl = "Electronics-in-Computer-desktop";
+      this.service_.getProductsByIdandLimit(cateUrl, limit).subscribe((res) => {
         this.result = res;
         // console.log("Fetching data:" + res);
       });
-      this.service_
-      .getCriteriasByCategoryId(cateUrl)
-      .subscribe((res) => {
+      this.service_.getCriteriasByCategoryId(cateUrl).subscribe((res) => {
         this.criterias = res;
         // console.log("criteria:" + JSON.stringify(this.criterias));
       });

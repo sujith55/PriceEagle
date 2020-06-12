@@ -1,15 +1,15 @@
 <div class="container" *ngIf="first">
   <div class="section">
-    <div class="content" *ngFor="let res of list">
-      <div class="pi-img-wrapper">
-        <img class="img-responsive res-img" style="height:250px" src="{{res.imageUrl}}" alt="img">
-      </div>
-      <div class="items">
-        <p>{{res.prodName}}</p>
-        <img src="{{global.ImgUrls.storeUrl}}{{res.productsSources[0]['source']['sourceIcon']}}">
-        <p>Best Price: <span style="color:green; font-weight:bold; word-spacing:0.03em">Rs.{{res.productsSources[0]['prodPrice']}}/-</span>
-        </p>
-      </div>
+    <div class="content" *ngFor="let res of list" routerLink="/{{categoryurl}}/{{res.productId}}">
+        <div class="pi-img-wrapper">
+          <img class="img-responsive res-img" style="height:250px" src="{{res.imageUrl}}" alt="img">
+        </div>
+        <div class="items">
+          <p>{{res.prodName}}</p>
+          <img src="{{global.ImgUrls.storeUrl}}{{res.productsSources[0]['source']['sourceIcon']}}">
+          <p>Best Price: <span style="color:green; font-weight:bold; word-spacing:0.03em">Rs.{{res.productsSources[0]['prodPrice']}}/-</span>
+          </p>
+        </div>
     </div>
   </div>
 </div>

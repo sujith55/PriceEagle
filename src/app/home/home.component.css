@@ -109,7 +109,7 @@ a.carousel-control-next {
   font-weight: 500;
   letter-spacing: 0.03rem;
 }
-.sidebar .list-group .list-group-item:focus{
+.list-group .list-group-item:focus{
   outline: none !important;
 }
 .sidebar .list-group .list-group-item:nth-child(even) {

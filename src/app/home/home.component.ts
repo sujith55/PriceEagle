@@ -50,6 +50,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void{
+    $("html, body").animate({ scrollTop: 0 }, "slow");
     this.service_.getBannerList().subscribe(res=>{
       this.imageUrl = res;
       this.loading = false;

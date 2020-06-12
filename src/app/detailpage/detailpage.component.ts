@@ -118,6 +118,7 @@ export class DetailpageComponent implements OnInit {
   }
 
   ngOnInit() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
     this.appService.getProductDetailsById(this.productId).subscribe(res => {
       if ((res["status"] = "0000")) {
         this.specF = res["prodSpecJson"];
@@ -434,7 +435,7 @@ export class DetailpageComponent implements OnInit {
             "success"
           ).then(()=>{
             this.form.reset();
-            location.href = location.origin;
+            location.reload();
           });
         } else {
           Swal.fire("Sorry!", "" + res["mesg"], "error");

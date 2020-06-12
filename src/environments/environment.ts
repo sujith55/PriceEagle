@@ -3,17 +3,17 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
-export const environment = {
-  production: true,
-  baseUrl: 'https://api.priceeagle.in/priceEagle/Pe_api/',
-  baseUrlAdmin: 'https://api.priceeagle.in/priceEagle/admin/'
-};
-
 // export const environment = {
 //   production: true,
-//   baseUrl: 'http://localhost:8080/priceEagle/Pe_api/',
-//   baseUrlAdmin: 'http://localhost:8080/priceEagle/admin/'
+//   baseUrl: 'https://api.priceeagle.in/priceEagle/Pe_api/',
+//   baseUrlAdmin: 'https://api.priceeagle.in/priceEagle/admin/'
 // };
+
+export const environment = {
+  production: true,
+  baseUrl: 'http://localhost:8080/priceEagle/Pe_api/',
+  baseUrlAdmin: 'http://localhost:8080/priceEagle/admin/'
+};
 
 // export const environment = {
 //   production: true,

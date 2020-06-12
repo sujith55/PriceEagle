@@ -85,6 +85,7 @@
             <p class="contents dropdown-toggle" type="button" data-toggle="modal" data-target="#infantsModal">
               Infants
             </p>
+            <p class="contents" routerLink="/fashion-latest">Latest trend</p>
         </div>
       </div>
       <h5 style="width: 930px; font-weight: bold; margin: 2px 0 2px 20px;">
@@ -97,7 +98,9 @@
           <p>{{ eles.title }}</p>
         </div>
         <div class="captions pull-right">
-          <p class="contents" *ngFor="let link of eles.contents" routerLink="/{{link.url}}">{{ link.name }}</p>
+          <div *ngFor="let link of eles.contents">
+            <a href="{{link.url}}" target="_blank"><p class="contents">{{ link.name }}</p></a>
+          </div>
         </div>
       </div>
     </div>

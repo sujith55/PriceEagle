@@ -20,7 +20,7 @@
       {
         "img":"/assets/sidebar/picture4.png",
         "name":"Fashion",
-        "url":"/maincat/Fashion/4",
+        "url":"",
         "pid":4
       },
       {
@@ -50,7 +50,7 @@
       {
         "img":"/assets/sidebar/picture9.png",
         "name":"Medicine",
-        "url":"/maincat/Medicine/9"
+        "url":""
       },
       {
         "img":"/assets/sidebar/picture10.png",
@@ -73,31 +73,31 @@
       {
         "img":"/assets/sidebar/picture13.png",
         "name":"Travel",
-        "url":"/maincat/Travel/13"
+        "url":""
       },
       {
         "img":"/assets/sidebar/picture14.png",
         "name":"Hotel",
-        "url":"/maincat/Hotel/14"
+        "url":""
       },
       {
         "img":"/assets/sidebar/picture15.png",
         "name":"Recharge",
-        "url":"/maincat/Recharge/15"
+        "url":""
       },
       {
         "img":"/assets/sidebar/picture16.png",
         "name":"Education",
-        "url":"/maincat/Education/16"
+        "url":""
       },
       {
         "img":"/assets/sidebar/picture17.png",
         "name":"Food Services",
-        "url":"/maincat/Food-Services/17"
+        "url":""
       },
       {
         "img":"/assets/sidebar/picture18.png",
         "name":"Repair & Services",
-        "url":"/maincat/Repair-Services/18"
+        "url":""
       }
 ]

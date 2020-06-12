@@ -16,6 +16,11 @@
   margin: 0 16px;
   bottom: 13px;
 }
+.navbar img:focus,
+.navbar img:hover{
+  outline: none;
+  cursor: pointer;
+}
 .flipkart-navbar-search {
   position: relative;
   display: flex;
@@ -26,6 +31,8 @@
 }
 .flipkart-navbar-search .row{
   padding: 0px 20px;
+  position: relative;
+  bottom: 3px;
 }
 .flipkart-navbar-search .flipkart-navbar-input {
   position: relative;

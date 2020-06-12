@@ -56,7 +56,7 @@ export class HeaderComponent implements OnInit {
           text: '' + res.mesg,
           icon:"success"
         }).then(() => {
-          location.href = location.origin;
+          location.reload();
           data.resetForm({});
         });
       } else if(res.status == "1034"){
@@ -105,7 +105,7 @@ export class HeaderComponent implements OnInit {
         text:"OTP Verification is Successfull",
         icon:"success"
       }).then(() => {
-        location.href = location.origin;
+        location.reload();
       });
     } else if (res.status == "1029") {
       Swal.fire("sorry..", "" + JSON.stringify(res["mesg"]), "error");
@@ -146,7 +146,7 @@ export class HeaderComponent implements OnInit {
           icon: 'success'
         }).then(() => {
           // location.href = "./user-login/login/user-login.htm";
-           location.href=location.origin;
+           location.reload();
         });
       } else if (res.status == "1029") {
         Swal.fire(
@@ -162,6 +162,9 @@ export class HeaderComponent implements OnInit {
         )
       }
     });
+  }
+  otpResend(data: any){
+    this.newpassword(data.value);
   }
   onKey(ev: any){
     this.values = ev.target.value;

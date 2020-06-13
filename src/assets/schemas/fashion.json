@@ -183,23 +183,23 @@
       "contents":[
         {
           "name":"Skirt",
-          "url":""
+          "url":"Fashion-women-skirt"
         },
         {
           "name":"Plazo",
-          "url":""
+          "url":"Fashion-women-plazo"
         },
         {
           "name":"Churidar",
-          "url":""
+          "url":"Fashion-women-churidar"
         },
         {
           "name":"Trousers",
-          "url":""
+          "url":"Fashion-women-trousers"
         },
         {
           "name":"Leggings & Jeggings",
-          "url":""
+          "url":"Fashion-women-leggings"
         }
       ]
     },
@@ -208,43 +208,47 @@
       "contents":[
         {
           "name":"Bras",
-          "url":""
+          "url":"Fashion-women-bras"
         },
         {
           "name":"Sports Bras",
-          "url":""
+          "url":"Fashion-women-sportsbras"
         },
         {
           "name":"Babydolls",
-          "url":""
+          "url":"Fashion-women-babydolls"
         },
         {
           "name":"Slips",
-          "url":""
+          "url":"Fashion-women-slips"
         },
         {
           "name":"Panties",
-          "url":""
+          "url":"Fashion-women-panties"
         },
         {
           "name":"Lingerie sets",
-          "url":""
+          "url":"Fashion-women-lingeriesets"
         },
         {
           "name":"Shape wears",
-          "url":""
+          "url":"Fashion-women-shapewears"
         },
         {
           "name":"Night Dresses",
-          "url":""
+          "url":"Fashion-women-nightdresses"
         },
         {
           "name":"Boxers",
-          "url":""
+          "url":"Fashion-women-boxers"
         },
         {
           "name":"pyjamas",
-          "url":""
+          "url":"Fashion-women-pyjamas"
+        },
+        {
+          "name":"Beach wear",
+          "url":"Fashion-women-beachwear"
         }
       ]
     },
@@ -253,19 +257,19 @@
       "contents":[
         {
           "name":"Shoes",
-          "url":""
+          "url":"Fashion-women-shoes"
         },
         {
           "name":"Sneakers",
-          "url":""
+          "url":"Fashion-women-sneakers"
         },
         {
           "name":"Sandals",
-          "url":""
+          "url":"Fashion-women-sandals"
         },
         {
           "name":"Socks",
-          "url":""
+          "url":"Fashion-women-socks"
         }
       ]
     },
@@ -274,15 +278,15 @@
       "contents":[
         {
           "name":"Handbags",
-          "url":""
+          "url":"Fashion-women-handbags"
         },
         {
           "name":"Belts",
-          "url":""
+          "url":"Fashion-women-belt"
         },
         {
           "name":"Watches",
-          "url":""
+          "url":"Fashion-women-watches"
         }
       ]
     }
@@ -290,68 +294,60 @@
   [
     {
       "name":"kids fashion",
-      "title":"Boys wear",
+      "title":"Boys wear(Top wear)",
       "contents":[
         {
-          "name":"Top wear",
-          "url":""
-        },
-        {
           "name":"Ethnic wear",
-          "url":""
+          "url":"Fashion-kids-boy-ethnicwear"
         },
         {
           "name":"Jumpsuits",
-          "url":""
+          "url":"Fashion-kids-boy-jumpsuits"
         },
         {
           "name":"Suits and Blazers",
-          "url":""
+          "url":"Fashion-kids-boy-suits"
         },
         {
           "name":"Shirts",
-          "url":""
+          "url":"Fashion-kids-boy-shirts"
         },
         {
           "name":"T-Shirts",
-          "url":""
+          "url":"Fashion-kids-boy-tshirts"
         },
         {
           "name":"Kurta",
-          "url":""
+          "url":"Fashion-kids-boy-kurta"
         }
       ]
     },
     {
-      "title":"Girls wear",
+      "title":"Girls wear(Top wear)",
       "contents":[
         {
-          "name":"Top wear",
-          "url":""
-        },
-        {
           "name":"Western wear",
-          "url":""
+          "url":"Fashion-kids-girls-westernwear"
         },
         {
           "name":"Ethnic wear",
-          "url":""
+          "url":"Fashion-kids-girls-ethnicwear"
         },
         {
           "name":"Jumpsuits",
-          "url":""
+          "url":"Fashion-kids-girls-jumpsuits"
         },
         {
           "name":"T-Shirts",
-          "url":""
+          "url":"Fashion-kids-girls-tshirts"
         },
         {
           "name":"Frocks",
-          "url":""
+          "url":"Fashion-kids-girls-frocks"
         },
         {
           "name":"Tops",
-          "url":""
+          "url":"Fashion-kids-girls-tops"
         }
       ]
     },
@@ -360,15 +356,15 @@
       "contents":[
         {
           "name":"Shoes",
-          "url":""
+          "url":"Fashion-kids-girls-shoes"
         },
         {
           "name":"Sandels",
-          "url":""
+          "url":"Fashion-kids-girls-sandals"
         },
         {
           "name":"Chappal",
-          "url":""
+          "url":"Fashion-kids-girls-chappal"
         }
       ]
     },
@@ -377,23 +373,23 @@
       "contents":[
         {
           "name":"Trousers & Cargos",
-          "url":""
+          "url":"Fashion-kids-boy-trousers"
         },
         {
           "name":"Jeans",
-          "url":""
+          "url":"Fashion-kids-boy-jeans"
         },
         {
           "name":"Shorts",
-          "url":""
+          "url":"Fashion-kids-boy-shorts"
         },
         {
           "name":"Sleep wear",
-          "url":""
+          "url":"Fashion-kids-boy-sleepwear"
         },
         {
           "name":"Sports wear",
-          "url":""
+          "url":"Fashion-kids-boy-sportswear"
         }
       ]
     },
@@ -402,27 +398,27 @@
       "contents":[
         {
           "name":"Trousers & Cargos",
-          "url":""
+          "url":"Fashion-kids-girls-trousers"
         },
         {
           "name":"Leggings & Jeggings",
-          "url":""
+          "url":"Fashion-kids-girls-leggings"
         },
         {
           "name":"Jeans",
-          "url":""
+          "url":"Fashion-kids-girls-jeans"
         },
         {
           "name":"Capris",
-          "url":""
+          "url":"Fashion-kids-girls-capris"
         },
         {
           "name":"Skirts",
-          "url":""
+          "url":"Fashion-kids-girls-skirts"
         },
         {
           "name":"Sleep wear",
-          "url":""
+          "url":"Fashion-kids-girls-sleepwear"
         }
       ]
     },
@@ -431,15 +427,15 @@
       "contents":[
         {
           "name":"Trunk",
-          "url":""
+          "url":"Fashion-kids-boy-trunk"
         },
         {
           "name":"Brief",
-          "url":""
+          "url":"Fashion-kids-boy-brief"
         },
         {
           "name":"Vest",
-          "url":""
+          "url":"Fashion-kids-boy-vest"
         }
       ]
     },
@@ -448,11 +444,11 @@
       "contents":[
         {
           "name":"Panty",
-          "url":""
+          "url":"Fashion-kids-girls-panty"
         },
         {
           "name":"Slips",
-          "url":""
+          "url":"Fashion-kids-girls-slips"
         }
       ]
     },
@@ -461,27 +457,27 @@
       "contents":[
         {
           "name":"Watches",
-          "url":""
+          "url":"Fashion-kids-girls-watch"
         },
         {
           "name":"Belts",
-          "url":""
+          "url":"Fashion-kids-girls-belt"
         },
         {
           "name":"Handkerchief",
-          "url":""
+          "url":"Fashion-kids-girls-handkechief"
         },
         {
           "name":"Cap",
-          "url":""
+          "url":"Fashion-kids-girls-cap"
         },
         {
           "name":"Goggles",
-          "url":""
+          "url":"Fashion-kids-girls-goggles"
         },
         {
           "name":"Socks",
-          "url":""
+          "url":"Fashion-kids-girls-socks"
         }
       ]
     }
@@ -493,39 +489,39 @@
       "contents":[
         {
           "name":"Baby Boy",
-          "url":""
+          "url":"Fashion-infants-babyboy"
         },
         {
           "name":"Baby Carrier",
-          "url":""
+          "url":"Fashion-infants-babycarrier"
         },
         {
           "name":"Baby Girl",
-          "url":""
+          "url":"Fashion-infants-babygirl"
         },
         {
           "name":"Baby sleeping bag",
-          "url":""
+          "url":"Fashion-infants-babysleepingbag"
         },
         {
           "name":"Diaper",
-          "url":""
+          "url":"Fashion-infants-ciaper"
         },
         {
           "name":"Night wear",
-          "url":""
+          "url":"Fashion-infants-nightwear"
         },
         {
           "name":"Socks",
-          "url":""
+          "url":"Fashion-infants-socks"
         },
         {
           "name":"Hand Gloves",
-          "url":""
+          "url":"Fashion-infants-handgloves"
         },
         {
           "name":"Cap",
-          "url":""
+          "url":"Fashion-infants-cap"
         }
       ]
     }

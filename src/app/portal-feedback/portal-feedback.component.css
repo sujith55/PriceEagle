@@ -6,10 +6,6 @@
   margin-top: 45px;
   max-width: 1300px;
 }
-.contents{
-  position: relative;
-  padding: 5px 2px;
-}
 .btn{
   position: relative;
   background: #ffc2df;
@@ -24,18 +20,38 @@
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.452);
 }
 .transactions{
-  width: 70%;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
   /* height: 400px; */
 }
-.portal{
+.contents{
   position: relative;
-  display: flex;
-  padding: 5px 5px;
-  border: 1px solid #ffc2df;
+  max-height: 100%;
+  padding: 5px 2px;
+}
+.contents .form-group{
+  display: inline-block;
 }
 .questions{
   /* display: flex; */
-  display: inline-block;
-  position: relative;
+  /* position: relative; */
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  /* max-height: 300px; */
+  /* padding: 5px 5px; */
+}
+.questions .inputs{
+  max-width: 100%;
   padding: 5px 5px;
+}
+.questions .inputs [type="radio"]{
+  vertical-align: middle;
+}
+.questions .inputs label{
+  font-size: 13px;
+  padding: 0px 5px;
+  /* vertical-align: middle; */
 }

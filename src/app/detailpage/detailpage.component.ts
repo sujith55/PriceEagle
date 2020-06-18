@@ -44,36 +44,6 @@ export class DetailpageComponent implements OnInit {
   highlights: any[];
   list: string[] = [];
   list2: string[] = [];
-  questions= {} = [
-    {
-      qid: 1,
-      ans: "sample text",
-    },
-    {
-      qid: 2,
-      ans: "sample text",
-    },
-    {
-      qid: 3,
-      ans: "sample text",
-    },
-    {
-      qid: 4,
-      ans: "sample text",
-    },
-    {
-      qid: 5,
-      ans: "sample text",
-    },
-    {
-      qid: 6,
-      ans: "sample text",
-    },
-    {
-      qid: 7,
-      ans: "sample text",
-    },
-  ];
   user: string;
   data: Object;
   goodReview: any;
@@ -82,6 +52,7 @@ export class DetailpageComponent implements OnInit {
   isRecommend: boolean= false;
   isLoad:boolean = false;
   isHigh: boolean= false;
+  fashion: boolean;
   constructor(
     private router: ActivatedRoute,
     private route: Router,
@@ -115,6 +86,10 @@ export class DetailpageComponent implements OnInit {
         this.specF = res["prodSpecJson"];
       });
     });
+    this.fashion = this.categoryurl.includes('Fashion');
+    this.list.length = 0;
+    this.list2.length = 0;
+    // console.log('it exists:::::' + fashion);
   }
 
   ngOnInit() {
@@ -162,6 +137,9 @@ export class DetailpageComponent implements OnInit {
       // });
       });
     });
+    this.shop.getHighLights().subscribe(res=>{
+      this.highLights = res;
+    });
     // this.highLights();
   }
   highLights(data) {
@@ -169,6 +147,8 @@ export class DetailpageComponent implements OnInit {
       this.highlights = res;
       for (let obj of this.highlights) {
         if (obj.categoryUrl == this.categoryurl) {
+          this.list.length = 0;
+          this.list2.length = 0;
           this.isHigh = true;
           let value = obj["highlightName"];
           Object.keys(value).forEach((i, key, val) => {
@@ -177,10 +157,16 @@ export class DetailpageComponent implements OnInit {
           this.list.forEach((i, key, val) => {
             this.list2.push(data[i]);
           });
-          console.log('data is:'+(this.list2));
+          console.log('data is:'+(this.list));
+        }else if(obj.categoryUrl.includes('Fashion') == this.categoryurl.includes('Fashion')){
+          this.fashionCat(this.categoryurl);
+          // console.log('no Highlights are there...!');
         }
       }
     });
+  }
+  fashionCat(url){
+
   }
   // check(entry) {
   //   if (!entry.isChecked) {

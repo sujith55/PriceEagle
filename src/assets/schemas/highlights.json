@@ -304,6 +304,25 @@
   },
   {
     "parentid":1,
+    "categoryid":38,
+    "categoryUrl":"Fashion-category",
+    "highlightName":[
+      {
+        "name":"Brand",
+        "value":"Brand"
+      },
+      {
+        "name":"Color",
+        "value":"Color"
+      },
+      {
+        "name":"Material",
+        "value":"Material"
+      }
+    ]
+  },
+  {
+    "parentid":1,
     "categoryid":42,
     "categoryUrl":"Beauty-in-shavingmen",
     "highlightName":[

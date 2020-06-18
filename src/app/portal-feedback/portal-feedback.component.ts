@@ -47,22 +47,25 @@ export class PortalFeedbackComponent implements OnInit {
       this.payment = res[2];
       this.delivery = res[3];
       this.experience = res[4];
-      // console.log('portal'+ JSON.stringify(this.delivery));
+      // console.log('portal'+ JSON.stringify(this.portal));
     });
   }
   public submitForm(data: any){
     if(data != null){
-      var temp = data.value;
-      var obj = {
-        "username":this.username,
-        "email":this.email
-      };
-     const res = {...temp, ...obj};
-     console.log(res);
-    this.service_.userreviewForm(res, this.lang).subscribe(res=>{
+    //   var temp = data.value;
+    //   var obj = {
+    //     "username":this.username,
+    //     "email":this.email
+    //   };
+    //  const res = {...temp, ...obj};
+    //  console.log(res);
+    this.service_.userreviewForm(data.value, this.lang).subscribe(res=>{
       if(res['status']=="0000"){
         this.feedId = res['data'];
-        this.isVerified = true;
+        setTimeout(()=>{
+          this.submit();
+        },4000);
+        // this.isVerified = true;
       }else{
         Swal.fire('Sorry!',''+res['mesg'], 'error');
       }
@@ -117,28 +120,7 @@ export class PortalFeedbackComponent implements OnInit {
     var select20 = $('input[id="select_20"]:checked').val();
     var select21 = $('input[id="select_21"]:checked').val();
     var select22 = $('input[id="select_22"]:checked').val();
-    // var select1 = $("#select_1  option:selected").val();
-    // var select2 = $("#select_2  option:selected").val();
-    // var select3 = $("#select_3  option:selected").val();
-    // var select4 = $("#select_4  option:selected").val();
-    // var select5 = $("#select_5  option:selected").val();
-    // var select6 = $("#select_6  option:selected").val();
-    // var select7 = $("#select_7  option:selected").val();
-    // var select8 = $("#select_8  option:selected").val();
-    // var select9 = $("#select_9  option:selected").val();
-    // var select10 = $("#select_10  option:selected").val();
-    // var select11 = $("#select_11  option:selected").val();
-    // var select12 = $("#select_12  option:selected").val();
-    // var select13 = $("#select_13  option:selected").val();
-    // var select14 = $("#select_14  option:selected").val();
-    // var select15 = $("#select_15  option:selected").val();
-    // var select16 = $("#select_16  option:selected").val();
-    // var select17 = $("#select_17  option:selected").val();
-    // var select18 = $("#select_18 option:selected").val();
-    // var select19 = $("#select_19  option:selected").val();
-    // var select20 = $("#select_20  option:selected").val();
-    // var select21 = $("#select_21  option:selected").val();
-    // var select22 = $("#select_22  option:selected").val();
+
     var lang = 'en';
     var obj = [{
       answerId: select1,
@@ -251,14 +233,14 @@ export class PortalFeedbackComponent implements OnInit {
         language: lang,
       }
     ]
-    console.log('form data is:' + JSON.stringify(obj));
-    // this.service_.setReviewAnswers(obj, this.feedId).subscribe(res=>{
-    //   if(res['status']=="0000"){
-    //     Swal.fire('Thank you','We have received your valuable feedback','success');
-    //     location.reload();
-    //   }else{
-    //     Swal.fire('Sorry',''+res['mesg'],'warning');
-    //   }
-    // });
+    // console.log('form data is:' + JSON.stringify(obj));
+    this.service_.setReviewAnswers(obj, this.feedId).subscribe(res=>{
+      if(res['status']=="0000"){
+        Swal.fire('Thank you','We have received your valuable feedback','success');
+        location.reload();
+      }else{
+        Swal.fire('Sorry',''+res['mesg'],'warning');
+      }
+    });
   }
 }

@@ -5,8 +5,10 @@
         <div>
           <p style="font-size: 15px;background: #ffc2df;color: black;">Select Type:</p>
           <ul style="list-style: none;">
-            <li (click)="typeChange(1)" style="font-weight: lighter; font-size: 18px; padding: 8px; cursor: pointer;"><a>Laptops</a></li>
-            <li (click)="typeChange(2)" style="font-weight: lighter; font-size: 18px; padding: 8px; cursor: pointer;"><a>Desktops</a></li>
+            <li (click)="typeChange(1)" style="font-weight: lighter; font-size: 18px; padding: 8px; cursor: pointer;">
+              <a>Laptops</a></li>
+            <li (click)="typeChange(2)" style="font-weight: lighter; font-size: 18px; padding: 8px; cursor: pointer;">
+              <a>Desktops</a></li>
           </ul>
         </div>
       </div>
@@ -21,14 +23,15 @@
       </div> -->
       <div *ngFor="let criteria of criterias; let RowIndex = index">
         <p data-toggle="collapse" [attr.data-target]="'#demo'+RowIndex" class="filter" *ngIf="criteria.crParentid==0">
-           {{criteria.criteriaName}}
+          {{criteria.criteriaName}}
         </p>
         <div id="criteria_{{criteria.criteriaId}}">
           <div id="demo{{RowIndex}}" class="list-group collapse">
             <ng-container *ngFor="let criteria_ of criterias">
               <a class="list-group-item" *ngIf="criteria_.crParentid == criteria.criteriaId">
                 <input type="checkbox" class="criteria-filter" value="{{criteria_.criteriaName}}"
-                  name="{{criteria_.crParentid }}" (change)="criteriaSelect(criteria.criteriaId,criteria.criteriaName)"/>
+                  name="{{criteria_.crParentid }}"
+                  (change)="criteriaSelect(criteria.criteriaId,criteria.criteriaName)" />
                 {{criteria_.criteriaName}}
               </a>
             </ng-container>
@@ -57,17 +60,19 @@
       </div> -->
     </div>
     <div class="section">
-      <div class="content" *ngFor="let res of result" routerLink="/{{categoryurl}}/{{res.productId}}">
-        <div class="pi-img-wrapper">
-          <img class="img-responsive res-img" style="height:250px" src="{{res.imageUrl}}" alt="img">
-        </div>
-        <div class="items">
-          <p>{{res.prodName}}</p>
-          <img src="{{global.ImgUrls.storeUrl}}{{res.productsSources[0]['source']['sourceIcon']}}">
-          <p>Best Price: <span
-              style="color:green; font-weight:bold; word-spacing:0.03em">Rs.{{res.productsSources[0]['prodPrice']}}/-</span>
-          </p>
-        </div>
+      <div class="content" *ngFor="let res of result">
+        <a routerLink="/{{categoryurl}}/{{res.productId}}" target="_blank">
+          <div class="pi-img-wrapper">
+            <img class="img-responsive res-img" style="height:250px" src="{{res.imageUrl}}" alt="img">
+          </div>
+          <div class="items">
+            <p>{{res.prodName}}</p>
+            <img src="{{global.ImgUrls.storeUrl}}{{res.productsSources[0]['source']['sourceIcon']}}">
+            <p>Best Price: <span
+                style="color:green; font-weight:bold; word-spacing:0.03em">Rs.{{res.productsSources[0]['prodPrice']}}/-</span>
+            </p>
+          </div>
+        </a>
       </div>
     </div>
     <div class="pagination" *ngIf="isDataexist">
@@ -84,7 +89,7 @@
             <a class="page-link" (click)="loadMore()">2 <span class="sr-only">(current)</span></a>
           </li>
           <li class="page-item"><a class="page-link" href="#">3</a></li> -->
-          <li class="page-item" *ngIf="!noData">
+          <li class="page-item" *ngIf="!noData && cnt != 20">
             <a class="page-link" (click)="loadMore()">Next</a>
           </li>
         </ul>

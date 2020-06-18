@@ -10,6 +10,16 @@
           <p style="font-weight: bold; display: inline">Highlights:</p>
           <button class="btn btn-primary" routerLink="feedback/portal">Portal Feedback &copy;</button>
         </div>
+        <!-- <div class="highlight" *ngIf="fashion">
+          <div style="display: flex;">
+            <div style="padding: 4px;">
+              <p *ngFor="let h of list">{{h}}</p>
+            </div>
+            <div style="padding: 4px;">
+              <p *ngFor="let i of list2"> :  {{i}}</p>
+            </div>
+          </div>
+        </div> -->
         <div class="highlight" *ngFor="let highlight of highlights">
           <div *ngIf="highlight.categoryUrl==categoryurl" style="display: flex;">
             <div style="padding: 4px;">
@@ -26,7 +36,7 @@
         <h5>
           {{sources.prodPrice}}/-
         </h5>
-        <a routerLink="/sourcepage/{{sources['source']['sourceId']}}/Category/{{categoryname}}/productsource/{{sources['psId']}}">
+        <a routerLink="/sourcepage/{{sources['source']['sourceId']}}/Category/{{categoryname}}/productsource/{{sources['psId']}}" target="_blank">
           <button class="btn btn-primary" type="submit">Best Buy</button>
         </a>
       </div>

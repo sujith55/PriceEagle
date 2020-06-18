@@ -1,224 +1,240 @@
 <div class="container">
-  <div class="transactions" *ngIf="!isVerified">
+  <div class="transactions">
     <h6>Transaction Information:</h6>
     <div class="contents">
       <form role="form" #feedbackForm="ngForm" (ngSubmit)="submitForm(feedbackForm)">
 
-        <div class="form-group">
+        <div class="form-group col-3">
           <label for="username">Name
-              <span class="require">*</span>
+            <span class="require">*</span>
           </label>
-          <input id="author_username" [(ngModel)]="feedback.username" name="username" placeholder="Enter Your username" #author_username="ngModel" type="text" value="" aria-required="true" required="" class="form-control">
-          <div *ngIf="author_username.invalid && (author_username.dirty || author_username.touched)" class="alert alert-danger">
-              <div ng-if="author_username.errors.minlength || author_username.errors.required ">
-                  UserName required.
-              </div>
+          <input id="author_username" [(ngModel)]="feedback.username" name="username" placeholder="Enter Your username"
+            #author_username="ngModel" type="text" value="" aria-required="true" required="" class="form-control">
+          <div *ngIf="author_username.invalid && (author_username.dirty || author_username.touched)"
+            class="alert alert-danger">
+            <div ng-if="author_username.errors.minlength || author_username.errors.required ">
+              UserName required.
+            </div>
           </div>
-      </div>
-      <div class="form-group">
+        </div>
+        <div class="form-group col-3">
           <label for="mobile">Mobile Number</label>
           <span class="require">*</span>
-          <input id="author_mobile" [(ngModel)]="feedback.mobile" #author_mobile="ngModel" OnlyNumber="true" name="mobile" placeholder="Enter Your mobile Number" class="form-control" required minlength="10" maxlength="10">
-          <div *ngIf="author_mobile.invalid && (author_mobile.dirty || author_mobile.touched)" class="alert alert-danger">
-              <div *ngIf="author_mobile.errors.minlength || author_mobile.errors.required ||author_mobile.errors.minlength ">
-                  10 digits mobile number is required .
-              </div>
+          <input id="author_mobile" [(ngModel)]="feedback.mobile" #author_mobile="ngModel" OnlyNumber="true"
+            name="mobile" placeholder="Enter Your mobile Number" class="form-control" required minlength="10"
+            maxlength="10">
+          <div *ngIf="author_mobile.invalid && (author_mobile.dirty || author_mobile.touched)"
+            class="alert alert-danger">
+            <div
+              *ngIf="author_mobile.errors.minlength || author_mobile.errors.required ||author_mobile.errors.minlength ">
+              10 digits mobile number is required .
+            </div>
           </div>
-      </div>
-      <div class="form-group">
+        </div>
+        <div class="form-group col-3">
           <label for="email">E-Mail</label>
           <span class="require">*</span>
-          <input id="author_email" name="email" placeholder="Enter Your Email Address" type="email" [(ngModel)]="feedback.email" #author_email="ngModel" required email class="form-control">
+          <input id="author_email" name="email" placeholder="Enter Your Email Address" type="email"
+            [(ngModel)]="feedback.email" #author_email="ngModel" required email class="form-control">
           <div *ngIf="author_email.invalid && (author_email.dirty || author_email.touched)" class="alert alert-danger">
-              <div *ngIf="author_email.errors.email || author_email.errors.required">
-                  Email address is required.
-              </div>
-          </div>
-      </div>
-
-      <div class="form-group">
-          <label for="transaction"> Transaction Number
-              <span class="require">*</span>
-          </label>
-          <input id="author_transaction" [(ngModel)]="feedback.transactionId" #author_transaction="ngModel" name="transactionId" placeholder="Enter Your Transaction Number" value="" aria-required="true" required="" type="text" type="text" class="form-control">
-          <div *ngIf="author_transaction.invalid && (author_transaction.dirty || author_transaction.touched)" class="alert alert-danger">
-              <div ng-if="author_transaction.errors.valid || author_transaction.errors.required ">
-                  Transaction Number required.
-              </div>
-          </div>
-      </div>
-
-      <div class="form-group">
-          <label for="Product purchase"> Product Purchased
-              <span class="require">*</span>
-          </label>
-          <input id="author_purchase" [(ngModel)]="feedback.productPurchased" #author_purchase="ngModel" name="productPurchased" placeholder="Enter Your Product Purchased" value="" aria-required="true" required="" type="text" type="text" class="form-control">
-          <div *ngIf="author_purchase.invalid && (author_purchase.dirty || author_purchase.touched)" class="alert alert-danger">
-              <div ng-if="author_purchase.errors.valid || author_purchase.errors.required ">
-                  Purchase required.
-              </div>
-          </div>
-      </div>
-
-      <div class="form-group">
-          <label for="product cost"> Cost of product
-              <span class="require">*</span>
-          </label>
-          <input id="author_prodPrice" [(ngModel)]="feedback.prodPrice" #author_prodPrice="ngModel" name="prodPrice" placeholder="Enter Your Cost of product" value="" OnlyNumber="true" aria-required="true" required="" class="form-control">
-          <div *ngIf="author_prodPrice.invalid && (author_prodPrice.dirty || author_prodPrice.touched)" class="alert alert-danger">
-              <div ng-if="author_prodPrice.errors.valid || author_prodPrice.errors.required ">
-                  Cost of product required.
-              </div>
-          </div>
-      </div>
-
-      <div class="form-group">
-          <label for="date of purchase"> Date Of Purchase
-              <span class="require">*</span>
-          </label>
-          <input id="author_date" [(ngModel)]="feedback.purchaseDate" #author_date="ngModel" name="purchaseDate" placeholder="Enter Your Date Of Purchase" value="" aria-required="true" required="" type="date" class="form-control">
-          <div *ngIf="author_date.invalid && (author_date.dirty || author_date.touched)" class="alert alert-danger">
-              <div ng-if="author_date.errors.valid || author_date.errors.required ">
-                  Date required.
-              </div>
-          </div>
-      </div>
-
-      <div class="form-group">
-          <label for="ecommerce portal"> Name of E-Commerce Portal
-              <span class="require">*</span>
-          </label>
-          <input id="author_portal" [(ngModel)]="feedback.merchantName" #author_portal="ngModel" name="merchantName" placeholder="Enter Your Name of E-Commerce Portal" value="" aria-required="true" required="" type="text" type="text" class="form-control">
-          <div *ngIf="author_portal.invalid && (author_portal.dirty || author_portal.touched)" class="alert alert-danger">
-              <div ng-if="author_portal.errors.valid || author_portal.errors.required ">
-                  Name of E-Commerce Portalrequired.
-              </div>
-          </div>
-      </div>
-          <div style="position: relative;">
-            <div class="text-center">
-              <button class="btn" type="submit" name="submit" [disabled]="feedbackForm.invalid">Submit</button>
+            <div *ngIf="author_email.errors.email || author_email.errors.required">
+              Email address is required.
             </div>
           </div>
+        </div>
+
+        <div class="form-group col-3">
+          <label for="transaction"> Transaction Number
+            <span class="require">*</span>
+          </label>
+          <input id="author_transaction" [(ngModel)]="feedback.transactionId" #author_transaction="ngModel"
+            name="transactionId" placeholder="Enter Your Transaction Number" value="" aria-required="true" required=""
+            type="text" type="text" class="form-control">
+          <div *ngIf="author_transaction.invalid && (author_transaction.dirty || author_transaction.touched)"
+            class="alert alert-danger">
+            <div ng-if="author_transaction.errors.valid || author_transaction.errors.required ">
+              Transaction Number required.
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group col-3">
+          <label for="Product purchase"> Product Purchased
+            <span class="require">*</span>
+          </label>
+          <input id="author_purchase" [(ngModel)]="feedback.productPurchased" #author_purchase="ngModel"
+            name="productPurchased" placeholder="Enter Your Product Purchased" value="" aria-required="true" required=""
+            type="text" type="text" class="form-control">
+          <div *ngIf="author_purchase.invalid && (author_purchase.dirty || author_purchase.touched)"
+            class="alert alert-danger">
+            <div ng-if="author_purchase.errors.valid || author_purchase.errors.required ">
+              Purchase required.
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group col-3">
+          <label for="product cost"> Cost of product
+            <span class="require">*</span>
+          </label>
+          <input id="author_prodPrice" [(ngModel)]="feedback.prodPrice" #author_prodPrice="ngModel" name="prodPrice"
+            placeholder="Enter Your Cost of product" value="" OnlyNumber="true" aria-required="true" required=""
+            class="form-control">
+          <div *ngIf="author_prodPrice.invalid && (author_prodPrice.dirty || author_prodPrice.touched)"
+            class="alert alert-danger">
+            <div ng-if="author_prodPrice.errors.valid || author_prodPrice.errors.required ">
+              Cost of product required.
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group col-3">
+          <label for="date of purchase"> Date Of Purchase
+            <span class="require">*</span>
+          </label>
+          <input id="author_date" [(ngModel)]="feedback.purchaseDate" #author_date="ngModel" name="purchaseDate"
+            placeholder="Enter Your Date Of Purchase" value="" aria-required="true" required="" type="date"
+            class="form-control">
+          <div *ngIf="author_date.invalid && (author_date.dirty || author_date.touched)" class="alert alert-danger">
+            <div ng-if="author_date.errors.valid || author_date.errors.required ">
+              Date required.
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group col-3">
+          <label for="ecommerce portal"> Name of E-Commerce Portal
+            <span class="require">*</span>
+          </label>
+          <input id="author_portal" [(ngModel)]="feedback.merchantName" #author_portal="ngModel" name="merchantName"
+            placeholder="Enter Your Name of E-Commerce Portal" value="" aria-required="true" required="" type="text"
+            type="text" class="form-control">
+          <div *ngIf="author_portal.invalid && (author_portal.dirty || author_portal.touched)"
+            class="alert alert-danger">
+            <div ng-if="author_portal.errors.valid || author_portal.errors.required ">
+              Name of E-Commerce Portalrequired.
+            </div>
+          </div>
+        </div>
+
+        <div class="portalfeedback">
+          <form>
+            <h6>Portal Quality</h6>
+            <div class="portal" style="display: flex; padding: 5px 5px; border: 1px solid #ffc2df;">
+              <div class="questions" *ngFor="let point of portal;">
+                <div class="inputs col-6" *ngFor="let quest of point.reviewQuestionsCollection; let i = index">
+                  <h2 class="current notranslate" id="quest_{{quest.serialId}}"
+                    attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
+                    {{quest.reviewQuestionsDesc.questionTitle}}</h2>
+                  <div *ngFor="let option of quest.reviewOptionsCollection">
+                    <input type="radio" id="select_{{quest.serialId}}" required=true name="select_{{quest.serialId}}"
+                      value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
+                    <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
+                  </div>
+                  <!-- <select class="notranslate" id="select_{{quest.serialId}}" type='text' required="true" name="answerId">
+                      <option value="0"></option>
+                      <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
+                        {{option.reviewOptionsDesc.optionTitle}}
+                      </option>
+                    </select> -->
+                </div>
+              </div>
+            </div>
+            <h6>Product</h6>
+            <div class="product" style="display: flex; padding: 5px 5px; border: 1px solid #ffc2df;">
+              <div class="questions" *ngFor="let point of product;let j = index">
+                <div class="inputs" *ngFor="let quest of point.reviewQuestionsCollection; let i = index">
+                  <h2 class="current notranslate" id="quest_{{quest.serialId}}"
+                    attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
+                    {{quest.reviewQuestionsDesc.questionTitle}}</h2>
+                  <div *ngFor="let option of quest.reviewOptionsCollection">
+                    <input type="radio" id="select_{{quest.serialId}}" required=true name="select_{{quest.serialId}}"
+                      value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
+                    <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
+                  </div>
+                  <!-- <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
+                    <option value="0"></option>
+                    <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
+                      {{option.reviewOptionsDesc.optionTitle}}
+                    </option>
+                  </select> -->
+                </div>
+              </div>
+            </div>
+            <h6>Payment</h6>
+            <div class="payment" style="display: flex; padding: 5px 5px; border: 1px solid #ffc2df;">
+              <div class="questions" *ngFor="let point of payment;let j = index">
+                <div class="inputs col-6" *ngFor="let quest of point.reviewQuestionsCollection; let i = index">
+                  <h2 class="current notranslate" id="quest_{{quest.serialId}}"
+                    attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
+                    {{quest.reviewQuestionsDesc.questionTitle}}</h2>
+                  <div *ngFor="let option of quest.reviewOptionsCollection">
+                    <input type="radio" id="select_{{quest.serialId}}" required=true name="select_{{quest.serialId}}"
+                      value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
+                    <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
+                  </div>
+                  <!-- <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
+                    <option value="0"></option>
+                    <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
+                      {{option.reviewOptionsDesc.optionTitle}}
+                    </option>
+                  </select> -->
+                </div>
+              </div>
+            </div>
+            <h6>Packaging and Delivery</h6>
+            <div class="delivery" style="display: flex; padding: 5px 5px; border: 1px solid #ffc2df;">
+              <div class="questions" *ngFor="let point of delivery;let j = index">
+                <div class="inputs col-6" *ngFor="let quest of point.reviewQuestionsCollection; let i = index">
+                  <h2 class="current notranslate" id="quest_{{quest.serialId}}"
+                    attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
+                    {{quest.reviewQuestionsDesc.questionTitle}}</h2>
+                  <div *ngFor="let option of quest.reviewOptionsCollection">
+                    <input type="radio" id="select_{{quest.serialId}}" required=true name="select_{{quest.serialId}}"
+                      value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
+                    <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
+                  </div>
+                  <!-- <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
+                    <option value="0"></option>
+                    <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
+                      {{option.reviewOptionsDesc.optionTitle}}
+                    </option>
+                  </select> -->
+                </div>
+              </div>
+            </div>
+            <h6>Overall experience</h6>
+            <div class="experience" style="display: flex; padding: 5px 5px; border: 1px solid #ffc2df;">
+              <div class="questions" *ngFor="let point of experience;let j = index">
+                <div class="inputs col-6" *ngFor="let quest of point.reviewQuestionsCollection; let i = index">
+                  <h2 class="current notranslate" id="quest_{{quest.serialId}}"
+                    attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
+                    {{quest.reviewQuestionsDesc.questionTitle}}</h2>
+                  <div *ngFor="let option of quest.reviewOptionsCollection">
+                    <input type="radio" id="select_{{quest.serialId}}" required=true name="select_{{quest.serialId}}"
+                      value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
+                    <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
+                  </div>
+                  <!-- <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
+                    <option value="0"></option>
+                    <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
+                      {{option.reviewOptionsDesc.optionTitle}}
+                    </option>
+                  </select> -->
+                </div>
+              </div>
+            </div>
+            <!-- <div class="text-center">
+              <button class="btn" type="submit" name="submit" (click)="submit()">Submit</button>
+            </div> -->
+          </form>
+        </div>
+        <div style="position: relative;">
+          <div class="text-center">
+            <button class="btn" type="submit" name="submit" [disabled]="feedbackForm.invalid">Submit</button>
+          </div>
+        </div>
       </form>
     </div>
-  </div>
-  <div class="portalfeedback" *ngIf="isVerified">
-    <form>
-      <h6>Portal Quality</h6>
-      <div class="portal">
-        <div class="questions" *ngFor="let point of portal;let j = index">
-          <div style="display: inline-block;">
-            <ng-container *ngFor="let quest of point.reviewQuestionsCollection; let i = index">
-              <h2 class="current notranslate" id="quest_{{quest.serialId}}"
-                attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
-                {{quest.reviewQuestionsDesc.questionTitle}}</h2>
-              <div *ngFor="let option of quest.reviewOptionsCollection">
-                <input type="radio" id ="select_{{quest.serialId}}" required=true name="select_{{quest.serialId}}"
-                  value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
-                <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
-              </div>
-              <!-- <select class="notranslate" id="select_{{quest.serialId}}" type='text' required="true" name="answerId">
-                <option value="0"></option>
-                <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
-                  {{option.reviewOptionsDesc.optionTitle}}
-                </option>
-              </select> -->
-            </ng-container>
-          </div>
-        </div>
-      </div>
-      <h6>Product</h6>
-      <div class="product" style="display: flex; padding: 5px 5px; border: 1px solid #ffc2df;">
-        <div class="questions" *ngFor="let point of product;let j = index"
-          style="padding: 5px 5px;">
-          <ng-container *ngFor="let quest of point.reviewQuestionsCollection; let i = index">
-            <h2 class="current notranslate" id="quest_{{quest.serialId}}"
-              attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
-              {{quest.reviewQuestionsDesc.questionTitle}}</h2>
-            <div *ngFor="let option of quest.reviewOptionsCollection">
-              <input type="radio" id="select_{{quest.serialId}}" required=true name="select_{{quest.serialId}}"
-                value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
-              <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
-            </div>
-            <!-- <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
-              <option value="0"></option>
-              <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
-                {{option.reviewOptionsDesc.optionTitle}}
-              </option>
-            </select> -->
-          </ng-container>
-        </div>
-      </div>
-      <h6>Payment</h6>
-      <div class="payment" style="display: flex; padding: 5px 5px; border: 1px solid #ffc2df;">
-        <div class="questions" *ngFor="let point of payment;let j = index"
-          style="padding: 5px 5px;">
-          <ng-container *ngFor="let quest of point.reviewQuestionsCollection; let i = index">
-            <h2 class="current notranslate" id="quest_{{quest.serialId}}"
-              attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
-              {{quest.reviewQuestionsDesc.questionTitle}}</h2>
-            <div *ngFor="let option of quest.reviewOptionsCollection">
-              <input type="radio" id="select_{{quest.serialId}}" required=true name="select_{{quest.serialId}}"
-                value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
-              <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
-            </div>
-            <!-- <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
-              <option value="0"></option>
-              <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
-                {{option.reviewOptionsDesc.optionTitle}}
-              </option>
-            </select> -->
-          </ng-container>
-        </div>
-      </div>
-      <h6>Packaging and Delivery</h6>
-      <div class="delivery" style="display: flex; padding: 5px 5px; border: 1px solid #ffc2df;">
-        <div class="questions" *ngFor="let point of delivery;let j = index"
-          style="padding: 5px 5px;">
-          <ng-container *ngFor="let quest of point.reviewQuestionsCollection; let i = index">
-            <h2 class="current notranslate" id="quest_{{quest.serialId}}"
-              attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
-              {{quest.reviewQuestionsDesc.questionTitle}}</h2>
-            <div *ngFor="let option of quest.reviewOptionsCollection">
-              <input type="radio" id="select_{{quest.serialId}}" required=true name="select_{{quest.serialId}}"
-                value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
-              <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
-            </div>
-            <!-- <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
-              <option value="0"></option>
-              <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
-                {{option.reviewOptionsDesc.optionTitle}}
-              </option>
-            </select> -->
-          </ng-container>
-        </div>
-      </div>
-      <h6>Overall experience</h6>
-      <div class="experience" style="display: flex; padding: 5px 5px; border: 1px solid #ffc2df;">
-        <div class="questions" *ngFor="let point of experience;let j = index"
-          style="padding: 5px 5px;">
-          <ng-container *ngFor="let quest of point.reviewQuestionsCollection; let i = index">
-            <h2 class="current notranslate" id="quest_{{quest.serialId}}"
-              attr.data-value="{{quest.reviewQuestionsDesc.reviewQuestionDescId}}" style='font-size: 14px;'>
-              {{quest.reviewQuestionsDesc.questionTitle}}</h2>
-            <div *ngFor="let option of quest.reviewOptionsCollection">
-              <input type="radio" id="select_{{quest.serialId}}" required=true name="select_{{quest.serialId}}"
-                value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
-              <label for="select_{{quest.serialId}}">{{option.reviewOptionsDesc.optionTitle}}</label>
-            </div>
-            <!-- <select class="notranslate" id="select_{{quest.serialId}}" type='text' required=true name="answerId">
-              <option value="0"></option>
-              <option class="notranslate" *ngFor="let option of quest.reviewOptionsCollection" value="{{option.reviewOptionsDesc.reviewOptionDescId}}">
-                {{option.reviewOptionsDesc.optionTitle}}
-              </option>
-            </select> -->
-          </ng-container>
-        </div>
-      </div>
-      <div class="text-center">
-        <button class="btn" type="submit" name="submit" (click)="submit()">Submit</button>
-      </div>
-    </form>
   </div>
 </div>

@@ -28,6 +28,7 @@ export class PortalFeedbackComponent implements OnInit {
   mobile: any;
   feedId: any;
   lang = 'en';
+  isSubmitting: boolean = false;
 
   constructor(private service_:AppComponentService, private shop_:ShopComponentService , private http: HttpClient, private router: ActivatedRoute) { }
 
@@ -49,6 +50,19 @@ export class PortalFeedbackComponent implements OnInit {
       this.experience = res[4];
       // console.log('portal'+ JSON.stringify(this.portal));
     });
+    var dateControler = {
+      currentDate: null,
+    };
+    $(document).on("change", "#dateMatch", function (event, ui) {
+      var now = new Date();
+      var selectedDate = new Date($(this).val());
+      if (selectedDate > now) {
+        alert('Invalid date selection..!');
+        $(this).val(dateControler.currentDate);
+      } else {
+        dateControler.currentDate = $(this).val();
+      }
+    });
   }
   public submitForm(data: any){
     if(data != null){
@@ -62,6 +76,7 @@ export class PortalFeedbackComponent implements OnInit {
     this.service_.userreviewForm(data.value, this.lang).subscribe(res=>{
       if(res['status']=="0000"){
         this.feedId = res['data'];
+        this.isSubmitting = true;
         setTimeout(()=>{
           this.submit();
         },4000);
@@ -236,9 +251,13 @@ export class PortalFeedbackComponent implements OnInit {
     // console.log('form data is:' + JSON.stringify(obj));
     this.service_.setReviewAnswers(obj, this.feedId).subscribe(res=>{
       if(res['status']=="0000"){
-        Swal.fire('Thank you','We have received your valuable feedback','success');
-        location.reload();
+        this.isSubmitting = false;
+        Swal.fire('Thank you','We have received your valuable feedback','success').then(()=>{
+          location.reload();
+        });
+
       }else{
+        this.isSubmitting = false;
         Swal.fire('Sorry',''+res['mesg'],'warning');
       }
     });

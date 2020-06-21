@@ -92,7 +92,7 @@
           <label for="date of purchase"> Date Of Purchase
             <span class="require">*</span>
           </label>
-          <input id="author_date" [(ngModel)]="feedback.purchaseDate" #author_date="ngModel" name="purchaseDate"
+          <input id="author_date" [(ngModel)]="feedback.purchaseDate" id="dateMatch" #author_date="ngModel" name="purchaseDate"
             placeholder="Enter Your Date Of Purchase" value="" aria-required="true" required="" type="date"
             class="form-control">
           <div *ngIf="author_date.invalid && (author_date.dirty || author_date.touched)" class="alert alert-danger">
@@ -229,9 +229,15 @@
             </div> -->
           </form>
         </div>
-        <div style="position: relative;">
+        <div style="position: relative; top: 20px;">
           <div class="text-center">
-            <button class="btn" type="submit" name="submit" [disabled]="feedbackForm.invalid">Submit</button>
+            <button class="btn" type="submit" name="submit" [disabled]="feedbackForm.invalid" *ngIf="!isSubmitting">
+              Submit
+            </button>
+            <button class="btn" type="button" disabled *ngIf="isSubmitting">
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              submitting...
+            </button>
           </div>
         </div>
       </form>

@@ -237,8 +237,8 @@ select.form-control {
 
 input[type="text"]:focus,
 select.form-control:focus {
-  -webkit-box-shadow: none;
-  box-shadow: #ffc2df;
+  /* -webkit-box-shadow: none; */
+  border-bottom: 1px solid #ffc2df;
 }
 .portalmodal-content{
   /* height: 280px; */

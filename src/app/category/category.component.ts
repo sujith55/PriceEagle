@@ -85,6 +85,7 @@ export class CategoryComponent implements OnInit {
       this.categoryurl,
       CategoryComponent.count
     );
+
     loadPages.subscribe((res) => {
       if (res != null && res.length != 0) {
         this.cnt = 0;
@@ -102,6 +103,20 @@ export class CategoryComponent implements OnInit {
         // console.log("data coming:" + check);
       }
     });
+    if (JSON.stringify(this.criteriamap) != JSON.stringify({})) {
+      var mapobj = {};
+      mapobj[this.categoryurl] = this.criteriamap;
+      // console.log("map object::condition:::::" + JSON.stringify(mapobj));
+      this.service_.getCriteriaResult(mapobj, CategoryComponent.count).subscribe((res) => {
+        this.result = res;
+      });
+    } else {
+      this.service_
+        .getProductsByIdandLimit(this.categoryurl, CategoryComponent.count)
+        .subscribe((res) => {
+          this.result = res;
+        });
+    }
   }
   loadPages(count){
     if(count != 0){

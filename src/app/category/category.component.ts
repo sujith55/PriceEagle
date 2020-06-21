@@ -85,7 +85,20 @@ export class CategoryComponent implements OnInit {
       this.categoryurl,
       CategoryComponent.count
     );
-
+    if (JSON.stringify(this.criteriamap) != JSON.stringify({})) {
+      var mapobj = {};
+      mapobj[this.categoryurl] = this.criteriamap;
+      console.log("filter working in next pages" + JSON.stringify(mapobj));
+      this.service_.getCriteriaResult(mapobj, CategoryComponent.count).subscribe((res) => {
+        this.result = res;
+      });
+    } else {
+      this.service_
+        .getProductsByIdandLimit(this.categoryurl, CategoryComponent.count)
+        .subscribe((res) => {
+          this.result = res;
+        });
+    }
     loadPages.subscribe((res) => {
       if (res != null && res.length != 0) {
         this.cnt = 0;
@@ -103,20 +116,6 @@ export class CategoryComponent implements OnInit {
         // console.log("data coming:" + check);
       }
     });
-    if (JSON.stringify(this.criteriamap) != JSON.stringify({})) {
-      var mapobj = {};
-      mapobj[this.categoryurl] = this.criteriamap;
-      // console.log("map object::condition:::::" + JSON.stringify(mapobj));
-      this.service_.getCriteriaResult(mapobj, CategoryComponent.count).subscribe((res) => {
-        this.result = res;
-      });
-    } else {
-      this.service_
-        .getProductsByIdandLimit(this.categoryurl, CategoryComponent.count)
-        .subscribe((res) => {
-          this.result = res;
-        });
-    }
   }
   loadPages(count){
     if(count != 0){
@@ -145,20 +144,11 @@ export class CategoryComponent implements OnInit {
     var arr = [];
     var check = false;
     var inputbox = "#criteria_" + ev + " input:checked";
-    // console.log("criteria select changed:-" + ev);
     $(inputbox).each(function (i) {
-      arr[i] = cr_name + ":";
-      arr.push($(this).val());
-      // console.log("da::}}"+$(this).val()+":cr name:"+cr_name);
+      arr.push(cr_name + ':' + $(this).val());
       check = true;
     });
-    if (
-      arr.length > 0 &&
-      $("#criteria_" + ev)
-        .find("input[type='checkbox']")
-        .is(":checked") &&
-      check
-    ) {
+    if (arr.length > 0 && $("#criteria_" + ev).find("input[type='checkbox']").is(":checked") && check) {
       this.criteriamap[ev] = arr;
       // console.log("map object::condition:::::" + JSON.stringify(this.criteriamap));
     } else {
@@ -167,7 +157,6 @@ export class CategoryComponent implements OnInit {
     if (JSON.stringify(this.criteriamap) != JSON.stringify({})) {
       var mapobj = {};
       mapobj[this.categoryurl] = this.criteriamap;
-      // console.log("map object::condition:::::" + JSON.stringify(mapobj));
       this.service_.getCriteriaResult(mapobj, 0).subscribe((res) => {
         this.result = res;
       });

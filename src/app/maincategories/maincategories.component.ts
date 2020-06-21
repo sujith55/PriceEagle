@@ -38,7 +38,11 @@ export class MaincategoriesComponent implements OnInit {
     url5: "Home-Appliances-in-IronBox",
   };
   subcat4 = {
-
+    url1:"Fashion-in-men-casualshirts",
+    url2:"Fashion-women-fusionwear",
+    url3:"Fashion-kids-boy-ethnicwear",
+    url4:"Fashion-kids-girls-tshirts",
+    url5:"Fashion-infants-babyboy"
   };
   subcat5 = {
     url1:"Beauty-in-makeup",

@@ -145,12 +145,13 @@ export class CategoryComponent implements OnInit {
     var check = false;
     var inputbox = "#criteria_" + ev + " input:checked";
     $(inputbox).each(function (i) {
-      arr.push(cr_name + ':' + $(this).val());
+      arr.push(cr_name + ':');
+      arr.push($(this).val());
       check = true;
     });
     if (arr.length > 0 && $("#criteria_" + ev).find("input[type='checkbox']").is(":checked") && check) {
       this.criteriamap[ev] = arr;
-      // console.log("map object::condition:::::" + JSON.stringify(this.criteriamap));
+      console.log("map object::condition:::::" + JSON.stringify(this.criteriamap));
     } else {
       delete this.criteriamap[ev];
     }

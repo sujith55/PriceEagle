@@ -250,7 +250,7 @@ export class PortalFeedbackComponent implements OnInit {
     ]
     // console.log('form data is:' + JSON.stringify(obj));
     this.service_.setReviewAnswers(obj, this.feedId).subscribe(res=>{
-      if(res['status']=="0000"){
+      if(res['status']=="111"){
         this.isSubmitting = false;
         Swal.fire('Thank you','We have received your valuable feedback','success').then(()=>{
           location.reload();

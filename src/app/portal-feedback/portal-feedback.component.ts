@@ -55,7 +55,7 @@ export class PortalFeedbackComponent implements OnInit {
     };
     $(document).on("change", "#dateMatch", function (event, ui) {
       var now = new Date();
-      var selectedDate = new Date($(this).val());
+      var selectedDate = new Date(this);
       if (selectedDate > now) {
         alert('Invalid date selection..!');
         $(this).val(dateControler.currentDate);

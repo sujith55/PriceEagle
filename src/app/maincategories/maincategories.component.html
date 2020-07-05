@@ -1,6 +1,6 @@
 <div class="container" *ngIf="first">
   <div class="section">
-    <div class="content" *ngFor="let res of list" routerLink="/{{categoryurl}}/{{res.productId}}">
+    <div class="content" *ngFor="let res of list" routerLink="/{{res.categoryUrl}}/{{res.productId}}">
         <div class="pi-img-wrapper">
           <img class="img-responsive res-img" style="height:250px" src="{{res.imageUrl}}" alt="img">
         </div>

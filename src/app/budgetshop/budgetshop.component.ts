@@ -26,7 +26,7 @@ export class BudgetshopComponent implements OnInit {
       this.categoryId = res['categoryId'];
       this.lowprice = res['lowPrice'];
       this.highprice = res['highPrice'];
-      console.log('params:'+ JSON.stringify(res));
+      console.log('params:'+ JSON.stringify(res));    
     });
   }
 

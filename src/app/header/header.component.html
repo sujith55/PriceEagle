@@ -54,8 +54,8 @@
 </nav>
 <div class="searchResults">
   <div class="content" *ngFor="let val of search">
-   <p *ngIf="!val.id" routerLink="/{{val.url}}">{{val.tagName}}</p>
-   <p *ngIf="val.id">{{val.tagName}}</p>
+   <!-- <p *ngIf="!val.id" routerLink="/{{val.url}}">{{val.tagName}}</p> -->
+   <p *ngIf="val.id" routerLink="/details/{{val.id}}">{{val.tagName}}</p>
   </div>
 </div>
 <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel"

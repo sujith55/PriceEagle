@@ -11,8 +11,8 @@
 
 export const environment = {
   production: true,
-  baseUrl: 'http://localhost:8080/priceEagle/Pe_api/',
-  baseUrlAdmin: 'http://localhost:8080/priceEagle/admin/'
+  baseUrl: 'http://localhost:8081/priceEagle/Pe_api/',
+  baseUrlAdmin: 'http://localhost:8081/priceEagle/admin/'
 };
 
 // export const environment = {
